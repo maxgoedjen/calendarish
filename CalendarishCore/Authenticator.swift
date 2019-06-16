@@ -1,5 +1,6 @@
 import Foundation
 import GTMAppAuth
+import GoogleAPIClientForREST
 
 public struct Authenticator {
 
@@ -25,7 +26,7 @@ extension Authenticator {
 
     public func authenticate(from viewController: UIViewController) {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
-        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
+        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
         Authenticator.runningAuthentication = OIDAuthState.authState(byPresenting: request, presenting: viewController) { state, error in
             guard let state = state else { return }
             let authorization = GTMAppAuthFetcherAuthorization(authState: state)
