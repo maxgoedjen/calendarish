@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double CalendarishCoreVersionNumber;
 FOUNDATION_EXPORT const unsigned char CalendarishCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CalendarishCore/PublicHeader.h>
-
-#import <GTMAppAuth/GTMAppAuth.h>

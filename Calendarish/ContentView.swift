@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CalendarishCore
 
 struct ContentView : View {
 
@@ -36,7 +37,7 @@ extension ContentView {
 
     func signin() {
         let authenticator = Authenticator(config: Constants.config)
-        authenticator.authenticate()
+        authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
     }
 
 }

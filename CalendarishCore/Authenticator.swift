@@ -1,21 +1,25 @@
 import Foundation
+import GTMAppAuth
 
 public struct Authenticator {
 
     let config: Config
+    fileprivate static var runningAuthentication: OIDExternalUserAgentSession?
 
     public init(config: Config) {
         self.config = config
     }
 
-    public func authenticate() {
+    public func authenticate(from viewController: UIViewController) {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
-        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [], redirectURL: config.redirectURI, responseType: "code", additionalParameters: nil)
-
+        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
+        Authenticator.runningAuthentication = OIDAuthState.authState(byPresenting: request, presenting: viewController) { state, error in
+            print(state as Any, error as Any)
+        }
     }
 }
 
-public extension Authenticator {
+extension Authenticator {
 
     public struct Config {
 
