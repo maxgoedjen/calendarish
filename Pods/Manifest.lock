@@ -1,9 +1,9 @@
 PODS:
   - AppAuth (0.95.0)
-  - GoogleAPIClientForREST/Core (1.2.1):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Sheets (1.2.1):
+  - GoogleAPIClientForREST/Calendar (1.2.1):
     - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAPIClientForREST/Core (1.2.1):
     - GTMSessionFetcher (>= 1.1.7)
   - GTMAppAuth (0.7.1):
     - AppAuth (~> 0.95)
@@ -15,7 +15,7 @@ PODS:
     - GTMSessionFetcher/Core (= 1.2.1)
 
 DEPENDENCIES:
-  - GoogleAPIClientForREST/Sheets (~> 1.2.1)
+  - GoogleAPIClientForREST/Calendar (~> 1.2.1)
   - GTMAppAuth (~> 0.7.1)
 
 SPEC REPOS:
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   GTMAppAuth: c5e41aaf039ac1ccc41543e6ea2ef7abd255ad41
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
 
-PODFILE CHECKSUM: 6dbd1cacc2de7d38a0f9a512007da251ffa35950
+PODFILE CHECKSUM: d481bcf82ba96f6ac257a689338fa334ab1a2bc7
 
 COCOAPODS: 1.5.2

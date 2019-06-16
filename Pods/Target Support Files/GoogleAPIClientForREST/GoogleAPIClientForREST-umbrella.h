@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "GTLRCalendar.h"
+#import "GTLRCalendarObjects.h"
+#import "GTLRCalendarQuery.h"
+#import "GTLRCalendarService.h"
 #import "GTLRDefines.h"
 #import "GTLRBatchQuery.h"
 #import "GTLRBatchResult.h"
@@ -25,10 +29,6 @@
 #import "GTLRFramework.h"
 #import "GTLRURITemplate.h"
 #import "GTLRUtilities.h"
-#import "GTLRSheets.h"
-#import "GTLRSheetsObjects.h"
-#import "GTLRSheetsQuery.h"
-#import "GTLRSheetsService.h"
 
 FOUNDATION_EXPORT double GoogleAPIClientForRESTVersionNumber;
 FOUNDATION_EXPORT const unsigned char GoogleAPIClientForRESTVersionString[];

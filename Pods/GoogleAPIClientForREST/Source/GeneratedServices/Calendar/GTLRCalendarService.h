@@ -2,11 +2,11 @@
 
 // ----------------------------------------------------------------------------
 // API:
-//   Google Sheets API (sheets/v4)
+//   Calendar API (calendar/v3)
 // Description:
-//   Reads and writes Google Sheets.
+//   Manipulates events and other calendar data.
 // Documentation:
-//   https://developers.google.com/sheets/
+//   https://developers.google.com/google-apps/calendar/firstapp
 
 #if GTLR_BUILT_AS_FRAMEWORK
   #import "GTLR/GTLRService.h"
@@ -24,45 +24,33 @@ NS_ASSUME_NONNULL_BEGIN
 // Authorization scopes
 
 /**
- *  Authorization scope: View and manage the files in your Google Drive
+ *  Authorization scope: Manage your calendars
  *
- *  Value "https://www.googleapis.com/auth/drive"
+ *  Value "https://www.googleapis.com/auth/calendar"
  */
-GTLR_EXTERN NSString * const kGTLRAuthScopeSheetsDrive;
+GTLR_EXTERN NSString * const kGTLRAuthScopeCalendar;
 /**
- *  Authorization scope: View the files in your Google Drive
+ *  Authorization scope: View your calendars
  *
- *  Value "https://www.googleapis.com/auth/drive.readonly"
+ *  Value "https://www.googleapis.com/auth/calendar.readonly"
  */
-GTLR_EXTERN NSString * const kGTLRAuthScopeSheetsDriveReadonly;
-/**
- *  Authorization scope: View and manage your spreadsheets in Google Drive
- *
- *  Value "https://www.googleapis.com/auth/spreadsheets"
- */
-GTLR_EXTERN NSString * const kGTLRAuthScopeSheetsSpreadsheets;
-/**
- *  Authorization scope: View your Google Spreadsheets
- *
- *  Value "https://www.googleapis.com/auth/spreadsheets.readonly"
- */
-GTLR_EXTERN NSString * const kGTLRAuthScopeSheetsSpreadsheetsReadonly;
+GTLR_EXTERN NSString * const kGTLRAuthScopeCalendarReadonly;
 
 // ----------------------------------------------------------------------------
-//   GTLRSheetsService
+//   GTLRCalendarService
 //
 
 /**
- *  Service for executing Google Sheets API queries.
+ *  Service for executing Calendar API queries.
  *
- *  Reads and writes Google Sheets.
+ *  Manipulates events and other calendar data.
  */
-@interface GTLRSheetsService : GTLRService
+@interface GTLRCalendarService : GTLRService
 
 // No new methods
 
 // Clients should create a standard query with any of the class methods in
-// GTLRSheetsQuery.h. The query can the be sent with GTLRService's execute
+// GTLRCalendarQuery.h. The query can the be sent with GTLRService's execute
 // methods,
 //
 //   - (GTLRServiceTicket *)executeQuery:(GTLRQuery *)query
