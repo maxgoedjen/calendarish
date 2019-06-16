@@ -2,12 +2,10 @@ import Foundation
 
 public struct Store {
 
-    public init() {
+    public let authenticator: Authenticator
 
+    public init(authenticator: Authenticator) {
+        self.authenticator = authenticator
     }
-
-    public var isLoggedIn: Bool {
-        false
-    }
-
+    
 }

@@ -11,11 +11,11 @@ import CalendarishCore
 
 struct ContentView : View {
 
-    var store: Store
+    @State var store: Store
 
     var body: some View {
         Button(action: signin) {
-            if !store.isLoggedIn {
+            if !store.authenticator.isAuthorized {
                 Text("Sign In")
                     .font(.subheadline)
                     .fontWeight(.bold)
@@ -36,8 +36,7 @@ struct ContentView : View {
 extension ContentView {
 
     func signin() {
-        let authenticator = Authenticator(config: Constants.config)
-        authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
+        store.authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
     }
 
 }
@@ -45,7 +44,7 @@ extension ContentView {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(store: Store())
+        ContentView(store: Store(authenticator: Authenticator(config: Constants.config)))
     }
 }
 #endif

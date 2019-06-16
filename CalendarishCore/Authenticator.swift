@@ -10,15 +10,31 @@ public struct Authenticator {
         self.config = config
     }
 
+}
+
+extension Authenticator {
+
+    public var authorization: GTMAppAuthFetcherAuthorization? {
+        return GTMAppAuthFetcherAuthorization.init(fromKeychainForName: config.clientID)
+    }
+
+    public var isAuthorized: Bool {
+        guard let authorization = authorization else { return false }
+        return authorization.authState.isAuthorized
+    }
+
     public func authenticate(from viewController: UIViewController) {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
         let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
         Authenticator.runningAuthentication = OIDAuthState.authState(byPresenting: request, presenting: viewController) { state, error in
-            print(state as Any, error as Any)
+            guard let state = state else { return }
+            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
+            GTMAppAuthFetcherAuthorization.save(authorization, toKeychainForName: self.config.clientID)
         }
     }
-}
 
+    
+}
 extension Authenticator {
 
     public struct Config {
