@@ -5,10 +5,10 @@ import Combine
 public struct Store {
 
     public let authenticator: Authenticator
-    
+    public private(set) var events: [Event]
 
     fileprivate let calendarService = GTLRCalendarService()
-    fileprivate static var sink: Any?
+
 
     public init(authenticator: Authenticator) {
         self.authenticator = authenticator
@@ -16,17 +16,13 @@ public struct Store {
         updateCalendars()
     }
 
-    public func updateCalendars() {
-        let list = calendarList().flatMap { calendars -> AnyPublisher<[Event], Error> in
-            let events = calendars.map { calendar in
-                self.events(in: calendar)
-            }
-            return Publishers.MergeMany(events).eraseToAnyPublisher()
+    public mutating func updateCalendars() {
+        let publisher = eventPublisher
+        struct Test {
+            var x: [Event] = []
         }
-        Store.sink = list.sink { (v) in
-
-        }
-
+        var y = Test()
+        publisher.assign(to: \.events, on: self)
 
     }
     
@@ -56,6 +52,17 @@ extension Store {
                 promise(.success(events))
             }
         }
+    }
+
+    var eventPublisher: AnyPublisher<[Event], Never> {
+        return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[Event], Error>> in
+            let events = calendars.map { calendar in
+                self.events(in: calendar)
+            }
+            return Publishers.MergeMany(events)
+        }
+            .replaceError(with: [])
+            .eraseToAnyPublisher()
     }
 
 }
