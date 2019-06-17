@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -256,7 +256,7 @@
 		0B1E49694AD4249A3648A57FD432D20C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		0E4123992B47EE3FCE89EA554CB1FC7A /* GTMAppAuth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMAppAuth.modulemap; sourceTree = "<group>"; };
 		0E7124EAC50B9744FFE6FEB4330796BB /* GTMOAuth2KeychainCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2KeychainCompatibility.h; path = Source/GTMOAuth2KeychainCompatibility/GTMOAuth2KeychainCompatibility.h; sourceTree = "<group>"; };
-		0ED9998516F1187515E7FAEE6289828A /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleAPIClientForREST.framework; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ED9998516F1187515E7FAEE6289828A /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		101848EC3FB46A43498558C036992EF4 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
 		10963EFF6A09F00F9028CD1834A7839B /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
 		12166664930EB4F3C6A42E53CDA5A709 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
@@ -286,9 +286,9 @@
 		2CFCC76E82CA772F9B524EC75883275B /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Source/OIDErrorUtilities.m; sourceTree = "<group>"; };
 		2D7E8CD2295D27D85E86452FEFDF8C29 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6EC04F828C8F8D3EC0647D9B425C38 /* GTLRCalendarService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarService.m; path = Source/GeneratedServices/Calendar/GTLRCalendarService.m; sourceTree = "<group>"; };
-		3189D62813A489F12480FC390705AAC8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3189D62813A489F12480FC390705AAC8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A853A78A840D4BB9C7CD69196B329E /* GTLRDuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRDuration.m; path = Source/Objects/GTLRDuration.m; sourceTree = "<group>"; };
-		32BE62EE5F03AC09435D9E16AD26BE71 /* Pods_CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarishCore.framework; path = "Pods-CalendarishCore.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BE62EE5F03AC09435D9E16AD26BE71 /* Pods_CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366558C4ABC7AA2C4FC827CFB20BE1C2 /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Source/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
 		367F257D5E7A70C5FE3556A5FDFF1572 /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
 		3C7CC0A4DD65063CD81DB069BB798BBA /* GTMAppAuthFetcherAuthorization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMAppAuthFetcherAuthorization.m; path = Source/GTMAppAuthFetcherAuthorization.m; sourceTree = "<group>"; };
@@ -299,15 +299,15 @@
 		49A4CB05E2AFB0C7EEC82E44DDADD3BA /* GTMAppAuth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMAppAuth-umbrella.h"; sourceTree = "<group>"; };
 		4AC14698C0DE6730F0E6EF72DDDBA893 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7101E5B98B165232A00D64793DF8C1 /* GoogleAPIClientForREST-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleAPIClientForREST-umbrella.h"; sourceTree = "<group>"; };
-		4D55CAC6E6BC4C9891D2408803CE3F20 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMAppAuth.framework; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D55CAC6E6BC4C9891D2408803CE3F20 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CE0F6ADE20EADDDDE818B4FD91688D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52CEDE61F4D4D0029B2032E8A86BF39E /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Calendarish.framework; path = "Pods-Calendarish.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52CEDE61F4D4D0029B2032E8A86BF39E /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		534E4751901E1995B37CDB1369C78B53 /* Pods-Calendarish-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Calendarish-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5461402F5A6CC76C513FF643864B4FCF /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Source/OIDFieldMapping.m; sourceTree = "<group>"; };
 		55502AD4B35A63419D90A3323A226011 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
 		57BEEFE6D3118E6DAE56E6E686A1A9A9 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
 		5959410DCA8A84DE2C7B3C7DF0DCE4CC /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Source/OIDExternalUserAgent.h; sourceTree = "<group>"; };
-		5B872C86D5E59A7DFCDDC45737A6D0B5 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B872C86D5E59A7DFCDDC45737A6D0B5 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFF4AD1D4DFBE90E01E6828837DBFB5 /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
 		60622635858B05471332725870C55DCE /* GTLRCalendarObjects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarObjects.h; path = Source/GeneratedServices/Calendar/GTLRCalendarObjects.h; sourceTree = "<group>"; };
 		6106EBC1F815E31048B7D223BE8E0156 /* GTLRURITemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRURITemplate.m; path = Source/Utilities/GTLRURITemplate.m; sourceTree = "<group>"; };
@@ -343,7 +343,7 @@
 		90FA1A360A835F7E41C278AFFC091D22 /* OIDAuthorizationFlowSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationFlowSession.h; path = Source/OIDAuthorizationFlowSession.h; sourceTree = "<group>"; };
 		924B2C6AAFC8C8400832654C0194FDEF /* GTMAppAuthFetcherAuthorization+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuthFetcherAuthorization+Keychain.h"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.h"; sourceTree = "<group>"; };
 		929DB96B63900CDB0B91ADF2FE7BE226 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		954F5EAA5763C2AA01DA25BC65EB80C6 /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
 		96D7A0D4960653742928CA655AD674C9 /* GTLRCalendarQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarQuery.m; path = Source/GeneratedServices/Calendar/GTLRCalendarQuery.m; sourceTree = "<group>"; };
 		971FAEEDE352284ED26454B337A504E8 /* GTLRBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRBase64.m; path = Source/Utilities/GTLRBase64.m; sourceTree = "<group>"; };
@@ -510,7 +510,6 @@
 				01823A196AFA924C51EF98A87A50B515 /* GTMTVServiceConfiguration.m */,
 				986AEA3A2FB7A687D0A758230D4F55C8 /* Support Files */,
 			);
-			name = GTMAppAuth;
 			path = GTMAppAuth;
 			sourceTree = "<group>";
 		};
@@ -644,7 +643,6 @@
 				5874956F40D4F4B1EB51081AE96C414D /* Full */,
 				59BA5CEF864B06954EB254320B26FF85 /* Support Files */,
 			);
-			name = GTMSessionFetcher;
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
@@ -710,7 +708,6 @@
 				A08BA8727FA27B61155EAE60136AC6DF /* Core */,
 				6EADF691892A46A1725F273E52C14FF4 /* Support Files */,
 			);
-			name = GoogleAPIClientForREST;
 			path = GoogleAPIClientForREST;
 			sourceTree = "<group>";
 		};
@@ -779,7 +776,6 @@
 				B37C1BB1C9E28438018A3D0BC0666DEB /* OIDURLSessionProvider.m */,
 				E1668B55450101D936EC9DB693385B7E /* Support Files */,
 			);
-			name = AppAuth;
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
@@ -1082,14 +1078,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = B3C8D1763BBE0E60FDB150D884AABEB9 /* Products */;
@@ -1302,11 +1299,7 @@
 				INFOPLIST_FILE = "Target Support Files/AppAuth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
 				PRODUCT_MODULE_NAME = AppAuth;
 				PRODUCT_NAME = AppAuth;
@@ -1338,11 +1331,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-CalendarishCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CalendarishCore/Pods-CalendarishCore.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1376,11 +1365,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Calendarish/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Calendarish/Pods-Calendarish.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1414,11 +1399,7 @@
 				INFOPLIST_FILE = "Target Support Files/AppAuth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AppAuth/AppAuth.modulemap";
 				PRODUCT_MODULE_NAME = AppAuth;
 				PRODUCT_NAME = AppAuth;
@@ -1450,11 +1431,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMAppAuth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMAppAuth/GTMAppAuth.modulemap";
 				PRODUCT_MODULE_NAME = GTMAppAuth;
 				PRODUCT_NAME = GTMAppAuth;
@@ -1486,11 +1463,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
 				PRODUCT_MODULE_NAME = GTMSessionFetcher;
 				PRODUCT_NAME = GTMSessionFetcher;
@@ -1521,11 +1494,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMAppAuth/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMAppAuth/GTMAppAuth.modulemap";
 				PRODUCT_MODULE_NAME = GTMAppAuth;
 				PRODUCT_NAME = GTMAppAuth;
@@ -1556,11 +1525,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleAPIClientForREST/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.modulemap";
 				PRODUCT_MODULE_NAME = GoogleAPIClientForREST;
 				PRODUCT_NAME = GoogleAPIClientForREST;
@@ -1592,11 +1557,7 @@
 				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
 				PRODUCT_MODULE_NAME = GTMSessionFetcher;
 				PRODUCT_NAME = GTMSessionFetcher;
@@ -1629,11 +1590,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Calendarish/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Calendarish/Pods-Calendarish.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1667,11 +1624,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-CalendarishCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CalendarishCore/Pods-CalendarishCore.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1705,11 +1658,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleAPIClientForREST/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.modulemap";
 				PRODUCT_MODULE_NAME = GoogleAPIClientForREST;
 				PRODUCT_NAME = GoogleAPIClientForREST;
@@ -1727,6 +1676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1785,6 +1735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
