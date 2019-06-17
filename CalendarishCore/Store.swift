@@ -1,22 +1,69 @@
 import Foundation
 import GoogleAPIClientForREST
+import Combine
 
 public struct Store {
 
     public let authenticator: Authenticator
+    
+
     fileprivate let calendarService = GTLRCalendarService()
+    fileprivate static var sink: Any?
 
     public init(authenticator: Authenticator) {
         self.authenticator = authenticator
         calendarService.authorizer = authenticator.authorization
-        updateResults()
+        updateCalendars()
     }
 
-    public func updateResults() {
-        let query = GTLRCalendarQuery_CalendarListList.query()
-        calendarService.executeQuery(query) { (ticket, any, error) in
-            print(ticket as Any, any as Any, error as Any)
+    public func updateCalendars() {
+        let list = calendarList().map { calendars -> [Publishers.Future<[Event], Error>] in
+            return calendars.map { calendar in
+                return self.events(in: calendar)
+            }
         }
+        Store.sink = list.sink { (v) in
+
+        }
+
+
     }
     
+}
+
+extension Store {
+
+    func calendarList() -> Publishers.Future<[Calendar], Error> {
+        return Publishers.Future { promise in
+            let query = GTLRCalendarQuery_CalendarListList.query()
+            self.calendarService.executeQuery(query) { _, any, error in
+                guard error == nil else { promise(.failure(.serverError(error!))); return }
+                guard let list = any as? GTLRCalendar_CalendarList, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
+                let calendars = items.map({ Calendar($0)})
+                promise(.success(calendars))
+            }
+        }
+    }
+
+    func events(in calendar: Calendar) -> Publishers.Future<[Event], Error> {
+        return Publishers.Future { promise in
+            let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
+            self.calendarService.executeQuery(query) { _, any, error in
+                guard error == nil else { promise(.failure(.serverError(error!))); return }
+                guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
+                let events = items.map({ Event($0, calendar: calendar) })
+                promise(.success(events))
+            }
+        }
+    }
+
+}
+
+extension Store {
+
+    enum Error: Swift.Error {
+        case invalidResponse(Any?)
+        case serverError(Swift.Error)
+    }
+
 }

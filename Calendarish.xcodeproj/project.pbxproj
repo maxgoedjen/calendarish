@@ -32,6 +32,9 @@
 		50935BEF22B4AD7B00DB2178 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BEE22B4AD7B00DB2178 /* Store.swift */; };
 		50935BF322B4CAA100DB2178 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF222B4CAA100DB2178 /* Authenticator.swift */; };
 		50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF422B4CBAD00DB2178 /* Configuration.swift */; };
+		50D2D49422B5FB9F00480806 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
+		50D2D49622B5FC7400480806 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49522B5FC7400480806 /* Calendar.swift */; };
+		50D2D49822B5FCAD00480806 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
 		D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */; };
 		EDC62F713F3269250CE87BFA /* Pods_CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90343CD3C31D805868D8A88 /* Pods_CalendarishCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -153,6 +156,9 @@
 		50935BEE22B4AD7B00DB2178 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		50935BF222B4CAA100DB2178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		50D2D49322B5FB9F00480806 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		50D2D49522B5FC7400480806 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		50D2D49722B5FCAD00480806 /* APIInits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInits.swift; sourceTree = "<group>"; };
 		59706754F9762B70D59A0715 /* Pods-CalendarishCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishCore/Pods-CalendarishCore.debug.xcconfig"; sourceTree = "<group>"; };
 		759229C6B5F98D5C343893E2 /* Pods-CalendarishCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishCore/Pods-CalendarishCore.release.xcconfig"; sourceTree = "<group>"; };
 		7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
@@ -312,6 +318,9 @@
 			children = (
 				50935BD222B4AD6100DB2178 /* CalendarishCore.h */,
 				50935BEE22B4AD7B00DB2178 /* Store.swift */,
+				50D2D49322B5FB9F00480806 /* Event.swift */,
+				50D2D49522B5FC7400480806 /* Calendar.swift */,
+				50D2D49722B5FCAD00480806 /* APIInits.swift */,
 				50935BF222B4CAA100DB2178 /* Authenticator.swift */,
 				50935BD322B4AD6100DB2178 /* Info.plist */,
 			);
@@ -627,7 +636,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				50935BEF22B4AD7B00DB2178 /* Store.swift in Sources */,
+				50D2D49822B5FCAD00480806 /* APIInits.swift in Sources */,
+				50D2D49422B5FB9F00480806 /* Event.swift in Sources */,
 				50935BF322B4CAA100DB2178 /* Authenticator.swift in Sources */,
+				50D2D49622B5FC7400480806 /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
