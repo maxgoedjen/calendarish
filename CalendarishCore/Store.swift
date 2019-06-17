@@ -17,10 +17,11 @@ public struct Store {
     }
 
     public func updateCalendars() {
-        let list = calendarList().map { calendars -> [Publishers.Future<[Event], Error>] in
-            return calendars.map { calendar in
-                return self.events(in: calendar)
+        let list = calendarList().flatMap { calendars -> AnyPublisher<[Event], Error> in
+            let events = calendars.map { calendar in
+                self.events(in: calendar)
             }
+            return Publishers.MergeMany(events).eraseToAnyPublisher()
         }
         Store.sink = list.sink { (v) in
 
