@@ -14,3 +14,7 @@ end
 target 'CalendarishCore' do
   common
 end
+
+target 'CalendarishCoreTests' do
+  common
+end
