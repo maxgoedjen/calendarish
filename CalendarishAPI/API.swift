@@ -1,36 +1,24 @@
 import Foundation
-import GoogleAPIClientForREST
-import CalendarishCore
 import Combine
 import SwiftUI
+import CalendarishCore
+import GoogleAPIClientForREST
 
-public class API {
+public struct API {
 
     public let authenticator: Authenticator
-    public private(set) var events: [Event] = []
-
     fileprivate let calendarService = GTLRCalendarService()
-    fileprivate var subscription: AnyCancellable? = nil
 
     public init(authenticator: Authenticator) {
         self.authenticator = authenticator
         calendarService.authorizer = authenticator.authorization
-        subscription = eventPublisher.assign(to: \.events, on: self)
-    }
-
-}
-
-extension API: BindableObject {
-
-    public var didChange: AnyPublisher<[Event], Never> {
-        return eventPublisher
     }
 
 }
 
 extension API {
 
-    var eventPublisher: AnyPublisher<[CalendarishCore.Event], Never> {
+    public var eventPublisher: AnyPublisher<[CalendarishCore.Event], Never> {
         return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[CalendarishCore.Event], Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)

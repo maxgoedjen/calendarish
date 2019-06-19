@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CalendarishCoreTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CalendarishCoreTestsVersionString[];
+FOUNDATION_EXPORT double Pods_CalendarishAPITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_CalendarishAPITestsVersionString[];
 

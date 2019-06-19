@@ -7,15 +7,17 @@
 //
 
 import SwiftUI
-import CalendarishCore
+import CalendarishAPI
+import CalendarishStore
 
 struct ContentView : View {
 
+    @State var api: API
     @State var store: Store
 
     var body: some View {
         Group {
-            if !store.authenticator.isAuthorized {
+            if !api.authenticator.isAuthorized {
                 Button(action: signin) {
                     Text("Sign In")
                         .font(.subheadline)
@@ -46,7 +48,7 @@ struct ContentView : View {
 extension ContentView {
 
     func signin() {
-        store.authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
+        api.authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
     }
 
 }
@@ -54,7 +56,7 @@ extension ContentView {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(store: Store(authenticator: Authenticator(config: Constants.config)))
+        ContentView(api: API(authenticator: Authenticator(config: Constants.config)), store: Store())
     }
 }
 #endif

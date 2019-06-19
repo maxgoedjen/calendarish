@@ -1,4 +1,4 @@
-import CalendarishCore
+import CalendarishAPI
 
 enum Constants {
     static let config = Authenticator.Config(

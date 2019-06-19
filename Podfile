@@ -15,6 +15,6 @@ target 'CalendarishAPI' do
   common
 end
 
-target 'CalendarishCoreTests' do
+target 'CalendarishAPITests' do
   common
 end

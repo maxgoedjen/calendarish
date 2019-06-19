@@ -8,19 +8,25 @@
 
 import UIKit
 import SwiftUI
-import CalendarishCore
+import Combine
+import CalendarishAPI
+import CalendarishStore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    fileprivate var storeSubscription: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: ContentView(store: Store(authenticator: Authenticator(config: Constants.config))))
+        let api = API(authenticator: Authenticator(config: Constants.config))
+        let store = Store()
+        storeSubscription = api.eventPublisher.assign(to: \.events, on: store)
+
+        window.rootViewController = UIHostingController(rootView: ContentView(api: api, store: store))
         self.window = window
         window.makeKeyAndVisible()
                                     
