@@ -8,7 +8,7 @@ public struct Event {
     public let endTime: Date
     public let calendar: Calendar
 
-    internal init(identifier: String, name: String, startTime: Date, endTime: Date, calendar: Calendar) {
+    public init(identifier: String, name: String, startTime: Date, endTime: Date, calendar: Calendar) {
         self.identifier = identifier
         self.name = name
         self.startTime = startTime

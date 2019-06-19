@@ -11,7 +11,7 @@ target 'Calendarish' do
   common
 end
 
-target 'CalendarishCore' do
+target 'CalendarishAPI' do
   common
 end
 

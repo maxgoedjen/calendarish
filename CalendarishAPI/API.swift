@@ -1,9 +1,10 @@
 import Foundation
 import GoogleAPIClientForREST
+import CalendarishCore
 import Combine
 import SwiftUI
 
-public class Store {
+public class API {
 
     public let authenticator: Authenticator
     public private(set) var events: [Event] = []
@@ -19,7 +20,7 @@ public class Store {
 
 }
 
-extension Store: BindableObject {
+extension API: BindableObject {
 
     public var didChange: AnyPublisher<[Event], Never> {
         return eventPublisher
@@ -27,10 +28,10 @@ extension Store: BindableObject {
 
 }
 
-extension Store {
+extension API {
 
-    var eventPublisher: AnyPublisher<[Event], Never> {
-        return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[Event], Error>> in
+    var eventPublisher: AnyPublisher<[CalendarishCore.Event], Never> {
+        return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[CalendarishCore.Event], Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)
             }
@@ -44,21 +45,21 @@ extension Store {
 
 }
 
-extension Store {
+extension API {
 
-    func calendarList() -> Publishers.Future<[Calendar], Error> {
+    func calendarList() -> Publishers.Future<[CalendarishCore.Calendar], Error> {
         return Publishers.Future { promise in
             let query = GTLRCalendarQuery_CalendarListList.query()
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_CalendarList, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
-                let calendars = items.map({ Calendar($0)})
+                let calendars = items.map({ CalendarishCore.Calendar($0)})
                 promise(.success(calendars))
             }
         }
     }
 
-    func events(in calendar: Calendar) -> Publishers.Future<[Event], Error> {
+    func events(in calendar: CalendarishCore.Calendar) -> Publishers.Future<[CalendarishCore.Event], Error> {
         return Publishers.Future { promise in
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
             let today = Date()
@@ -69,7 +70,7 @@ extension Store {
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
-                let events = items.map({ Event($0, calendar: calendar) })
+                let events = items.map({ CalendarishCore.Event($0, calendar: calendar) })
                 promise(.success(events))
             }
         }
@@ -77,7 +78,7 @@ extension Store {
 
 }
 
-extension Store {
+extension API {
 
     enum Error: Swift.Error {
         case invalidResponse(Any?)
