@@ -30,11 +30,11 @@ struct ContentView : View {
                     Text("Signed In")
                     Image(systemName: "checkmark.seal.fill")
                     List(store.events) { event in
-                        HStack {
+                        VStack {
                             Text(event.name)
                                 .font(.subheadline)
                                 .fontWeight(.bold)
-                            
+                            Text(event.calendar.name)
                         }
                     }
                 }
