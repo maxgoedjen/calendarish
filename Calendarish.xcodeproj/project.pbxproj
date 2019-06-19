@@ -87,6 +87,20 @@
 			remoteGlobalIDString = 50935BCF22B4AD6100DB2178;
 			remoteInfo = CalendarishCore;
 		};
+		50B1E74C22BA15A6004A0B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C9715422BA1103005AF478;
+			remoteInfo = CalendarishStore;
+		};
+		50B1E74E22BA15B6004A0B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C9715422BA1103005AF478;
+			remoteInfo = CalendarishStore;
+		};
 		50C970E822BA0CB2005AF478 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
@@ -573,6 +587,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				50B1E74D22BA15A6004A0B0D /* PBXTargetDependency */,
 				50935BA522B4AA8D00DB2178 /* PBXTargetDependency */,
 			);
 			name = "Calendarish WatchKit App";
@@ -591,6 +606,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				50B1E74F22BA15B6004A0B0D /* PBXTargetDependency */,
 			);
 			name = "Calendarish WatchKit Extension";
 			productName = "Calendarish WatchKit Extension";
@@ -773,8 +789,8 @@
 			projectRoot = "";
 			targets = (
 				50935B8022B4AA8A00DB2178 /* Calendarish */,
-				50935B9222B4AA8D00DB2178 /* Calendarish WatchKit App */,
 				50935BA122B4AA8D00DB2178 /* Calendarish WatchKit Extension */,
+				50935B9222B4AA8D00DB2178 /* Calendarish WatchKit App */,
 				50935BCF22B4AD6100DB2178 /* CalendarishCore */,
 				50935BD722B4AD6100DB2178 /* CalendarishCoreTests */,
 				50C970DD22BA0CB2005AF478 /* CalendarishAPI */,
@@ -1065,6 +1081,16 @@
 			isa = PBXTargetDependency;
 			target = 50935BCF22B4AD6100DB2178 /* CalendarishCore */;
 			targetProxy = 50935BE322B4AD6100DB2178 /* PBXContainerItemProxy */;
+		};
+		50B1E74D22BA15A6004A0B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C9715422BA1103005AF478 /* CalendarishStore */;
+			targetProxy = 50B1E74C22BA15A6004A0B0D /* PBXContainerItemProxy */;
+		};
+		50B1E74F22BA15B6004A0B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50C9715422BA1103005AF478 /* CalendarishStore */;
+			targetProxy = 50B1E74E22BA15B6004A0B0D /* PBXContainerItemProxy */;
 		};
 		50C970E922BA0CB2005AF478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1400,6 +1426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator watchsimulator iphoneos watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1432,6 +1459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator watchsimulator iphoneos watchos";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1599,6 +1627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishStore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator watchsimulator iphoneos watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1628,6 +1657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishStore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator watchsimulator iphoneos watchos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
