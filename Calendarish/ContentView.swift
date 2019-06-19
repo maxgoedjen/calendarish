@@ -11,7 +11,7 @@ import CalendarishCore
 
 struct ContentView : View {
 
-    var store: Store
+    @State var store: Store
 
     var body: some View {
         Group {
@@ -29,6 +29,14 @@ struct ContentView : View {
                 VStack {
                     Text("Signed In")
                     Image(systemName: "checkmark.seal.fill")
+                    List(store.events) { event in
+                        HStack {
+                            Text(event.name)
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                            
+                        }
+                    }
                 }
             }
         }

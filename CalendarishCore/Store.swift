@@ -1,24 +1,35 @@
 import Foundation
 import GoogleAPIClientForREST
 import Combine
+import SwiftUI
 
-public struct Store {
+public class Store {
 
     public let authenticator: Authenticator
+    public private(set) var events: [Event] = []
 
     fileprivate let calendarService = GTLRCalendarService()
-
+    fileprivate var subscription: AnyCancellable? = nil
 
     public init(authenticator: Authenticator) {
         self.authenticator = authenticator
         calendarService.authorizer = authenticator.authorization
+        subscription = eventPublisher.assign(to: \.events, on: self)
+    }
+
+}
+
+extension Store: BindableObject {
+
+    public var didChange: AnyPublisher<[Event], Never> {
+        return eventPublisher
     }
 
 }
 
 extension Store {
 
-    public var eventPublisher: AnyPublisher<[Event], Never> {
+    var eventPublisher: AnyPublisher<[Event], Never> {
         return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[Event], Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)
@@ -28,7 +39,6 @@ extension Store {
             .replaceError(with: [])
             .eraseToAnyPublisher()
     }
-
 
 }
 

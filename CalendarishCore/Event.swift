@@ -17,3 +17,11 @@ public struct Event {
     }
 
 }
+
+extension Event: Identifiable {
+
+    public var id: String {
+        return identifier
+    }
+
+}
