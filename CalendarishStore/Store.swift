@@ -1,14 +1,15 @@
 import Foundation
 import Combine
+import SwiftUI
 import CalendarishCore
 
-public class Store {
+public class Store: BindableObject {
 
-    let subject = PassthroughSubject<Void, Never>()
+    public let didChange = PassthroughSubject<Void, Never>()
 
     public var events: [Event] = [] {
         didSet {
-            subject.send()
+            didChange.send()
         }
     }
     
