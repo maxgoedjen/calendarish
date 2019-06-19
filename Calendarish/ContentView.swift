@@ -30,7 +30,7 @@ struct ContentView : View {
                     Text("Signed In")
                     Image(systemName: "checkmark.seal.fill")
                     List(store.events) { event in
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(event.name)
                                 .font(.subheadline)
                                 .fontWeight(.bold)

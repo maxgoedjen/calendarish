@@ -36,6 +36,7 @@ extension Store {
             }
             return Publishers.MergeMany(events)
             }
+            .assertNoFailure()
             .replaceError(with: [])
             .reduce([], +)
             .eraseToAnyPublisher()
@@ -60,7 +61,11 @@ extension Store {
     func events(in calendar: Calendar) -> Publishers.Future<[Event], Error> {
         return Publishers.Future { promise in
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
-            query.timeMin = GTLRDateTime(date: Date())
+            let today = Date()
+            query.timeMin = GTLRDateTime(date: today)
+            if let nextWeek = Foundation.Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: today, wrappingComponents: true) {
+                query.timeMax = GTLRDateTime(date: nextWeek)
+            }
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
