@@ -37,6 +37,7 @@ extension Store {
             return Publishers.MergeMany(events)
             }
             .replaceError(with: [])
+            .reduce([], +)
             .eraseToAnyPublisher()
     }
 
@@ -59,6 +60,7 @@ extension Store {
     func events(in calendar: Calendar) -> Publishers.Future<[Event], Error> {
         return Publishers.Future { promise in
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
+            query.timeMin = GTLRDateTime(date: Date())
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
