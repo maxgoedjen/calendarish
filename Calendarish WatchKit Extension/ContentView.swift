@@ -1,23 +1,33 @@
-//
-//  ContentView.swift
-//  Calendarish WatchKit Extension
-//
-//  Created by Max Goedjen on 6/14/19.
-//  Copyright © 2019 Max Goedjen. All rights reserved.
-//
-
 import SwiftUI
+import CalendarishStore
 
 struct ContentView : View {
+
+    @State var store: Store
+
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("Signed In")
+            Image(systemName: "checkmark.seal.fill")
+            List(store.events) { event in
+                VStack(alignment: .leading) {
+                    Text(event.name)
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Text(event.calendar.name)
+                }
+            }
+        }
     }
+
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(store: Store())
     }
 }
 #endif
+
+
