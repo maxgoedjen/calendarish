@@ -30,6 +30,8 @@
 		50935BE522B4AD6100DB2178 /* CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50935BD022B4AD6100DB2178 /* CalendarishCore.framework */; };
 		50935BE622B4AD6100DB2178 /* CalendarishCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50935BD022B4AD6100DB2178 /* CalendarishCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF422B4CBAD00DB2178 /* Configuration.swift */; };
+		50AD53FD22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
+		50AD53FE22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
 		50B1E75422BB5100004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
 		50B1E76122BB512A004A0B0D /* CalendarishCoreWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; };
 		50B1E76222BB512A004A0B0D /* CalendarishCoreWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -218,6 +220,7 @@
 		50935BEE22B4AD7B00DB2178 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		50935BF222B4CAA100DB2178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProxy.swift; sourceTree = "<group>"; };
 		50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishCoreWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970E022BA0CB2005AF478 /* CalendarishAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPI.h; sourceTree = "<group>"; };
@@ -427,6 +430,7 @@
 				50D2D49322B5FB9F00480806 /* Event.swift */,
 				50D2D49522B5FC7400480806 /* Calendar.swift */,
 				50C9717622BA11E1005AF478 /* Store.swift */,
+				50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */,
 				50935BD322B4AD6100DB2178 /* Info.plist */,
 			);
 			path = CalendarishCore;
@@ -916,6 +920,7 @@
 				50B1E75422BB5100004A0B0D /* Store.swift in Sources */,
 				50D2D49422B5FB9F00480806 /* Event.swift in Sources */,
 				50D2D49622B5FC7400480806 /* Calendar.swift in Sources */,
+				50AD53FD22BB583D004BFAC0 /* SessionProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,6 +939,7 @@
 				50B1E76922BB519A004A0B0D /* Store.swift in Sources */,
 				50B1E76722BB519A004A0B0D /* Event.swift in Sources */,
 				50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */,
+				50AD53FE22BB583D004BFAC0 /* SessionProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

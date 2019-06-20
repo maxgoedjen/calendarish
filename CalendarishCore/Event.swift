@@ -1,6 +1,6 @@
 import SwiftUI
 
-public struct Event {
+public struct Event: Codable {
 
     public let identifier: String
     public let name: String
