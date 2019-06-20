@@ -24,6 +24,7 @@ class HostingController : WKHostingController<ContentView> {
         storeSubscription = sessionProxy.contextPublisher
             .assertNoFailure()
             .replaceError(with: [])
+            .receive(on: DispatchQueue.main)
             .assign(to: \.events, on: store)
 
     }
