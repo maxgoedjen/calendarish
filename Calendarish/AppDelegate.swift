@@ -11,12 +11,15 @@ import SwiftUI
 import Combine
 import CalendarishCore
 import CalendarishAPI
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     fileprivate var storeSubscription: AnyCancellable?
+    fileprivate var watchSink: AnySubscriber<[Event], Never>?
+    fileprivate var sessionProxy = SessionProxy(session: WCSession.default)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -28,6 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .replaceError(with: [])
         let store = Store()
         storeSubscription = publisher.assign(to: \.events, on: store)
+        watchSink = publisher.sink { events in
+            do {
+                try self.sessionProxy.send(events: events)
+            } catch {
+                print(error)
+            }
+        }.eraseToAnySubscriber()
 
         window.rootViewController = UIHostingController(rootView: ContentView(api: api, store: store))
         self.window = window
