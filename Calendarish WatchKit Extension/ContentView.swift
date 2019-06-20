@@ -1,5 +1,4 @@
 import SwiftUI
-import CalendarishStore
 
 struct ContentView : View {
 

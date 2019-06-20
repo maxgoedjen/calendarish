@@ -10,7 +10,6 @@ import UIKit
 import SwiftUI
 import Combine
 import CalendarishAPI
-import CalendarishStore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

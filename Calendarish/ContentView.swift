@@ -8,7 +8,6 @@
 
 import SwiftUI
 import CalendarishAPI
-import CalendarishStore
 
 struct ContentView : View {
 

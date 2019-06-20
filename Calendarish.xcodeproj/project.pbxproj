@@ -31,6 +31,11 @@
 		50935BE622B4AD6100DB2178 /* CalendarishCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50935BD022B4AD6100DB2178 /* CalendarishCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF422B4CBAD00DB2178 /* Configuration.swift */; };
 		50B1E75422BB5100004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
+		50B1E76122BB512A004A0B0D /* CalendarishCoreWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; };
+		50B1E76222BB512A004A0B0D /* CalendarishCoreWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50B1E76722BB519A004A0B0D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
+		50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49522B5FC7400480806 /* Calendar.swift */; };
+		50B1E76922BB519A004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
 		50C970E722BA0CB2005AF478 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50C970F022BA0CB2005AF478 /* CalendarishAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C970E022BA0CB2005AF478 /* CalendarishAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,6 +86,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 50935BCF22B4AD6100DB2178;
 			remoteInfo = CalendarishCore;
+		};
+		50B1E75F22BB512A004A0B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B1E75922BB512A004A0B0D;
+			remoteInfo = CalendarishCoreWatch;
 		};
 		50C970E822BA0CB2005AF478 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -147,6 +159,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50B1E76622BB512A004A0B0D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50B1E76222BB512A004A0B0D /* CalendarishCoreWatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50D68CEB22B5EA6400753386 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +218,7 @@
 		50935BEE22B4AD7B00DB2178 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		50935BF222B4CAA100DB2178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishCoreWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970E022BA0CB2005AF478 /* CalendarishAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPI.h; sourceTree = "<group>"; };
 		50C970E122BA0CB2005AF478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B1E76122BB512A004A0B0D /* CalendarishCoreWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				50935BD922B4AD6100DB2178 /* CalendarishCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B1E75722BB512A004A0B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +357,7 @@
 				50935BD822B4AD6100DB2178 /* CalendarishCoreTests.xctest */,
 				50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */,
 				50C970E622BA0CB2005AF478 /* CalendarishAPITests.xctest */,
+				50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -440,6 +473,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50B1E75522BB512A004A0B0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50C970D922BA0CB2005AF478 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,10 +540,12 @@
 				50935B9E22B4AA8D00DB2178 /* Sources */,
 				50935B9F22B4AA8D00DB2178 /* Frameworks */,
 				50935BA022B4AA8D00DB2178 /* Resources */,
+				50B1E76622BB512A004A0B0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50B1E76022BB512A004A0B0D /* PBXTargetDependency */,
 			);
 			name = "Calendarish WatchKit Extension";
 			productName = "Calendarish WatchKit Extension";
@@ -547,6 +589,24 @@
 			productName = CalendarishCoreTests;
 			productReference = 50935BD822B4AD6100DB2178 /* CalendarishCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50B1E75922BB512A004A0B0D /* CalendarishCoreWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B1E76322BB512A004A0B0D /* Build configuration list for PBXNativeTarget "CalendarishCoreWatch" */;
+			buildPhases = (
+				50B1E75522BB512A004A0B0D /* Headers */,
+				50B1E75622BB512A004A0B0D /* Sources */,
+				50B1E75722BB512A004A0B0D /* Frameworks */,
+				50B1E75822BB512A004A0B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalendarishCoreWatch;
+			productName = CalendarishCoreWatch;
+			productReference = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		50C970DD22BA0CB2005AF478 /* CalendarishAPI */ = {
 			isa = PBXNativeTarget;
@@ -617,6 +677,9 @@
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 50935B8022B4AA8A00DB2178;
 					};
+					50B1E75922BB512A004A0B0D = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					50C970DD22BA0CB2005AF478 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -643,6 +706,7 @@
 				50935BA122B4AA8D00DB2178 /* Calendarish WatchKit Extension */,
 				50935B9222B4AA8D00DB2178 /* Calendarish WatchKit App */,
 				50935BCF22B4AD6100DB2178 /* CalendarishCore */,
+				50B1E75922BB512A004A0B0D /* CalendarishCoreWatch */,
 				50935BD722B4AD6100DB2178 /* CalendarishCoreTests */,
 				50C970DD22BA0CB2005AF478 /* CalendarishAPI */,
 				50C970E522BA0CB2005AF478 /* CalendarishAPITests */,
@@ -687,6 +751,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		50935BD622B4AD6100DB2178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B1E75822BB512A004A0B0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -856,6 +927,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50B1E75622BB512A004A0B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B1E76922BB519A004A0B0D /* Store.swift in Sources */,
+				50B1E76722BB519A004A0B0D /* Event.swift in Sources */,
+				50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50C970DA22BA0CB2005AF478 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -901,6 +982,11 @@
 			isa = PBXTargetDependency;
 			target = 50935BCF22B4AD6100DB2178 /* CalendarishCore */;
 			targetProxy = 50935BE322B4AD6100DB2178 /* PBXContainerItemProxy */;
+		};
+		50B1E76022BB512A004A0B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B1E75922BB512A004A0B0D /* CalendarishCoreWatch */;
+			targetProxy = 50B1E75F22BB512A004A0B0D /* PBXContainerItemProxy */;
 		};
 		50C970E922BA0CB2005AF478 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1298,6 +1384,66 @@
 			};
 			name = Release;
 		};
+		50B1E76422BB512A004A0B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z72PRUAWF6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalendarishCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCoreWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		50B1E76522BB512A004A0B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z72PRUAWF6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalendarishCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCoreWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
 		50C970F522BA0CB2005AF478 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD62F4DEBBE62AF1FEF6B064 /* Pods-CalendarishAPI.debug.xcconfig */;
@@ -1449,6 +1595,15 @@
 			buildConfigurations = (
 				50935BEC22B4AD6100DB2178 /* Debug */,
 				50935BED22B4AD6100DB2178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50B1E76322BB512A004A0B0D /* Build configuration list for PBXNativeTarget "CalendarishCoreWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B1E76422BB512A004A0B0D /* Debug */,
+				50B1E76522BB512A004A0B0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
