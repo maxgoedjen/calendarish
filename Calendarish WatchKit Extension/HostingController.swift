@@ -25,9 +25,11 @@ class HostingController : WKHostingController<ContentView> {
             .assertNoFailure()
             .replaceError(with: [])
             .assign(to: \.events, on: store)
+
     }
 
     override var body: ContentView {
-        return ContentView(store: Store())
+        return ContentView(store: store)
     }
+    
 }

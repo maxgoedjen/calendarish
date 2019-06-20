@@ -6,7 +6,7 @@ public class Store: BindableObject {
 
     public let didChange = PassthroughSubject<Void, Never>()
 
-    public var events: [Event]{
+    public var events: [Event] {
         didSet {
             didChange.send()
         }
