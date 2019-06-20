@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import Combine
+import CalendarishCore
 import CalendarishAPI
 
 @UIApplicationMain
@@ -22,8 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
         let api = API(authenticator: Authenticator(config: Constants.config))
+        let publisher = api.eventPublisher
+            .assertNoFailure()
+            .replaceError(with: [])
         let store = Store()
-        storeSubscription = api.eventPublisher.assign(to: \.events, on: store)
+        storeSubscription = publisher.assign(to: \.events, on: store)
 
         window.rootViewController = UIHostingController(rootView: ContentView(api: api, store: store))
         self.window = window

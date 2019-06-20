@@ -18,15 +18,19 @@ public struct API {
 
 extension API {
 
-    public var eventPublisher: AnyPublisher<[CalendarishCore.Event], Never> {
-        return calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[CalendarishCore.Event], Error>> in
+    public var eventPublisher: AnyPublisher<[CalendarishCore.Event], Error> {
+        guard authenticator.isAuthorized else {
+            return Publishers.Fail<[Event], Error>(error: .signedOut)
+                .eraseToAnyPublisher()
+
+        }
+        return
+            calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[CalendarishCore.Event], Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)
             }
             return Publishers.MergeMany(events)
             }
-            .assertNoFailure()
-            .replaceError(with: [])
             .reduce([], +)
             .eraseToAnyPublisher()
     }
@@ -68,7 +72,8 @@ extension API {
 
 extension API {
 
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
+        case signedOut
         case invalidResponse(Any?)
         case serverError(Swift.Error)
     }
