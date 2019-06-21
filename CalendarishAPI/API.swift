@@ -32,6 +32,7 @@ extension API {
             return Publishers.MergeMany(events)
             }
             .reduce([], +)
+            .map({ $0.sorted() })
             .eraseToAnyPublisher()
     }
 

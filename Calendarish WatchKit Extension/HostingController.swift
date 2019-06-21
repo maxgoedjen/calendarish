@@ -30,7 +30,7 @@ class HostingController : WKHostingController<ContentView> {
             do {
                 try self.sessionProxy.send(message: .requestUpdate)
             } catch {
-                assertionFailure()
+//                assertionFailure()
                 print(error)
             }
         }

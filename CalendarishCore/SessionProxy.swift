@@ -26,10 +26,10 @@ extension SessionProxy {
         }
         switch message {
         case .requestUpdate:
-            break
-//            try session.updateApplicationContext([
-//                Constants.messageKey: WireMessage.requestUpdate.rawValue
-//                ])
+//            break
+            try session.updateApplicationContext([
+                Constants.messageKey: WireMessage.requestUpdate.rawValue
+                ])
         case .update(let events):
             try session.updateApplicationContext([
                 Constants.messageKey: WireMessage.update.rawValue,
