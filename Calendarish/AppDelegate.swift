@@ -20,22 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate var storeSubscription: AnyCancellable?
     fileprivate var watchSink: AnySubscriber<[Event], Never>?
     fileprivate var sessionProxy = SessionProxy(session: WCSession.default)
+    fileprivate var sessionProxySink: AnySubscriber<SessionProxy.Message, SessionProxy.Error>?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
         let api = API(authenticator: Authenticator(config: Constants.config))
+        let store = Store()
         let publisher = api.eventPublisher
             .assertNoFailure()
             .replaceError(with: [])
-        let store = Store()
         storeSubscription = publisher.assign(to: \.events, on: store)
         watchSink = publisher.sink { events in
-            do {
-                try self.sessionProxy.send(events: events)
-            } catch {
-                print(error)
+            self.sendUpdate(events: events)
+        }.eraseToAnySubscriber()
+        sessionProxySink = sessionProxy.messagePublisher.sink { message in
+            switch message {
+            case .requestUpdate:
+                self.sendUpdate(events: store.events)
+            case .update:
+                assertionFailure()
+                break
             }
         }.eraseToAnySubscriber()
 
@@ -44,6 +50,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
                                     
         return true
+    }
+
+    func sendUpdate(events: [Event]) {
+        do {
+            try self.sessionProxy.send(message: .update(events))
+        } catch {
+//            assertionFailure(error.localizedDescription)
+            print(error)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

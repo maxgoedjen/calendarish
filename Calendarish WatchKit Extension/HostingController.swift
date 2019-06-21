@@ -1,11 +1,3 @@
-//
-//  HostingController.swift
-//  Calendarish WatchKit Extension
-//
-//  Created by Max Goedjen on 6/14/19.
-//  Copyright © 2019 Max Goedjen. All rights reserved.
-//
-
 import WatchKit
 import Foundation
 import SwiftUI
@@ -21,16 +13,32 @@ class HostingController : WKHostingController<ContentView> {
 
     override init() {
         super.init()
-        storeSubscription = sessionProxy.contextPublisher
+        storeSubscription = sessionProxy.messagePublisher
             .assertNoFailure()
+            .compactMap { message -> [Event]? in
+                if case let .update(events) = message {
+                    return events
+                } else {
+                    assertionFailure()
+                    return nil
+                }
+            }
             .replaceError(with: [])
             .receive(on: DispatchQueue.main)
             .assign(to: \.events, on: store)
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            do {
+                try self.sessionProxy.send(message: .requestUpdate)
+            } catch {
+                assertionFailure()
+                print(error)
+            }
+        }
     }
 
     override var body: ContentView {
         return ContentView(store: store)
     }
-    
+
 }
+
