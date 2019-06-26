@@ -7,8 +7,6 @@ struct ContentView : View {
 
     var body: some View {
         VStack {
-            Text("Signed In")
-            Image(systemName: "checkmark.seal.fill")
             List(store.events) { event in
                 VStack(alignment: .leading) {
                     Text(event.name)
@@ -16,7 +14,7 @@ struct ContentView : View {
                         .fontWeight(.bold)
                     Text(DateFormatter().string(from: event.startTime))
                 }
-            }
+            }.listStyle(.carousel)
         }
     }
 
@@ -25,7 +23,13 @@ struct ContentView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(store: Store())
+        ContentView(store: Store(events: [
+            Event(identifier: UUID().uuidString, name: "Coffee with Marina", startTime: Date(), endTime: Date(), calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Home")),
+            Event(identifier: UUID().uuidString, name: "iOS Sync", startTime: Date(), endTime: Date(), calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
+            Event(identifier: UUID().uuidString, name: "Team Lunch", startTime: Date(), endTime: Date(), calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
+            Event(identifier: UUID().uuidString, name: "Coffee with Marina", startTime: Date(), endTime: Date(), calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
+            Event(identifier: UUID().uuidString, name: "Dinner with Parents", startTime: Date(), endTime: Date(), calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Home")),
+            ]))
     }
 }
 #endif
