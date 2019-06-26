@@ -1,7 +1,7 @@
 import SwiftUI
 import CalendarishCoreWatch
 
-struct ContentView : View {
+struct EventListView: View {
 
     @State var store: Store
     let dateFormatter: DateFormatter = {
@@ -13,20 +13,29 @@ struct ContentView : View {
     let durationFormatter: DateComponentsFormatter = {
         let f = DateComponentsFormatter()
         f.allowedUnits = [.hour, .minute]
+        f.formattingContext = .standalone
         return f
     }()
 
     var body: some View {
         List(store.events) { event in
             VStack(alignment: .leading) {
-                Text(event.name)
-                    .font(.headline)
-                    .fontWeight(.bold)
                 HStack {
                     Text(self.dateFormatter.string(from: event.startTime))
                     Spacer()
                 Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                 }
+                Text(event.name)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .lineLimit(nil)
+                Text(event.location ?? "")
+                .italic()
+                Text(event.description ?? "")
+                    .font(.footnote)
+                    .lineLimit(3)
                 }
                 .padding()
             }.listStyle(.carousel)
@@ -35,9 +44,9 @@ struct ContentView : View {
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct EventListView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(store: Store(events: [
+        EventListView(store: Store(events: [
             Event(identifier: UUID().uuidString,
                   name: "Coffee with Marina",
                   startTime: Date(timeIntervalSince1970: -25200),
@@ -61,6 +70,14 @@ struct ContentView_Previews : PreviewProvider {
                   attendees: [],
                   description: nil,
                   location: "Blossom",
+                  calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
+            Event(identifier: UUID().uuidString,
+                  name: "Interview - Dmytro Nikolenko",
+                  startTime: Date(timeIntervalSince1970: 0),
+                  endTime: Date(timeIntervalSince1970: 3600),
+                  attendees: [],
+                  description: "Candidate's profile is in Workday",
+                  location: nil,
                   calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
             Event(identifier: UUID().uuidString,
                   name: "Dinner with Parents",

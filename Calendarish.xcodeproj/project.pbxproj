@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5037D7EF22C34FD700B76927 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
+		508257FF22C357DE00733C3C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508257FE22C357DE00733C3C /* EventDetailView.swift */; };
 		50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8422B4AA8A00DB2178 /* AppDelegate.swift */; };
 		50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8622B4AA8A00DB2178 /* ContentView.swift */; };
 		50935B8922B4AA8D00DB2178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50935B8822B4AA8D00DB2178 /* Assets.xcassets */; };
@@ -17,7 +18,7 @@
 		50935B9A22B4AA8D00DB2178 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50935B9822B4AA8D00DB2178 /* Interface.storyboard */; };
 		50935B9C22B4AA8D00DB2178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50935B9B22B4AA8D00DB2178 /* Assets.xcassets */; };
 		50935BA322B4AA8D00DB2178 /* Calendarish WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50935BA222B4AA8D00DB2178 /* Calendarish WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		50935BA822B4AA8D00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BA722B4AA8D00DB2178 /* ContentView.swift */; };
+		50935BA822B4AA8D00DB2178 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BA722B4AA8D00DB2178 /* EventListView.swift */; };
 		50935BAA22B4AA8D00DB2178 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BA922B4AA8D00DB2178 /* HostingController.swift */; };
 		50935BAC22B4AA8D00DB2178 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BAB22B4AA8D00DB2178 /* ExtensionDelegate.swift */; };
 		50935BAE22B4AA8D00DB2178 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BAD22B4AA8D00DB2178 /* NotificationController.swift */; };
@@ -191,6 +192,7 @@
 		4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5037D7EE22C34FD700B76927 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
+		508257FE22C357DE00733C3C /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		50935B8122B4AA8A00DB2178 /* Calendarish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendarish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50935B8422B4AA8A00DB2178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50935B8622B4AA8A00DB2178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -203,7 +205,7 @@
 		50935B9B22B4AA8D00DB2178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50935B9D22B4AA8D00DB2178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50935BA222B4AA8D00DB2178 /* Calendarish WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Calendarish WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50935BA722B4AA8D00DB2178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50935BA722B4AA8D00DB2178 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		50935BA922B4AA8D00DB2178 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		50935BAB22B4AA8D00DB2178 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		50935BAD22B4AA8D00DB2178 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -404,7 +406,8 @@
 		50935BA622B4AA8D00DB2178 /* Calendarish WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				50935BA722B4AA8D00DB2178 /* ContentView.swift */,
+				50935BA722B4AA8D00DB2178 /* EventListView.swift */,
+				508257FE22C357DE00733C3C /* EventDetailView.swift */,
 				50935BA922B4AA8D00DB2178 /* HostingController.swift */,
 				50935BAB22B4AA8D00DB2178 /* ExtensionDelegate.swift */,
 				50935BAD22B4AA8D00DB2178 /* NotificationController.swift */,
@@ -909,11 +912,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50935BAA22B4AA8D00DB2178 /* HostingController.swift in Sources */,
-				50935BA822B4AA8D00DB2178 /* ContentView.swift in Sources */,
+				50935BA822B4AA8D00DB2178 /* EventListView.swift in Sources */,
 				50935BAE22B4AA8D00DB2178 /* NotificationController.swift in Sources */,
 				50935BAC22B4AA8D00DB2178 /* ExtensionDelegate.swift in Sources */,
 				50935BB022B4AA8D00DB2178 /* NotificationView.swift in Sources */,
 				50935BB222B4AA8D00DB2178 /* ComplicationController.swift in Sources */,
+				508257FF22C357DE00733C3C /* EventDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

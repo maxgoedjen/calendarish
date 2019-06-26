@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 public struct Attendee: Codable {
 
@@ -21,6 +21,14 @@ extension Attendee {
         case declined
         case tentative
         case accepted
+    }
+
+}
+
+extension Attendee: Identifiable {
+
+    public var id: String {
+        return identifier
     }
 
 }

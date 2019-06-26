@@ -5,7 +5,7 @@ import CalendarishCoreWatch
 import WatchConnectivity
 import Combine
 
-class HostingController : WKHostingController<ContentView> {
+class HostingController : WKHostingController<EventListView> {
 
     let store = Store()
     let sessionProxy = SessionProxy(session: WCSession.default)
@@ -36,8 +36,8 @@ class HostingController : WKHostingController<ContentView> {
         }
     }
 
-    override var body: ContentView {
-        return ContentView(store: store)
+    override var body: EventListView {
+        return EventListView(store: store)
     }
 
 }
