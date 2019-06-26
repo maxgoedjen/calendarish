@@ -19,26 +19,28 @@ struct EventListView: View {
 
     var body: some View {
         List(store.events) { event in
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(self.dateFormatter.string(from: event.startTime))
-                    Spacer()
-                Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+            NavigationButton(destination: EventDetailView(event: event)) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(self.dateFormatter.string(from: event.startTime))
+                        Spacer()
+                    Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                    }
+                    Text(event.name)
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .lineLimit(nil)
+                    Text(event.location ?? "")
+                    .italic()
+                    Text(event.description ?? "")
+                        .font(.footnote)
+                        .lineLimit(3)
+                    }
+                    .padding()
                 }
-                Text(event.name)
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .lineLimit(nil)
-                Text(event.location ?? "")
-                .italic()
-                Text(event.description ?? "")
-                    .font(.footnote)
-                    .lineLimit(3)
-                }
-                .padding()
-            }.listStyle(.carousel)
+        }.listStyle(.carousel)
     }
 
 }
