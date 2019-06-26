@@ -45,7 +45,7 @@ struct EventDetailView: View {
             }
             }
             .padding()
-        }.isScrollEnabled(true)
+        }
 
     func image(for response: Attendee.Response) -> Image {
         switch response {
