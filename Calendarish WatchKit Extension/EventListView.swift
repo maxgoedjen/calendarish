@@ -40,7 +40,8 @@ struct EventListView: View {
                     }
                     .padding()
                 }
-        }.listStyle(.carousel)
+        }
+            .listStyle(.carousel)
     }
 
 }
@@ -61,8 +62,14 @@ struct EventListView_Previews : PreviewProvider {
                   name: "iOS Sync",
                   startTime: Date(timeIntervalSince1970: -21600),
                   endTime: Date(timeIntervalSince1970: -19800),
-                  attendees: [],
-                  description: "Catch up on projects.",
+                  attendees: [
+                    Attendee(identifier: UUID().uuidString, name: "Max Goedjen", response: .accepted),
+                    Attendee(identifier: UUID().uuidString, name: "Ivan Golub", response: .accepted),
+                    Attendee(identifier: UUID().uuidString, name: "Anton Udovychenko", response: .needsAction),
+                    Attendee(identifier: UUID().uuidString, name: "Oleksii Gordiienko", response: .tentative),
+                    Attendee(identifier: UUID().uuidString, name: "Alexander Gritzuk", response: .declined)
+                ],
+                  description: "Catch up on projects, go over any high priority isues for next release.",
                   location: "Blue Devils",
                   calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
             Event(identifier: UUID().uuidString,
