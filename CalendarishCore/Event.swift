@@ -3,16 +3,24 @@ import SwiftUI
 public struct Event: Codable {
 
     public let identifier: String
+
     public let name: String
     public let startTime: Date
     public let endTime: Date
+    public let attendees: [Attendee]
+    public let description: String?
+    public let location: String?
+
     public let calendar: Calendar
 
-    public init(identifier: String, name: String, startTime: Date, endTime: Date, calendar: Calendar) {
+    public init(identifier: String, name: String, startTime: Date, endTime: Date, attendees: [Attendee], description: String?, location: String?, calendar: Calendar) {
         self.identifier = identifier
         self.name = name
         self.startTime = startTime
         self.endTime = endTime
+        self.attendees = attendees
+        self.description = description
+        self.location = location
         self.calendar = calendar
     }
 

@@ -1,4 +1,4 @@
-import SwiftUI
+import Foundation
 
 public struct Calendar: Codable {
 

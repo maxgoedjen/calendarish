@@ -36,7 +36,6 @@ struct ContentView : View {
                             Text(event.name)
                                 .font(.subheadline)
                                 .fontWeight(.bold)
-                            Text(DateFormatter().string(from: event.startTime))
                         }
                     }
                 }

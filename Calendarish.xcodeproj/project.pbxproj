@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5037D7EF22C34FD700B76927 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
 		50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8422B4AA8A00DB2178 /* AppDelegate.swift */; };
 		50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8622B4AA8A00DB2178 /* ContentView.swift */; };
 		50935B8922B4AA8D00DB2178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50935B8822B4AA8D00DB2178 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		50C970FF22BA0D21005AF478 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
 		50D2D49422B5FB9F00480806 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
 		50D2D49622B5FC7400480806 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49522B5FC7400480806 /* Calendar.swift */; };
+		50EF0BF922C352660070C192 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
 		5C15D06D883EAB24F5C60A5F /* Pods_CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */; };
 		76C50E60BA4434FDA9F19ACD /* Pods_CalendarishAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */; };
 		D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */; };
@@ -188,6 +190,7 @@
 		13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5037D7EE22C34FD700B76927 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
 		50935B8122B4AA8A00DB2178 /* Calendarish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendarish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50935B8422B4AA8A00DB2178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50935B8622B4AA8A00DB2178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -429,6 +432,7 @@
 				50935BD222B4AD6100DB2178 /* CalendarishCore.h */,
 				50D2D49322B5FB9F00480806 /* Event.swift */,
 				50D2D49522B5FC7400480806 /* Calendar.swift */,
+				5037D7EE22C34FD700B76927 /* Attendee.swift */,
 				50C9717622BA11E1005AF478 /* Store.swift */,
 				50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */,
 				50935BD322B4AD6100DB2178 /* Info.plist */,
@@ -917,6 +921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5037D7EF22C34FD700B76927 /* Attendee.swift in Sources */,
 				50B1E75422BB5100004A0B0D /* Store.swift in Sources */,
 				50D2D49422B5FB9F00480806 /* Event.swift in Sources */,
 				50D2D49622B5FC7400480806 /* Calendar.swift in Sources */,
@@ -936,6 +941,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EF0BF922C352660070C192 /* Attendee.swift in Sources */,
 				50B1E76922BB519A004A0B0D /* Store.swift in Sources */,
 				50B1E76722BB519A004A0B0D /* Event.swift in Sources */,
 				50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */,

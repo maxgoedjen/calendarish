@@ -14,7 +14,7 @@ extension CalendarishCore.Calendar {
 extension CalendarishCore.Event {
 
     init(_ event: GTLRCalendar_Event, calendar: CalendarishCore.Calendar) {
-        self.init(identifier:  event.identifier!, name: event.summary!, startTime: event.start?.dateTime?.date ?? Date(), endTime: event.end?.dateTime?.date ?? Date(), calendar: calendar)
+        self.init(identifier:  event.identifier!, name: event.summary!, startTime: event.start?.dateTime?.date ?? Date(), endTime: event.end?.dateTime?.date ?? Date(), attendees: [], description: event.description, location: event.location, calendar: calendar)
     }
 
 }
