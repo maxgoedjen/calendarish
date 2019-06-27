@@ -19,33 +19,37 @@ struct EventDetailView: View {
     }()
 
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(self.dateFormatter.string(from: event.startTime))
-                Spacer()
-                Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-            }
-            Text(event.name)
-                .font(.headline)
-                .fontWeight(.bold)
-                .lineLimit(nil)
-            Text(event.location ?? "")
-                .italic()
-            Text(event.description ?? "")
-                .font(.footnote)
-                .lineLimit(nil)
-            List(event.attendees) { attendee in
+        List {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(self.dateFormatter.string(from: event.startTime))
+                    Spacer()
+                    Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                }
+                Text(event.name)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .lineLimit(nil)
+                Text(event.location ?? "")
+                    .italic()
+                Text(event.description ?? "")
+                    .font(.footnote)
+                    .lineLimit(nil)
+                }
+                .padding()
+            ForEach(event.attendees) { attendee in
                 HStack {
                     Text(attendee.name)
                     Spacer()
                     self.image(for: attendee.response)
                 }
             }
+
             }
             .padding()
-        }
+    }
 
     func image(for response: Attendee.Response) -> Image {
         switch response {
@@ -84,6 +88,9 @@ struct EventDetailView_Previews : PreviewProvider {
     }
 }
 #endif
+
+
+
 
 
 
