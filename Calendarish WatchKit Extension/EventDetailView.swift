@@ -39,7 +39,6 @@ struct EventDetailView: View {
                     .lineLimit(nil)
                 }
                 .listRowBackground(Color.clear)
-            .background(Color.black)
             ForEach(event.attendees) { attendee in
                 HStack {
                     Text(attendee.name)
