@@ -36,7 +36,7 @@ extension Store {
                   location: "Blossom",
                   calendar: CalendarishCoreWatch.Calendar(identifier: UUID().uuidString, name: "Work")),
             Event(identifier: UUID().uuidString,
-                  name: "Interview - Dmytro Nikolenko",
+                  name: "Interview - Toby Ziegler",
                   startTime: Date(timeIntervalSince1970: 0),
                   endTime: Date(timeIntervalSince1970: 3600),
                   attendees: [],
