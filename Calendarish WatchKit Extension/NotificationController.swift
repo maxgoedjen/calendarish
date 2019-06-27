@@ -13,7 +13,8 @@ import UserNotifications
 class NotificationController: WKUserNotificationHostingController<NotificationView> {
 
     override var body: NotificationView {
-        return NotificationView()
+        fatalError()
+//        return NotificationView()
     }
 
     override func willActivate() {
