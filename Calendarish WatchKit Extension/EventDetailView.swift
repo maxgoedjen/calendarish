@@ -38,7 +38,8 @@ struct EventDetailView: View {
                     .font(.footnote)
                     .lineLimit(nil)
                 }
-                .padding()
+                .listRowBackground(Color.clear)
+            .background(Color.black)
             ForEach(event.attendees) { attendee in
                 HStack {
                     Text(attendee.name)
