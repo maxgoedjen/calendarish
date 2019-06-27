@@ -3,7 +3,21 @@ import CalendarishCoreWatch
 
 struct EventDetailView: View {
 
-    @State var event: Event
+    let event: Event
+
+    var body: some View {
+        List {
+            EventDescriptionView(event: event)
+            EventAttendeeListView(attendees: event.attendees)
+        }
+            .padding()
+    }
+
+}
+
+struct EventDescriptionView: View {
+
+    let event: Event
 
     let dateFormatter: DateFormatter = {
         let f = DateFormatter()
@@ -19,36 +33,41 @@ struct EventDetailView: View {
     }()
 
     var body: some View {
-        List {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(self.dateFormatter.string(from: event.startTime))
-                    Spacer()
-                    Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                }
-                Text(event.name)
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .lineLimit(nil)
-                Text(event.location ?? "")
-                    .italic()
-                Text(event.description ?? "")
-                    .font(.footnote)
-                    .lineLimit(nil)
-                }
-                .listRowBackground(Color.clear)
-            ForEach(event.attendees) { attendee in
-                HStack {
-                    Text(attendee.name)
-                    Spacer()
-                    self.image(for: attendee.response)
-                }
+        VStack(alignment: .leading) {
+            HStack {
+                Text(self.dateFormatter.string(from: event.startTime))
+                Spacer()
+                Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
             }
+            Text(event.name)
+                .font(.headline)
+                .fontWeight(.bold)
+                .lineLimit(nil)
+            Text(event.location ?? "")
+                .italic()
+            Text(event.description ?? "")
+                .font(.footnote)
+                .lineLimit(nil)
+            }
+            .listRowBackground(Color.clear)
+    }
 
+}
+
+struct EventAttendeeListView: View {
+
+    let attendees: [Attendee]
+
+    var body: some View {
+        ForEach(attendees) { attendee in
+            HStack {
+                Text(attendee.name)
+                Spacer()
+                self.image(for: attendee.response)
             }
-            .padding()
+        }
     }
 
     func image(for response: Attendee.Response) -> Image {

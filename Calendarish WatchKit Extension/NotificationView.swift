@@ -6,7 +6,9 @@ struct NotificationView : View {
     let event: Event
 
     var body: some View {
-        EventDetailView(event: event)
+        VStack {
+            EventDetailView(event: event)
+        }
     }
 
 }
