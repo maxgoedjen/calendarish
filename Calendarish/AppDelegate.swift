@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let api = API(authenticator: Authenticator(config: Constants.config))
         let store = Store()
         let publisher = api.eventPublisher
-            .assertNoFailure()
+//            .assertNoFailure()
             .replaceError(with: [])
         storeSubscription = publisher.assign(to: \.events, on: store)
         watchSink = publisher.sink { events in

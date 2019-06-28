@@ -19,7 +19,7 @@ extension CalendarishCore.Event {
                   startTime: event.start?.dateTime?.date ?? Date(),
                   endTime: event.end?.dateTime?.date ?? Date(),
                   attendees: (event.attendees ?? []).map({ Attendee($0) }),
-                  description: event.description,
+                  description: event.descriptionProperty,
                   location: event.location,
                   calendar: calendar)
     }
