@@ -7,7 +7,14 @@ struct NotificationView : View {
 
     var body: some View {
         VStack {
-            EventDetailView(event: event)
+            EventDescriptionView(event: event)
+            Button(action: {}) {
+                Text("Snooze")
+            }
+            Button(action: {}) {
+                Text("Dismiss")
+            }
+            EventAttendeeListView(attendees: event.attendees)
         }
     }
 
