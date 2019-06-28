@@ -57,7 +57,7 @@ extension API {
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
             let today = Date()
             query.timeMin = GTLRDateTime(date: today)
-            if let nextWeek = Foundation.Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: today, wrappingComponents: true) {
+            if let nextWeek = Foundation.Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: today, wrappingComponents: false) {
                 query.timeMax = GTLRDateTime(date: nextWeek)
             }
             self.calendarService.executeQuery(query) { _, any, error in
