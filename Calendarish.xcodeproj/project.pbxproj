@@ -35,6 +35,7 @@
 		50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF422B4CBAD00DB2178 /* Configuration.swift */; };
 		50A09F4A22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */; };
 		50A09F4B22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */; };
+		50A09F4F22C70D0A005CDEA1 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4E22C70D0A005CDEA1 /* SampleData.swift */; };
 		50AD53FD22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
 		50AD53FE22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
 		50B1E75422BB5100004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
@@ -230,6 +231,7 @@
 		50935BF222B4CAA100DB2178 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutController.swift; sourceTree = "<group>"; };
+		50A09F4E22C70D0A005CDEA1 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProxy.swift; sourceTree = "<group>"; };
 		50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishCoreWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +395,7 @@
 		50935B8A22B4AA8D00DB2178 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				50A09F4E22C70D0A005CDEA1 /* SampleData.swift */,
 				50935B8B22B4AA8D00DB2178 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -911,6 +914,7 @@
 				50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */,
 				50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */,
 				50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */,
+				50A09F4F22C70D0A005CDEA1 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

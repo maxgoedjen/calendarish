@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }.eraseToAnySubscriber()
 
-        window.rootViewController = UIHostingController(rootView: ContentView(api: api, store: store))
+        window.rootViewController = UIHostingController(rootView: ContentView(authenticator: api.authenticator, store: store))
         self.window = window
         window.makeKeyAndVisible()
                                     

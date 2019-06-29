@@ -2,6 +2,12 @@ import Foundation
 import GTMAppAuth
 import GoogleAPIClientForREST
 
+public protocol AuthenticatorProtocol {
+    var authorization: GTMAppAuthFetcherAuthorization? { get }
+    var isAuthorized: Bool { get }
+    func authenticate(from viewController: UIViewController)
+}
+
 public struct Authenticator {
 
     let config: Config
@@ -13,7 +19,7 @@ public struct Authenticator {
 
 }
 
-extension Authenticator {
+extension Authenticator: AuthenticatorProtocol {
 
     public var authorization: GTMAppAuthFetcherAuthorization? {
         return GTMAppAuthFetcherAuthorization.init(fromKeychainForName: config.clientID)
