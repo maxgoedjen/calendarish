@@ -15,7 +15,7 @@ class HostingController : WKHostingController<EventListView> {
 
     override init() {
         super.init()
-        let cleanedPublisher = sessionProxy.messagePublisher
+        storeSubscription = sessionProxy.messagePublisher
             .assertNoFailure()
             .compactMap { message -> [Event]? in
                 if case let .update(events) = message {
@@ -27,9 +27,8 @@ class HostingController : WKHostingController<EventListView> {
             }
             .replaceError(with: [])
             .receive(on: DispatchQueue.main)
-
-        storeSubscription = cleanedPublisher.assign(to: \.events, on: store)
-        shortcutSubscription = cleanedPublisher.assign(to: \.events, on: shortcutController)
+            .assign(to: \.events, on: store)
+        shortcutSubscription = store.didChange.assign(to: \.events, on: shortcutController)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             do {

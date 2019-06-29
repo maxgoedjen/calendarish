@@ -4,12 +4,12 @@ import SwiftUI
 
 public class Store: BindableObject {
 
-    public let didChange = PassthroughSubject<Void, Never>()
+    public let didChange = PassthroughSubject<[Event], Never>()
     let queue = DispatchQueue(label: "calendarishcore.store.disk", qos: .userInitiated)
 
     public var events: [Event] {
         didSet {
-            didChange.send()
+            didChange.send(events)
             saveToDisk()
         }
     }

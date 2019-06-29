@@ -23,9 +23,7 @@ extension ShortcutController {
 
     func updateIntents() {
         let shortcuts = events.map({ shortcut(for: $0 )})
-        // TODO: REMOVE
-        let test = Array(shortcuts[0..<1])
-        INRelevantShortcutStore.default.setRelevantShortcuts(test, completionHandler: nil)
+        INRelevantShortcutStore.default.setRelevantShortcuts(shortcuts, completionHandler: nil)
     }
 
     func shortcut(for event: Event) -> INRelevantShortcut {
