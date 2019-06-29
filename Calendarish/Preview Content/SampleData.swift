@@ -2,7 +2,6 @@
 import SwiftUI
 import CalendarishCore
 import CalendarishAPI
-import GTMAppAuth
 
 extension Store {
     static var sampleStore: Store {
@@ -62,12 +61,8 @@ struct SampleAuthenticator: AuthenticatorProtocol {
 
     let isAuthorized: Bool
 
-    var authorization: GTMAppAuthFetcherAuthorization? { return nil
-    }
-
     func authenticate(from viewController: UIViewController) {
     }
-
 
 }
 

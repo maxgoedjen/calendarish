@@ -64,7 +64,14 @@ extension LoginView {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: Store.sampleStore)
+        Group {
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: Store.sampleStore)
+                .environment(\.colorScheme, .dark)
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: Store.sampleStore)
+                .environment(\.colorScheme, .light)
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: false), store: Store.sampleStore)
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
 #endif

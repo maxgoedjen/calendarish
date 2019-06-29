@@ -3,7 +3,6 @@ import GTMAppAuth
 import GoogleAPIClientForREST
 
 public protocol AuthenticatorProtocol {
-    var authorization: GTMAppAuthFetcherAuthorization? { get }
     var isAuthorized: Bool { get }
     func authenticate(from viewController: UIViewController)
 }
