@@ -1,7 +1,7 @@
 import Combine
 import Intents
 
-class ShortcutController {
+public class ShortcutController {
 
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -9,7 +9,9 @@ class ShortcutController {
         return formatter
     }
 
-    var events: [Event] = [] {
+    public init() {}
+
+    public var events: [Event] = [] {
         didSet {
             updateIntents()
         }
@@ -22,7 +24,7 @@ extension ShortcutController {
     func updateIntents() {
         let shortcuts = events.map({ shortcut(for: $0 )})
         // TODO: REMOVE
-        let test = Array(shortcuts[0...1])
+        let test = Array(shortcuts[0..<1])
         INRelevantShortcutStore.default.setRelevantShortcuts(test, completionHandler: nil)
     }
 

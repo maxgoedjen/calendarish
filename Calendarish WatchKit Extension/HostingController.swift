@@ -8,12 +8,14 @@ import Combine
 class HostingController : WKHostingController<EventListView> {
 
     let store = Store()
+    let shortcutController = ShortcutController()
     let sessionProxy = SessionProxy(session: WCSession.default)
     fileprivate var storeSubscription: AnyCancellable?
+    fileprivate var shortcutSubscription: AnyCancellable?
 
     override init() {
         super.init()
-        storeSubscription = sessionProxy.messagePublisher
+        let cleanedPublisher = sessionProxy.messagePublisher
             .assertNoFailure()
             .compactMap { message -> [Event]? in
                 if case let .update(events) = message {
@@ -25,7 +27,10 @@ class HostingController : WKHostingController<EventListView> {
             }
             .replaceError(with: [])
             .receive(on: DispatchQueue.main)
-            .assign(to: \.events, on: store)
+
+        storeSubscription = cleanedPublisher.assign(to: \.events, on: store)
+        shortcutSubscription = cleanedPublisher.assign(to: \.events, on: shortcutController)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             do {
                 try self.sessionProxy.send(message: .requestUpdate)
