@@ -33,7 +33,7 @@ extension Event: Comparable {
     }
 
     public static func < (lhs: Self, rhs: Self) -> Bool {
-        return lhs.startTime < rhs.startTime
+        return lhs.startTime > rhs.startTime
     }
 
 }

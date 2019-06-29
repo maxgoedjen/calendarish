@@ -15,6 +15,14 @@ struct ContentView : View {
     @State var authenticator: AuthenticatorProtocol
     @State var store: Store
 
+    let dateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .short
+        f.timeStyle = .short
+        return f
+    }()
+
+
     var body: some View {
         Group {
             if !authenticator.isAuthorized {
@@ -28,6 +36,7 @@ struct ContentView : View {
                             Text(event.name)
                                 .font(.subheadline)
                                 .fontWeight(.bold)
+                            Text(self.dateFormatter.string(from: event.startTime))
                         }
                     }
                 }

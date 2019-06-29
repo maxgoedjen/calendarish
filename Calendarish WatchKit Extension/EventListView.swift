@@ -4,6 +4,7 @@ import CalendarishCoreWatch
 struct EventListView: View {
 
     @State var store: Store
+
     let dateFormatter: DateFormatter = {
         let f = DateFormatter()
         f.timeStyle = .short
