@@ -20,7 +20,7 @@ struct EventListView: View {
 
     var body: some View {
         List(store.events) { event in
-            NavigationButton(destination: EventDetailView(event: event)) {
+            NavigationLink(destination: EventDetailView(event: event)) {
                 VStack(alignment: .leading) {
                     HStack {
                         Text(self.dateFormatter.string(from: event.startTime))

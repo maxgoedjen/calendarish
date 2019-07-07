@@ -65,7 +65,7 @@ struct LoginView: View {
 extension LoginView {
 
     func signin() {
-        authenticator.authenticate(from: UIApplication.shared.keyWindow!.rootViewController!)
+        authenticator.authenticate(from: UIApplication.shared.windows.first!.rootViewController!)
     }
 
 }

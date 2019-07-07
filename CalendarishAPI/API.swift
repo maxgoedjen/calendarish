@@ -25,7 +25,7 @@ extension API {
 
         }
         return
-            calendarList().flatMap { calendars -> Publishers.MergeMany<Publishers.Future<[CalendarishCore.Event], Error>> in
+            calendarList().flatMap { calendars -> Publishers.MergeMany<Future<[CalendarishCore.Event], Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)
             }
@@ -40,8 +40,8 @@ extension API {
 
 extension API {
 
-    func calendarList() -> Publishers.Future<[CalendarishCore.Calendar], Error> {
-        return Publishers.Future { promise in
+    func calendarList() -> Future<[CalendarishCore.Calendar], Error> {
+        return Future { promise in
             let query = GTLRCalendarQuery_CalendarListList.query()
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
@@ -52,8 +52,8 @@ extension API {
         }
     }
 
-    func events(in calendar: CalendarishCore.Calendar) -> Publishers.Future<[CalendarishCore.Event], Error> {
-        return Publishers.Future { promise in
+    func events(in calendar: CalendarishCore.Calendar) -> Future<[CalendarishCore.Event], Error> {
+        return Future { promise in
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
             let today = Date()
             query.timeMin = GTLRDateTime(date: today)
