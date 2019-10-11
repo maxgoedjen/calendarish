@@ -1,8 +1,8 @@
-import Foundation
 #if os(iOS)
-import GTMAppAuth
+import Foundation
 import GoogleAPIClientForREST
-#endif
+import AppAuth
+import GTMAppAuth
 
 public protocol AuthenticatorProtocol {
     var isAuthorized: Bool { get }
@@ -34,15 +34,30 @@ extension Authenticator: AuthenticatorProtocol {
     public func authenticate(from viewController: UIViewController) {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
         let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
-        Authenticator.runningAuthentication = OIDAuthState.authState(byPresenting: request, presenting: viewController) { state, error in
+        OIDAuthState.authState(byPresenting: request, externalUserAgent: self) { state, error in
             guard let state = state else { return }
             let authorization = GTMAppAuthFetcherAuthorization(authState: state)
             GTMAppAuthFetcherAuthorization.save(authorization, toKeychainForName: self.config.clientID)
         }
     }
 
-    
 }
+
+extension Authenticator: OIDExternalUserAgent {
+
+    public func present(_ request: OIDExternalUserAgentRequest, session: OIDExternalUserAgentSession) -> Bool {
+        UIApplication.shared.delegate?.application?(UIApplication.shared, open: request.externalUserAgentRequestURL(), options: [:])
+        return true
+    }
+
+    public func dismiss(animated: Bool, completion: @escaping () -> Void) {
+
+    }
+    
+
+}
+
+
 extension Authenticator {
 
     public struct Config {
@@ -58,3 +73,4 @@ extension Authenticator {
 
 }
 
+#endif

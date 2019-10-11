@@ -13,9 +13,9 @@
 		5061CDC223504AAC001E6546 /* CalendarishAPIWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5061CDC023504AAC001E6546 /* CalendarishAPIWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5061CDC523504AAC001E6546 /* CalendarishAPIWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */; };
 		5061CDC623504AAC001E6546 /* CalendarishAPIWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5061CDCA23504AB9001E6546 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF222B4CAA100DB2178 /* Authenticator.swift */; };
 		5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
 		5061CDCC23504AB9001E6546 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BEE22B4AD7B00DB2178 /* API.swift */; };
+		5061CDCF23504E5F001E6546 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF222B4CAA100DB2178 /* Authenticator.swift */; };
 		508257FF22C357DE00733C3C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508257FE22C357DE00733C3C /* EventDetailView.swift */; };
 		50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8422B4AA8A00DB2178 /* AppDelegate.swift */; };
 		50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8622B4AA8A00DB2178 /* ContentView.swift */; };
@@ -918,17 +918,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS13.0/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-iOS13.0/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS13.1/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-iOS13.1/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -996,17 +998,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-iOS13.1/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-iOS13.1/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1022,7 +1024,7 @@
 			files = (
 				5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */,
 				5061CDCC23504AB9001E6546 /* API.swift in Sources */,
-				5061CDCA23504AB9001E6546 /* Authenticator.swift in Sources */,
+				5061CDCF23504E5F001E6546 /* Authenticator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

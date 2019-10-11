@@ -25,6 +25,11 @@ NSString * const kGTLRCalendarMinAccessRoleWriter         = @"writer";
 NSString * const kGTLRCalendarOrderByStartTime = @"startTime";
 NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
+// sendUpdates
+NSString * const kGTLRCalendarSendUpdatesAll          = @"all";
+NSString * const kGTLRCalendarSendUpdatesExternalOnly = @"externalOnly";
+NSString * const kGTLRCalendarSendUpdatesNone         = @"none";
+
 // ----------------------------------------------------------------------------
 // Query Classes
 //
@@ -82,7 +87,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_AclInsert
 
-@dynamic calendarId;
+@dynamic calendarId, sendNotifications;
 
 + (instancetype)queryWithObject:(GTLRCalendar_AclRule *)object
                      calendarId:(NSString *)calendarId {
@@ -126,7 +131,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_AclPatch
 
-@dynamic calendarId, ruleId;
+@dynamic calendarId, ruleId, sendNotifications;
 
 + (instancetype)queryWithObject:(GTLRCalendar_AclRule *)object
                      calendarId:(NSString *)calendarId
@@ -155,7 +160,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_AclUpdate
 
-@dynamic calendarId, ruleId;
+@dynamic calendarId, ruleId, sendNotifications;
 
 + (instancetype)queryWithObject:(GTLRCalendar_AclRule *)object
                      calendarId:(NSString *)calendarId
@@ -518,7 +523,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsDelete
 
-@dynamic calendarId, eventId, sendNotifications;
+@dynamic calendarId, eventId, sendNotifications, sendUpdates;
 
 + (instancetype)queryWithCalendarId:(NSString *)calendarId
                             eventId:(NSString *)eventId {
@@ -563,7 +568,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsImport
 
-@dynamic calendarId, supportsAttachments;
+@dynamic calendarId, conferenceDataVersion, supportsAttachments;
 
 + (instancetype)queryWithObject:(GTLRCalendar_Event *)object
                      calendarId:(NSString *)calendarId {
@@ -588,7 +593,8 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsInsert
 
-@dynamic calendarId, maxAttendees, sendNotifications, supportsAttachments;
+@dynamic calendarId, conferenceDataVersion, maxAttendees, sendNotifications,
+         sendUpdates, supportsAttachments;
 
 + (instancetype)queryWithObject:(GTLRCalendar_Event *)object
                      calendarId:(NSString *)calendarId {
@@ -667,7 +673,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsMove
 
-@dynamic calendarId, destination, eventId, sendNotifications;
+@dynamic calendarId, destination, eventId, sendNotifications, sendUpdates;
 
 + (instancetype)queryWithCalendarId:(NSString *)calendarId
                             eventId:(NSString *)eventId
@@ -692,8 +698,8 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsPatch
 
-@dynamic alwaysIncludeEmail, calendarId, eventId, maxAttendees,
-         sendNotifications, supportsAttachments;
+@dynamic alwaysIncludeEmail, calendarId, conferenceDataVersion, eventId,
+         maxAttendees, sendNotifications, sendUpdates, supportsAttachments;
 
 + (instancetype)queryWithObject:(GTLRCalendar_Event *)object
                      calendarId:(NSString *)calendarId
@@ -722,7 +728,7 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsQuickAdd
 
-@dynamic calendarId, sendNotifications, text;
+@dynamic calendarId, sendNotifications, sendUpdates, text;
 
 + (instancetype)queryWithCalendarId:(NSString *)calendarId
                                text:(NSString *)text {
@@ -743,8 +749,8 @@ NSString * const kGTLRCalendarOrderByUpdated   = @"updated";
 
 @implementation GTLRCalendarQuery_EventsUpdate
 
-@dynamic alwaysIncludeEmail, calendarId, eventId, maxAttendees,
-         sendNotifications, supportsAttachments;
+@dynamic alwaysIncludeEmail, calendarId, conferenceDataVersion, eventId,
+         maxAttendees, sendNotifications, sendUpdates, supportsAttachments;
 
 + (instancetype)queryWithObject:(GTLRCalendar_Event *)object
                      calendarId:(NSString *)calendarId

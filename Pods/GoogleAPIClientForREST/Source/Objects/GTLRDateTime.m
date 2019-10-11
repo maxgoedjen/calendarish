@@ -193,7 +193,7 @@ static NSUInteger const kGTLRDateComponentBits = (NSCalendarUnitYear | NSCalenda
     // and adjust the time.
     NSString *offsetStr = @"Z";
     NSNumber *offsetMinutes = self.offsetMinutes;
-    if (offsetMinutes) {
+    if (offsetMinutes != nil) {
       BOOL isNegative = NO;
       NSInteger offsetVal = offsetMinutes.integerValue;
       if (offsetVal < 0) {
@@ -202,8 +202,8 @@ static NSUInteger const kGTLRDateComponentBits = (NSCalendarUnitYear | NSCalenda
       }
       NSInteger mins = offsetVal % 60;
       NSInteger hours = (offsetVal - mins) / 60;
-      offsetStr = [NSString stringWithFormat:@"%c%02zd:%02zd",
-                   isNegative ? '-' : '+', hours, mins];
+      offsetStr = [NSString stringWithFormat:@"%c%02ld:%02ld",
+                   isNegative ? '-' : '+', (long)hours, (long)mins];
 
       // Adjust date components back to account for the offset.
       //
@@ -217,15 +217,16 @@ static NSUInteger const kGTLRDateComponentBits = (NSCalendarUnitYear | NSCalenda
       }
     }
 
-    timeString = [NSString stringWithFormat:@"T%02zd:%02zd:%02zd%@%@",
-                  dateComponents.hour, dateComponents.minute,
-                  dateComponents.second, fractionalSecondsString,
+    timeString = [NSString stringWithFormat:@"T%02ld:%02ld:%02ld%@%@",
+                  (long)dateComponents.hour, (long)dateComponents.minute,
+                  (long)dateComponents.second, fractionalSecondsString,
                   offsetStr];
   }
 
   // full dateString like "2006-11-17T15:10:46-08:00"
-  NSString *dateString = [NSString stringWithFormat:@"%04zd-%02zd-%02zd%@",
-    dateComponents.year, dateComponents.month, dateComponents.day, timeString];
+  NSString *dateString = [NSString stringWithFormat:@"%04ld-%02ld-%02ld%@",
+    (long)dateComponents.year, (long)dateComponents.month,
+    (long)dateComponents.day, timeString];
 
   @synchronized(self) {
     _cachedRFC3339String = dateString;

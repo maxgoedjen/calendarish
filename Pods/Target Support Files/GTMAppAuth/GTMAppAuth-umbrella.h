@@ -14,10 +14,6 @@
 #import "GTMAppAuthFetcherAuthorization+Keychain.h"
 #import "GTMAppAuthFetcherAuthorization.h"
 #import "GTMKeychain.h"
-#import "GTMTVAuthorizationRequest.h"
-#import "GTMTVAuthorizationResponse.h"
-#import "GTMTVAuthorizationService.h"
-#import "GTMTVServiceConfiguration.h"
 #import "GTMOAuth2KeychainCompatibility.h"
 
 FOUNDATION_EXPORT double GTMAppAuthVersionNumber;

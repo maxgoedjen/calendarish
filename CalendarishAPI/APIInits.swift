@@ -1,6 +1,6 @@
 import SwiftUI
-#if os(iOS)
 import GoogleAPIClientForREST
+#if os(iOS)
 import CalendarishCore
 #elseif os(watchOS)
 import CalendarishCoreWatch
@@ -15,7 +15,7 @@ extension CalendarishCore.Calendar {
 
 }
 
-extension CalendarishCore.Event {
+extension Event {
 
     init(_ event: GTLRCalendar_Event, calendar: CalendarishCore.Calendar) {
         self.init(identifier:  event.identifier!,
@@ -30,7 +30,7 @@ extension CalendarishCore.Event {
 
 }
 
-extension CalendarishCore.Attendee {
+extension Attendee {
 
     init(_ attendee: GTLRCalendar_EventAttendee) {
         self.init(identifier: attendee.identifier!,

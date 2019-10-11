@@ -81,7 +81,7 @@ store the in-progress OIDAuthorizationFlowSession instance in a property:
 ```objc
 // property of the app's UIApplicationDelegate
 @property(nonatomic, nullable)
-    id<OIDAuthorizationFlowSession> currentAuthorizationFlow;
+    id<OIDExternalUserAgentSession> currentAuthorizationFlow;
 ```
 
 And in a location accessible by all controllers that need authorization, a
@@ -152,7 +152,7 @@ authorization session (created in the previous session).
            withReplyEvent:(NSAppleEventDescriptor *)replyEvent {
   NSString *URLString = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
   NSURL *URL = [NSURL URLWithString:URLString];
-  [_currentAuthorizationFlow resumeAuthorizationFlowWithURL:URL];
+  [_currentAuthorizationFlow resumeExternalUserAgentFlowWithURL:URL];
 }
 ```
 
@@ -164,7 +164,7 @@ authorization session (created in the previous session).
             options:(NSDictionary<NSString *, id> *)options {
   // Sends the URL to the current authorization flow (if any) which will
   // process it if it relates to an authorization response.
-  if ([_currentAuthorizationFlow resumeAuthorizationFlowWithURL:url]) {
+  if ([_currentAuthorizationFlow resumeExternalUserAgentFlowWithURL:url]) {
     _currentAuthorizationFlow = nil;
     return YES;
   }
@@ -266,13 +266,13 @@ should serialize in GTMAppAuth format as described above).
 
 ## Included Samples
 
-Try out one of the included samples `Example-Mac` and `Example-iOS`. In the
-folder run `pod install`, then open the `xcworkspace` file.
+Try out one of the included sample apps under [Examples](Examples). In the
+apps folder run `pod install`, then open the resulting `xcworkspace` file.
 
 Be sure to follow the instructions in
-[Example-iOS/README.md](Example-iOS/README.md) or
-[Example-macOS/README.md](Example-macOS/README.md) to configure your own OAuth
-client ID for use with the example.
+[Example-iOS/README.md](Examples/Example-iOS/README.md) or
+[Example-macOS/README.md](Examples/Example-macOS/README.md) to configure
+your own OAuth client ID for use with the example.
 
 ## Differences with GTMOAuth2
 
