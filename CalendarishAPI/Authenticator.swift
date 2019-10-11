@@ -1,18 +1,23 @@
-#if os(iOS)
 import Foundation
 import GoogleAPIClientForREST
-import AppAuth
+import GTMSessionFetcher
+
+#if os(iOS)
 import GTMAppAuth
+import AppAuth
+#endif
 
 public protocol AuthenticatorProtocol {
-    var isAuthorized: Bool { get }
-    func authenticate(from viewController: UIViewController)
+//    var authorization: GTMFetcherAuthorizationProtocol { get }
 }
 
 public struct Authenticator {
 
     let config: Config
+
+    #if os(iOS)
     fileprivate static var runningAuthentication: OIDExternalUserAgentSession?
+    #endif
 
     public init(config: Config) {
         self.config = config
@@ -20,43 +25,43 @@ public struct Authenticator {
 
 }
 
-extension Authenticator: AuthenticatorProtocol {
+#if os(iOS)
+public protocol AuthenticatorSetupProtocol {
+    func authenticate(from viewController: UIViewController)
+}
 
-    public var authorization: GTMAppAuthFetcherAuthorization? {
+extension Authenticator: AuthenticatorSetupProtocol {
+
+    public var authorization: GTMFetcherAuthorizationProtocol? {
         return GTMAppAuthFetcherAuthorization.init(fromKeychainForName: config.clientID)
     }
 
-    public var isAuthorized: Bool {
-        guard let authorization = authorization else { return false }
-        return authorization.authState.isAuthorized
-    }
-
     public func authenticate(from viewController: UIViewController) {
-        let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
-        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
-        OIDAuthState.authState(byPresenting: request, externalUserAgent: self) { state, error in
-            guard let state = state else { return }
-            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
-            GTMAppAuthFetcherAuthorization.save(authorization, toKeychainForName: self.config.clientID)
-        }
+//        let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
+//        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: config.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: config.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
+//        OIDAuthState.authState(byPresenting: request, externalUserAgent: self) { state, error in
+//            guard let state = state else { return }
+//            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
+//            GTMAppAuthFetcherAuthorization.save(authorization, toKeychainForName: self.config.clientID)
+//        }
     }
 
 }
 
-extension Authenticator: OIDExternalUserAgent {
+//extension Authenticator: OIDExternalUserAgent {
+//
+//    public func present(_ request: OIDExternalUserAgentRequest, session: OIDExternalUserAgentSession) -> Bool {
+//        UIApplication.shared.delegate?.application?(UIApplication.shared, open: request.externalUserAgentRequestURL(), options: [:])
+//        return true
+//    }
+//
+//    public func dismiss(animated: Bool, completion: @escaping () -> Void) {
+//
+//    }
+//
+//}
 
-    public func present(_ request: OIDExternalUserAgentRequest, session: OIDExternalUserAgentSession) -> Bool {
-        UIApplication.shared.delegate?.application?(UIApplication.shared, open: request.externalUserAgentRequestURL(), options: [:])
-        return true
-    }
-
-    public func dismiss(animated: Bool, completion: @escaping () -> Void) {
-
-    }
-    
-
-}
-
+#endif
 
 extension Authenticator {
 
@@ -72,5 +77,3 @@ extension Authenticator {
     }
 
 }
-
-#endif

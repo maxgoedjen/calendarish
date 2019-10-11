@@ -2,11 +2,13 @@ import SwiftUI
 import GoogleAPIClientForREST
 #if os(iOS)
 import CalendarishCore
+typealias CalendarishCalendar = CalendarishCore.Calendar
 #elseif os(watchOS)
 import CalendarishCoreWatch
+typealias CalendarishCalendar = CalendarishCoreWatch.Calendar
 #endif
 
-extension CalendarishCore.Calendar {
+extension CalendarishCalendar {
 
     init(_ calendar: GTLRCalendar_CalendarListEntry) {
         // TODO: Hex color parse
@@ -17,7 +19,7 @@ extension CalendarishCore.Calendar {
 
 extension Event {
 
-    init(_ event: GTLRCalendar_Event, calendar: CalendarishCore.Calendar) {
+    init(_ event: GTLRCalendar_Event, calendar: CalendarishCalendar) {
         self.init(identifier:  event.identifier!,
                   name: event.summary!,
                   startTime: event.start?.dateTime?.date ?? Date(),

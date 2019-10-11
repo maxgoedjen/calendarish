@@ -1,0 +1,6 @@
+framework module GoogleAPIClientForREST {
+  umbrella header "GoogleAPIClientForREST-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
