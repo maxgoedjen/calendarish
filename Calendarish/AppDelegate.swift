@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     fileprivate var storeSubscription: AnyCancellable?
-    fileprivate var watchSink: Subscribers.Sink<[Event], Never>?
+    fileprivate var watchSink: AnyCancellable?
     fileprivate var sessionProxy = SessionProxy(session: WCSession.default)
-    fileprivate var sessionProxySink: Subscribers.Sink<SessionProxy.Message, SessionProxy.Error>?
+    fileprivate var sessionProxySink: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -35,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchSink = publisher.sink { events in
             self.sendUpdate(events: events)
         }
-        sessionProxySink = sessionProxy.messagePublisher.sink { message in
+        sessionProxySink = sessionProxy.messagePublisher.sink(receiveCompletion: { completions in
+
+        }) { message in
             switch message {
             case .requestUpdate:
                 self.sendUpdate(events: store.events)
