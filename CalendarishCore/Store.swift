@@ -1,8 +1,7 @@
 import Foundation
 import Combine
-import SwiftUI
 
-public class Store: BindableObject {
+public class Store: ObservableObject {
 
     public let didChange = PassthroughSubject<[Event], Never>()
     let queue = DispatchQueue(label: "calendarishcore.store.disk", qos: .userInitiated)

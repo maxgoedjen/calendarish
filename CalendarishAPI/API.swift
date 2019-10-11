@@ -20,7 +20,7 @@ extension API {
 
     public var eventPublisher: AnyPublisher<[CalendarishCore.Event], Error> {
         guard authenticator.isAuthorized else {
-            return Publishers.Fail<[Event], Error>(error: .signedOut)
+            return Fail<[Event], Error>(error: .signedOut)
                 .eraseToAnyPublisher()
 
         }
