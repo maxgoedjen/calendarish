@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth" "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth" "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-iOS13.1" "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-iOS13.1"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth" "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth" "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-iOS" "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-iOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-iOS13.0/GTMSessionFetcher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-iOS13.1/GTMSessionFetcher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-iOS13.0/GoogleAPIClientForREST.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-iOS13.1/GoogleAPIClientForREST.framework/Headers"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth/GTMAppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-iOS/GTMSessionFetcher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-iOS/GoogleAPIClientForREST.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "AppAuth" -framework "GTMAppAuth" -framework "GTMSessionFetcher" -framework "GoogleAPIClientForREST"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

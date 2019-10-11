@@ -1,3 +1,4 @@
+platform :ios, '13.1'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -6,12 +7,10 @@ def common
 end
 
 target 'Calendarish' do
-  platform :ios, '13.1'
   common
 end
 
 target 'CalendarishAPI' do
-  platform :ios, '13.1'
   common
   pod 'GTMAppAuth'
 end
