@@ -1,6 +1,10 @@
-import GoogleAPIClientForREST
 import SwiftUI
+#if os(iOS)
+import GoogleAPIClientForREST
 import CalendarishCore
+#elseif os(watchOS)
+import CalendarishCoreWatch
+#endif
 
 extension CalendarishCore.Calendar {
 

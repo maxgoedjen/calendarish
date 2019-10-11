@@ -1,8 +1,12 @@
 import Foundation
 import Combine
 import SwiftUI
-import CalendarishCore
+#if os(iOS)
 import GoogleAPIClientForREST
+import CalendarishCore
+#elseif os(watchOS)
+import CalendarishCoreWatch
+#endif
 
 public struct API {
 

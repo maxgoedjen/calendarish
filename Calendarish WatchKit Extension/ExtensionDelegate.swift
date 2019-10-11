@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import CalendarishAPIWatch
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 

@@ -15,6 +15,10 @@ target 'CalendarishAPI' do
   common
 end
 
+target 'CalendarishAPIWatch' do
+  common
+end
+
 target 'CalendarishAPITests' do
   common
 end

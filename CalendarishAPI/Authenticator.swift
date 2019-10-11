@@ -1,6 +1,8 @@
 import Foundation
+#if os(iOS)
 import GTMAppAuth
 import GoogleAPIClientForREST
+#endif
 
 public protocol AuthenticatorProtocol {
     var isAuthorized: Bool { get }

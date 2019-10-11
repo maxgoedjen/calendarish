@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387B4A06C5C12C9BA4C3734C /* Pods_CalendarishAPIWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
 		5037D7EF22C34FD700B76927 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
+		5061CDC223504AAC001E6546 /* CalendarishAPIWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 5061CDC023504AAC001E6546 /* CalendarishAPIWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5061CDC523504AAC001E6546 /* CalendarishAPIWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */; };
+		5061CDC623504AAC001E6546 /* CalendarishAPIWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5061CDCA23504AB9001E6546 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF222B4CAA100DB2178 /* Authenticator.swift */; };
+		5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
+		5061CDCC23504AB9001E6546 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BEE22B4AD7B00DB2178 /* API.swift */; };
 		508257FF22C357DE00733C3C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508257FE22C357DE00733C3C /* EventDetailView.swift */; };
 		50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8422B4AA8A00DB2178 /* AppDelegate.swift */; };
 		50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8622B4AA8A00DB2178 /* ContentView.swift */; };
@@ -61,6 +68,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5061CDC323504AAC001E6546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5061CDBD23504AAC001E6546;
+			remoteInfo = CalendarishAPIWatch;
+		};
+		5061CDCD23504BAE001E6546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B1E75922BB512A004A0B0D;
+			remoteInfo = CalendarishCoreWatch;
+		};
 		50935B9522B4AA8D00DB2178 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
@@ -174,6 +195,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5061CDC623504AAC001E6546 /* CalendarishAPIWatch.framework in Embed Frameworks */,
 				50B1E76222BB512A004A0B0D /* CalendarishCoreWatch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -192,11 +214,15 @@
 
 /* Begin PBXFileReference section */
 		016DDFC9EBE1D9A5E537773E /* Pods_CalendarishCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPIWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5020C7D422C48E5300031599 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5037D7EE22C34FD700B76927 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
+		5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPIWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5061CDC023504AAC001E6546 /* CalendarishAPIWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPIWatch.h; sourceTree = "<group>"; };
+		5061CDC123504AAC001E6546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508257FE22C357DE00733C3C /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		50935B8122B4AA8A00DB2178 /* Calendarish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendarish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50935B8422B4AA8A00DB2178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,7 +274,9 @@
 		96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EC095C88D5287299600BC71 /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
 		A90343CD3C31D805868D8A88 /* Pods_CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPIWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPIWatch/Pods-CalendarishAPIWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		B84826427BE82D638C1401DC /* Pods-CalendarishAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPIWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPIWatch/Pods-CalendarishAPIWatch.release.xcconfig"; sourceTree = "<group>"; };
 		DD62F4DEBBE62AF1FEF6B064 /* Pods-CalendarishAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -258,6 +286,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5061CDBB23504AAC001E6546 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387B4A06C5C12C9BA4C3734C /* Pods_CalendarishAPIWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +311,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5061CDC523504AAC001E6546 /* CalendarishAPIWatch.framework in Frameworks */,
 				50B1E76122BB512A004A0B0D /* CalendarishCoreWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +367,8 @@
 				13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */,
 				B84826427BE82D638C1401DC /* Pods-CalendarishAPITests.debug.xcconfig */,
 				96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */,
+				B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */,
+				B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -342,8 +381,18 @@
 				016DDFC9EBE1D9A5E537773E /* Pods_CalendarishCoreTests.framework */,
 				F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */,
 				4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */,
+				076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5061CDBF23504AAC001E6546 /* CalendarishAPIWatch */ = {
+			isa = PBXGroup;
+			children = (
+				5061CDC023504AAC001E6546 /* CalendarishAPIWatch.h */,
+				5061CDC123504AAC001E6546 /* Info.plist */,
+			);
+			path = CalendarishAPIWatch;
 			sourceTree = "<group>";
 		};
 		50935B7822B4AA8A00DB2178 = {
@@ -356,6 +405,7 @@
 				50935BDE22B4AD6100DB2178 /* CalendarishCoreTests */,
 				50C970DF22BA0CB2005AF478 /* CalendarishAPI */,
 				50C970EC22BA0CB2005AF478 /* CalendarishAPITests */,
+				5061CDBF23504AAC001E6546 /* CalendarishAPIWatch */,
 				50935B8222B4AA8A00DB2178 /* Products */,
 				204FB92CD9410039C6A06AEB /* Pods */,
 				2CEDFE23BF1EC92F7AF73B61 /* Frameworks */,
@@ -373,6 +423,7 @@
 				50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */,
 				50C970E622BA0CB2005AF478 /* CalendarishAPITests.xctest */,
 				50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */,
+				5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,6 +537,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5061CDB923504AAC001E6546 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5061CDC223504AAC001E6546 /* CalendarishAPIWatch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50935BCB22B4AD6100DB2178 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +571,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5061CDBD23504AAC001E6546 /* CalendarishAPIWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5061CDC923504AAC001E6546 /* Build configuration list for PBXNativeTarget "CalendarishAPIWatch" */;
+			buildPhases = (
+				A8DD4556446552735B9CC6CF /* [CP] Check Pods Manifest.lock */,
+				5061CDB923504AAC001E6546 /* Headers */,
+				5061CDBA23504AAC001E6546 /* Sources */,
+				5061CDBB23504AAC001E6546 /* Frameworks */,
+				5061CDBC23504AAC001E6546 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5061CDCE23504BAE001E6546 /* PBXTargetDependency */,
+			);
+			name = CalendarishAPIWatch;
+			productName = CalendarishAPIWatch;
+			productReference = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		50935B8022B4AA8A00DB2178 /* Calendarish */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50935BC422B4AA8E00DB2178 /* Build configuration list for PBXNativeTarget "Calendarish" */;
@@ -567,6 +646,7 @@
 			);
 			dependencies = (
 				50B1E76022BB512A004A0B0D /* PBXTargetDependency */,
+				5061CDC423504AAC001E6546 /* PBXTargetDependency */,
 			);
 			name = "Calendarish WatchKit Extension";
 			productName = "Calendarish WatchKit Extension";
@@ -680,6 +760,9 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Max Goedjen";
 				TargetAttributes = {
+					5061CDBD23504AAC001E6546 = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					50935B8022B4AA8A00DB2178 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
@@ -730,12 +813,20 @@
 				50B1E75922BB512A004A0B0D /* CalendarishCoreWatch */,
 				50935BD722B4AD6100DB2178 /* CalendarishCoreTests */,
 				50C970DD22BA0CB2005AF478 /* CalendarishAPI */,
+				5061CDBD23504AAC001E6546 /* CalendarishAPIWatch */,
 				50C970E522BA0CB2005AF478 /* CalendarishAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5061CDBC23504AAC001E6546 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50935B7F22B4AA8A00DB2178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -862,6 +953,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A8DD4556446552735B9CC6CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalendarishAPIWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C5D6A586BB329F63D88C586B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -907,6 +1016,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5061CDBA23504AAC001E6546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */,
+				5061CDCC23504AB9001E6546 /* API.swift in Sources */,
+				5061CDCA23504AB9001E6546 /* Authenticator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50935B7D22B4AA8A00DB2178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -988,6 +1107,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5061CDC423504AAC001E6546 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5061CDBD23504AAC001E6546 /* CalendarishAPIWatch */;
+			targetProxy = 5061CDC323504AAC001E6546 /* PBXContainerItemProxy */;
+		};
+		5061CDCE23504BAE001E6546 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B1E75922BB512A004A0B0D /* CalendarishCoreWatch */;
+			targetProxy = 5061CDCD23504BAE001E6546 /* PBXContainerItemProxy */;
+		};
 		50935B9622B4AA8D00DB2178 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 50935B9222B4AA8D00DB2178 /* Calendarish WatchKit App */;
@@ -1060,6 +1189,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5061CDC723504AAC001E6546 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z72PRUAWF6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalendarishAPIWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishAPIWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
+		5061CDC823504AAC001E6546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z72PRUAWF6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CalendarishAPIWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishAPIWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
 		50935BBA22B4AA8E00DB2178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1617,6 +1808,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5061CDC923504AAC001E6546 /* Build configuration list for PBXNativeTarget "CalendarishAPIWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5061CDC723504AAC001E6546 /* Debug */,
+				5061CDC823504AAC001E6546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50935B7C22B4AA8A00DB2178 /* Build configuration list for PBXProject "Calendarish" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
