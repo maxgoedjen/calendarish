@@ -7,11 +7,9 @@ import CalendarishCore
 
 public struct API {
 
-    public let authenticator: Authenticator
     fileprivate let calendarService = GTLRCalendarService()
 
-    public init(authenticator: Authenticator) {
-        self.authenticator = authenticator
+    public init(account: Account) {
 //        calendarService.authorizer = authenticator.authorization
     }
 
