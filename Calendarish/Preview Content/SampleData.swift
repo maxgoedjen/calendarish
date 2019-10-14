@@ -4,7 +4,9 @@ import CalendarishCore
 import CalendarishAPI
 
 extension EventStore {
+
     static var sampleStore: EventStore {
+
         return EventStore(events: [
             Event(identifier: UUID().uuidString,
                   name: "Coffee with Marina",
@@ -55,13 +57,13 @@ extension EventStore {
 
             ])
     }
+
 }
 
-struct SampleAuthenticator: AuthenticatorProtocol {
+extension AccountStore {
 
-    let isAuthorized: Bool
-
-    func authenticate(from viewController: UIViewController) {
+    static var sampleStore: AccountStore {
+        return AccountStore()
     }
 
 }

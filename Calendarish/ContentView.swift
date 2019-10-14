@@ -12,8 +12,8 @@ import CalendarishAPI
 
 struct ContentView : View {
 
-    @State var authenticator: AuthenticatorProtocol
-    @State var store: EventStore
+    @State var accountStore: AccountStore
+    @State var eventStore: EventStore
 
     let dateFormatter: DateFormatter = {
         let f = DateFormatter()
@@ -25,13 +25,17 @@ struct ContentView : View {
 
     var body: some View {
         Group {
-            if !authenticator.isAuthorized {
-                LoginView(authenticator: authenticator)
+            if !accountStore.accounts.isEmpty {
+                LoginView(accountStore: accountStore)
             } else {
                 VStack {
+                    LoginView(accountStore: accountStore)
                     Text("Signed In")
+                    List(accountStore.accounts) { account in
+                        Text(account.id)
+                    }
                     Image(systemName: "checkmark.seal.fill")
-                    List(store.events) { event in
+                    List(eventStore.events) { event in
                         VStack(alignment: .leading) {
                             Text(event.name)
                                 .font(.subheadline)
@@ -47,7 +51,7 @@ struct ContentView : View {
 
 struct LoginView: View {
 
-    @State var authenticator: AuthenticatorProtocol
+    var accountStore: AccountStore
 
     var body: some View {
         Button(action: signin) {
@@ -65,23 +69,22 @@ struct LoginView: View {
 extension LoginView {
 
     func signin() {
-        authenticator.authenticate(from: UIApplication.shared.windows.first!.rootViewController!)
     }
 
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        Group {
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
-                .environment(\.colorScheme, .dark)
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
-                .environment(\.colorScheme, .light)
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: false), store: EventStore.sampleStore)
-                .environment(\.colorScheme, .dark)
-        }
-    }
-}
+//struct ContentView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
+//                .environment(\.colorScheme, .dark)
+//            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
+//                .environment(\.colorScheme, .light)
+//            ContentView(authenticator: SampleAuthenticator(isAuthorized: false), store: EventStore.sampleStore)
+//                .environment(\.colorScheme, .dark)
+//        }
+//    }
+//}
 #endif
 

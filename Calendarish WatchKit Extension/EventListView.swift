@@ -3,7 +3,7 @@ import CalendarishCoreWatch
 
 struct EventListView: View {
 
-    @State var store: Store
+    @State var store: EventStore
 
     let dateFormatter: DateFormatter = {
         let f = DateFormatter()
