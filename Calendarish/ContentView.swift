@@ -1,6 +1,19 @@
 import SwiftUI
+import GTMAppAuth
+import GoogleAPIClientForREST
+import AppAuth
+
+fileprivate struct AuthState {
+    static var runningAuthentication: OIDExternalUserAgentSession? = nil
+}
 
 struct ContentView : View {
+
+    let userAgent: OIDExternalUserAgent?
+
+    init(userAgent: OIDExternalUserAgent? = nil) {
+        self.userAgent = userAgent
+    }
 
     var body: some View {
                     Button(action: signin) {
@@ -18,6 +31,14 @@ struct ContentView : View {
 extension ContentView {
 
     func signin() {
+        guard let userAgent = userAgent else { return }
+        let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
+        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: Constants.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: Constants.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
+        AuthState.runningAuthentication = OIDAuthState.authState(byPresenting: request, externalUserAgent: userAgent) { state, error in
+            guard let state = state else { return }
+            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
+            print(authorization)
+        }
     }
 
 }
@@ -31,6 +52,3 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
-
-
-

@@ -10,6 +10,8 @@ import UIKit
 import SwiftUI
 import Combine
 import WatchConnectivity
+import AppAuth
+import AuthenticationServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,13 +22,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: ContentView())
+        window.rootViewController = UIHostingController(rootView: ContentView(userAgent: self))
         self.window = window
         window.makeKeyAndVisible()
                                     
         return true
     }
 
+}
+
+extension AppDelegate: OIDExternalUserAgent {
+
+    func present(_ request: OIDExternalUserAgentRequest, session: OIDExternalUserAgentSession) -> Bool {
+        let authViewController = ASWebAuthenticationSession(url: request.externalUserAgentRequestURL(), callbackURLScheme: Constants.redirectURIScheme) { url, error in
+            if let url = url {
+                session.resumeExternalUserAgentFlow(with: url)
+            } else if let error = error {
+                session.failExternalUserAgentFlowWithError(error)
+            }
+        }
+        authViewController.presentationContextProvider = self
+        authViewController.start()
+        return true
+    }
+
+    func dismiss(animated: Bool, completion: @escaping () -> Void) {
+        // This is automatic with ASWebAuthenticationSession
+        completion()
+    }
 
 }
 
+extension AppDelegate: ASWebAuthenticationPresentationContextProviding {
+
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return window!
+    }
+
+}

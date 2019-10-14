@@ -42,7 +42,7 @@
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50EF0BF922C352660070C192 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
 		76C50E60BA4434FDA9F19ACD /* Pods_CalendarishAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */; };
-		B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */; };
+		B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */; };
 /* End PBXBuildFile section */
 
