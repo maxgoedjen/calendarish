@@ -9,8 +9,6 @@
 import UIKit
 import SwiftUI
 import Combine
-import CalendarishCore
-import CalendarishAPI
 import WatchConnectivity
 
 @UIApplicationMain
