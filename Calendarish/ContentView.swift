@@ -3,10 +3,6 @@ import GTMAppAuth
 import GoogleAPIClientForREST
 import AppAuth
 
-fileprivate struct AuthState {
-    static var runningAuthentication: OIDExternalUserAgentSession? = nil
-}
-
 struct ContentView : View {
 
     let userAgent: OIDExternalUserAgent?
@@ -41,6 +37,10 @@ extension ContentView {
         }
     }
 
+}
+
+fileprivate struct AuthState {
+    static var runningAuthentication: OIDExternalUserAgentSession? = nil
 }
 
 #if DEBUG
