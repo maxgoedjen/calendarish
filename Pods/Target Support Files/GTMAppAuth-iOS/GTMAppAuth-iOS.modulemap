@@ -1,0 +1,6 @@
+framework module GTMAppAuth {
+  umbrella header "GTMAppAuth-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
