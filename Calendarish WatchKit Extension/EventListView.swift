@@ -1,5 +1,5 @@
 import SwiftUI
-import CalendarishCoreWatch
+import CalendarishCore
 
 struct EventListView: View {
 

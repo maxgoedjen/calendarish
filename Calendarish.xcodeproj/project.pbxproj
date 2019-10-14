@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		387B4A06C5C12C9BA4C3734C /* Pods_CalendarishAPIWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
 		504BAC9E23505BE400345049 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF222B4CAA100DB2178 /* Authenticator.swift */; };
 		5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; };
@@ -225,7 +224,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387B4A06C5C12C9BA4C3734C /* Pods_CalendarishAPIWatch.framework in Frameworks */,
 				B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

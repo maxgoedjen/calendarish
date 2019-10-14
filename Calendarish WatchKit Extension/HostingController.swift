@@ -1,7 +1,7 @@
 import WatchKit
 import Foundation
 import SwiftUI
-import CalendarishCoreWatch
+import CalendarishCore
 import WatchConnectivity
 import Combine
 

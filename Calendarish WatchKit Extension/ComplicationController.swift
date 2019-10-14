@@ -1,5 +1,5 @@
 import ClockKit
-import CalendarishCoreWatch
+import CalendarishCore
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
 

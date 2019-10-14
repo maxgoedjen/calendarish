@@ -3,11 +3,7 @@ import Combine
 import SwiftUI
 import GoogleAPIClientForREST
 import GTMSessionFetcher
-#if os(iOS)
 import CalendarishCore
-#elseif os(watchOS)
-import CalendarishCoreWatch
-#endif
 
 public struct API {
 
