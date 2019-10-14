@@ -1,27 +1,15 @@
-//
-//  ExtensionDelegate.swift
-//  Calendarish WatchKit Extension
-//
-//  Created by Max Goedjen on 6/14/19.
-//  Copyright © 2019 Max Goedjen. All rights reserved.
-//
-
 import WatchKit
+import WatchConnectivity
+import CalendarishCore
 import CalendarishAPI
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    let accountStore = AccountStore()
+    let eventStore = EventStore()
+
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
-    }
-
-    func applicationDidBecomeActive() {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillResignActive() {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, etc.
+        WCSession.default.delegate = self
     }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
@@ -53,5 +41,17 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
+
+}
+
+extension ExtensionDelegate: WCSessionDelegate {
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        print(message)
+    }
+
 
 }

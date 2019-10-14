@@ -1,5 +1,6 @@
 import Foundation
 import WatchConnectivity
+import GTMAppAuth
 
 struct WatchController {
 
@@ -13,6 +14,8 @@ struct WatchController {
 
 extension WatchController {
 
-//    func addAuthorization(authorization: WC)
+    func addAuthorization(authorization: GTMAppAuthFetcherAuthorization) {
+        session.sendMessage(["Authorization" : authorization], replyHandler: nil, errorHandler: nil)
+    }
 
 }

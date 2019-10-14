@@ -1,11 +1,13 @@
 import UIKit
 import AuthenticationServices
+import Combine
 import AppAuth
 import GTMAppAuth
 import GoogleAPIClientForREST
 
 class AuthorizationController: NSObject {
 
+    let authorizationPublisher = PassthroughSubject<GTMAppAuthFetcherAuthorization, Error>()
     let targetWindow: UIWindow
     fileprivate var running: OIDExternalUserAgentSession? = nil
     
@@ -22,9 +24,12 @@ extension AuthorizationController {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
         let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: Constants.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: Constants.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
         running = OIDAuthState.authState(byPresenting: request, externalUserAgent: self) { state, error in
-            guard let state = state else { return }
-            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
-            print(authorization)
+            if let state = state {
+                let authorization = GTMAppAuthFetcherAuthorization(authState: state)
+                self.authorizationPublisher.send(authorization)
+            } else if let error = error {
+                self.authorizationPublisher.send(completion: .failure(error))
+            }
         }
     }
 

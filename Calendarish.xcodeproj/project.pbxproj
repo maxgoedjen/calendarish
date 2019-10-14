@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		500B0FDC2354448800C16CD0 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDB2354448800C16CD0 /* AuthorizationController.swift */; };
 		500B0FDE235446F600C16CD0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDD235446F600C16CD0 /* WatchController.swift */; };
+		500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
 		5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; };
 		5061CDC623504AAC001E6546 /* CalendarishAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -872,6 +873,7 @@
 				50EF0BF922C352660070C192 /* Attendee.swift in Sources */,
 				50B1E76922BB519A004A0B0D /* EventStore.swift in Sources */,
 				50B1E76722BB519A004A0B0D /* Event.swift in Sources */,
+				500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */,
 				50A09F4B22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */,
 				50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */,
 				5076FD8B23540DEB005AE0D1 /* Account.swift in Sources */,
