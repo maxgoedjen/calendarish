@@ -22,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let accountStore = AccountStore()
-        let eventStore = EventStore()
-        window.rootViewController = UIHostingController(rootView: ContentView(accountStore: accountStore, eventStore: eventStore))
+        window.rootViewController = UIHostingController(rootView: ContentView())
         self.window = window
         window.makeKeyAndVisible()
                                     

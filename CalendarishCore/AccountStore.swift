@@ -47,7 +47,7 @@ extension AccountStore {
             ]
             var item: CFTypeRef?
             let status = SecItemCopyMatching(query as CFDictionary, &item)
-            assert(status == errSecSuccess, "Failed to retrieve from keychain")
+            assert(status == errSecSuccess || status == errSecItemNotFound, "Failed to retrieve from keychain")
             guard let data = item as? Data else { return }
             guard let savedAccounts = try? JSONDecoder().decode([Account].self, from: data) else { return }
             guard self.accounts.isEmpty else { return }
