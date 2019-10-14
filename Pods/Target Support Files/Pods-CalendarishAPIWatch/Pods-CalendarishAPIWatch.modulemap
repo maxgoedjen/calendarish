@@ -1,6 +1,0 @@
-framework module Pods_CalendarishAPIWatch {
-  umbrella header "Pods-CalendarishAPIWatch-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5061CDBD23504AAC001E6546"
-               BuildableName = "CalendarishAPIWatch.framework"
-               BlueprintName = "CalendarishAPIWatch"
+               BuildableName = "CalendarishAPI.framework"
+               BlueprintName = "CalendarishAPI"
                ReferencedContainer = "container:Calendarish.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5061CDBD23504AAC001E6546"
-            BuildableName = "CalendarishAPIWatch.framework"
-            BlueprintName = "CalendarishAPIWatch"
+            BuildableName = "CalendarishAPI.framework"
+            BlueprintName = "CalendarishAPI"
             ReferencedContainer = "container:Calendarish.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
