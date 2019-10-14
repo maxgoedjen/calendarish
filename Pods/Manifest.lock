@@ -16,22 +16,30 @@ PODS:
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/Calendar
-  - GTMAppAuth
+  - GTMAppAuth (from `https://github.com/maxgoedjen/GTMAppAuth.git`)
   - GTMSessionFetcher
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppAuth
     - GoogleAPIClientForREST
-    - GTMAppAuth
     - GTMSessionFetcher
+
+EXTERNAL SOURCES:
+  GTMAppAuth:
+    :git: https://github.com/maxgoedjen/GTMAppAuth.git
+
+CHECKOUT OPTIONS:
+  GTMAppAuth:
+    :commit: 97e75db7dab145543cdfffa66a80be150b8cee0a
+    :git: https://github.com/maxgoedjen/GTMAppAuth.git
 
 SPEC CHECKSUMS:
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   GoogleAPIClientForREST: 4acfffd77f1c3c8741b6be9eaed0e603278efbde
-  GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
+  GTMAppAuth: 990d5edfe4bffc25e5c9198e6ad875e022a943a5
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
 
-PODFILE CHECKSUM: 1d1f73e835083d36c537367294c2f63e38bd8c0f
+PODFILE CHECKSUM: e1adc040a256c1e4c9e91d3bb6a267a7b44e6b0a
 
 COCOAPODS: 1.5.2

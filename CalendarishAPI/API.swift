@@ -4,6 +4,7 @@ import SwiftUI
 import GoogleAPIClientForREST
 import GTMSessionFetcher
 import CalendarishCore
+import GTMAppAuth
 
 public struct API {
 

@@ -1,14 +1,11 @@
 import SwiftUI
-import GTMAppAuth
-import GoogleAPIClientForREST
-import AppAuth
 
 struct ContentView : View {
 
-    let userAgent: OIDExternalUserAgent?
+    let authorizationController: AuthorizationController?
 
-    init(userAgent: OIDExternalUserAgent? = nil) {
-        self.userAgent = userAgent
+    init(authorizationController: AuthorizationController? = nil) {
+        self.authorizationController = authorizationController
     }
 
     var body: some View {
@@ -27,20 +24,9 @@ struct ContentView : View {
 extension ContentView {
 
     func signin() {
-        guard let userAgent = userAgent else { return }
-        let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
-        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: Constants.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: Constants.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
-        AuthState.runningAuthentication = OIDAuthState.authState(byPresenting: request, externalUserAgent: userAgent) { state, error in
-            guard let state = state else { return }
-            let authorization = GTMAppAuthFetcherAuthorization(authState: state)
-            print(authorization)
-        }
+        authorizationController?.start()
     }
 
-}
-
-fileprivate struct AuthState {
-    static var runningAuthentication: OIDExternalUserAgentSession? = nil
 }
 
 #if DEBUG
