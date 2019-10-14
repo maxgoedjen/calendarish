@@ -16,6 +16,8 @@
 		5061CDC623504AAC001E6546 /* CalendarishAPIWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
 		5061CDCC23504AB9001E6546 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BEE22B4AD7B00DB2178 /* API.swift */; };
+		5076FD862353F5C6005AE0D1 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
+		5076FD8A2353F69C005AE0D1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD892353F69C005AE0D1 /* Account.swift */; };
 		508257FF22C357DE00733C3C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508257FE22C357DE00733C3C /* EventDetailView.swift */; };
 		50935B8522B4AA8A00DB2178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8422B4AA8A00DB2178 /* AppDelegate.swift */; };
 		50935B8722B4AA8A00DB2178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935B8622B4AA8A00DB2178 /* ContentView.swift */; };
@@ -45,12 +47,12 @@
 		50A09F4F22C70D0A005CDEA1 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4E22C70D0A005CDEA1 /* SampleData.swift */; };
 		50AD53FD22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
 		50AD53FE22BB583D004BFAC0 /* SessionProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */; };
-		50B1E75422BB5100004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
+		50B1E75422BB5100004A0B0D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* EventStore.swift */; };
 		50B1E76122BB512A004A0B0D /* CalendarishCoreWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; };
 		50B1E76222BB512A004A0B0D /* CalendarishCoreWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCoreWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50B1E76722BB519A004A0B0D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
 		50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49522B5FC7400480806 /* Calendar.swift */; };
-		50B1E76922BB519A004A0B0D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* Store.swift */; };
+		50B1E76922BB519A004A0B0D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* EventStore.swift */; };
 		50C970E722BA0CB2005AF478 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C970DE22BA0CB2005AF478 /* CalendarishAPI.framework */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50C970F022BA0CB2005AF478 /* CalendarishAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C970E022BA0CB2005AF478 /* CalendarishAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -223,6 +225,8 @@
 		5061CDBE23504AAC001E6546 /* CalendarishAPIWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPIWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5061CDC023504AAC001E6546 /* CalendarishAPIWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPIWatch.h; sourceTree = "<group>"; };
 		5061CDC123504AAC001E6546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5076FD852353F5C6005AE0D1 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		5076FD892353F69C005AE0D1 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		508257FE22C357DE00733C3C /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		50935B8122B4AA8A00DB2178 /* Calendarish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendarish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50935B8422B4AA8A00DB2178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -266,7 +270,7 @@
 		50C970E622BA0CB2005AF478 /* CalendarishAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarishAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarishAPITests.swift; sourceTree = "<group>"; };
 		50C970EF22BA0CB2005AF478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50C9717622BA11E1005AF478 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		50C9717622BA11E1005AF478 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		50D2D49322B5FB9F00480806 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		50D2D49522B5FC7400480806 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		50D2D49722B5FCAD00480806 /* APIInits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInits.swift; sourceTree = "<group>"; };
@@ -496,7 +500,9 @@
 				50D2D49322B5FB9F00480806 /* Event.swift */,
 				50D2D49522B5FC7400480806 /* Calendar.swift */,
 				5037D7EE22C34FD700B76927 /* Attendee.swift */,
-				50C9717622BA11E1005AF478 /* Store.swift */,
+				50C9717622BA11E1005AF478 /* EventStore.swift */,
+				5076FD852353F5C6005AE0D1 /* AccountStore.swift */,
+				5076FD892353F69C005AE0D1 /* Account.swift */,
 				50AD53FC22BB583D004BFAC0 /* SessionProxy.swift */,
 				50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */,
 				50935BD322B4AD6100DB2178 /* Info.plist */,
@@ -1057,9 +1063,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5037D7EF22C34FD700B76927 /* Attendee.swift in Sources */,
-				50B1E75422BB5100004A0B0D /* Store.swift in Sources */,
+				50B1E75422BB5100004A0B0D /* EventStore.swift in Sources */,
 				50D2D49422B5FB9F00480806 /* Event.swift in Sources */,
+				5076FD862353F5C6005AE0D1 /* AccountStore.swift in Sources */,
 				50A09F4A22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */,
+				5076FD8A2353F69C005AE0D1 /* Account.swift in Sources */,
 				50D2D49622B5FC7400480806 /* Calendar.swift in Sources */,
 				50AD53FD22BB583D004BFAC0 /* SessionProxy.swift in Sources */,
 			);
@@ -1078,7 +1086,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EF0BF922C352660070C192 /* Attendee.swift in Sources */,
-				50B1E76922BB519A004A0B0D /* Store.swift in Sources */,
+				50B1E76922BB519A004A0B0D /* EventStore.swift in Sources */,
 				50B1E76722BB519A004A0B0D /* Event.swift in Sources */,
 				50A09F4B22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */,
 				50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */,

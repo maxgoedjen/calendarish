@@ -1,10 +1,10 @@
 import Foundation
 import Combine
 
-public class Store: ObservableObject {
+public class EventStore: ObservableObject {
 
     public let didChange = PassthroughSubject<[Event], Never>()
-    let queue = DispatchQueue(label: "calendarishcore.store.disk", qos: .userInitiated)
+    let queue = DispatchQueue(label: "com.calendarish.core.eventstore.disk", qos: .userInitiated)
 
     public var events: [Event] {
         didSet {
@@ -24,7 +24,7 @@ public class Store: ObservableObject {
 
 }
 
-extension Store {
+extension EventStore {
 
     func saveToDisk() {
         queue.async {
@@ -46,10 +46,10 @@ extension Store {
 
 }
 
-extension Store {
+extension EventStore {
 
     enum Constants {
-        static let diskURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("calendarish_cache.json")
+        static let diskURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("calendarish_es_cache.json")
     }
 
 }

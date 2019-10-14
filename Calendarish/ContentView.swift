@@ -13,7 +13,7 @@ import CalendarishAPI
 struct ContentView : View {
 
     @State var authenticator: AuthenticatorProtocol
-    @State var store: Store
+    @State var store: EventStore
 
     let dateFormatter: DateFormatter = {
         let f = DateFormatter()
@@ -74,11 +74,11 @@ extension LoginView {
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: Store.sampleStore)
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
                 .environment(\.colorScheme, .dark)
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: Store.sampleStore)
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: true), store: EventStore.sampleStore)
                 .environment(\.colorScheme, .light)
-            ContentView(authenticator: SampleAuthenticator(isAuthorized: false), store: Store.sampleStore)
+            ContentView(authenticator: SampleAuthenticator(isAuthorized: false), store: EventStore.sampleStore)
                 .environment(\.colorScheme, .dark)
         }
     }

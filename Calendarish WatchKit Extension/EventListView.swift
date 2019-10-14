@@ -49,7 +49,7 @@ struct EventListView: View {
 #if DEBUG
 struct EventListView_Previews : PreviewProvider {
     static var previews: some View {
-        EventListView(store: Store.sampleStore)
+        EventListView(store: EventStore.sampleStore)
     }
 }
 #endif

@@ -88,7 +88,7 @@ struct EventAttendeeListView: View {
 #if DEBUG
 struct EventDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        ForEach(Store.sampleStore.events) { event in
+        ForEach(EventStore.sampleStore.events) { event in
             EventDetailView(event: event)
         }.environment(\.colorScheme, .dark)
     }

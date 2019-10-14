@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
         let api = API(authenticator: Authenticator(config: Constants.config))
-        let store = Store()
+        let store = EventStore()
         let publisher = api.eventPublisher
 //            .assertNoFailure()
             .replaceError(with: [])

@@ -3,9 +3,9 @@ import SwiftUI
 import CalendarishCore
 import CalendarishAPI
 
-extension Store {
-    static var sampleStore: Store {
-        return Store(events: [
+extension EventStore {
+    static var sampleStore: EventStore {
+        return EventStore(events: [
             Event(identifier: UUID().uuidString,
                   name: "Coffee with Marina",
                   startTime: Date(timeIntervalSince1970: -25200),
