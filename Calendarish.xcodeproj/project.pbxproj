@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BF01E7A36F2FB6E549C7B0 /* Pods_Calendarish_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */; };
 		500B0FDC2354448800C16CD0 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDB2354448800C16CD0 /* AuthorizationController.swift */; };
 		500B0FDE235446F600C16CD0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDD235446F600C16CD0 /* WatchController.swift */; };
 		500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
@@ -151,6 +152,7 @@
 
 /* Begin PBXFileReference section */
 		016DDFC9EBE1D9A5E537773E /* Pods_CalendarishCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPIWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
 		4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +208,9 @@
 		50D2D49522B5FC7400480806 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		50D2D49722B5FCAD00480806 /* APIInits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInits.swift; sourceTree = "<group>"; };
 		7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
+		92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC095C88D5287299600BC71 /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
 		A90343CD3C31D805868D8A88 /* Pods_CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPIWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPIWatch/Pods-CalendarishAPIWatch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 			files = (
 				5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */,
 				50B1E76122BB512A004A0B0D /* CalendarishCore.framework in Frameworks */,
+				44BF01E7A36F2FB6E549C7B0 /* Pods_Calendarish_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +290,8 @@
 				96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */,
 				B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */,
 				B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */,
+				04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */,
+				92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -298,6 +305,7 @@
 				F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */,
 				4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */,
 				076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */,
+				984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -524,10 +532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50935BBC22B4AA8E00DB2178 /* Build configuration list for PBXNativeTarget "Calendarish WatchKit Extension" */;
 			buildPhases = (
+				C1477B87343548D6643EE7FB /* [CP] Check Pods Manifest.lock */,
 				50935B9E22B4AA8D00DB2178 /* Sources */,
 				50935B9F22B4AA8D00DB2178 /* Frameworks */,
 				50935BA022B4AA8D00DB2178 /* Resources */,
 				50B1E76622BB512A004A0B0D /* Embed Frameworks */,
+				FC388377C5C76321A8975030 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -776,6 +786,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C1477B87343548D6643EE7FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calendarish WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C5D6A586BB329F63D88C586B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,6 +844,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC388377C5C76321A8975030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth-watchOS/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1126,6 +1178,7 @@
 		};
 		50935BBD22B4AA8E00DB2178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -1153,6 +1206,7 @@
 		};
 		50935BBE22B4AA8E00DB2178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;

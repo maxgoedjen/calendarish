@@ -22,7 +22,7 @@ extension AuthorizationController {
 
     func start() {
         let gtmConfig = GTMAppAuthFetcherAuthorization.configurationForGoogle()
-        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: Constants.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, OIDScopeProfile, kGTLRAuthScopeCalendarReadonly], redirectURL: Constants.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
+        let request = OIDAuthorizationRequest(configuration: gtmConfig, clientId: Constants.clientID, clientSecret: nil, scopes: [OIDScopeOpenID, kGTLRAuthScopeCalendarReadonly, OIDScopeEmail], redirectURL: Constants.redirectURI, responseType: OIDResponseTypeCode, additionalParameters: nil)
         running = OIDAuthState.authState(byPresenting: request, externalUserAgent: self) { state, error in
             if let state = state {
                 let authorization = GTMAppAuthFetcherAuthorization(authState: state)

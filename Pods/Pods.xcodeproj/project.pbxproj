@@ -19,8 +19,10 @@
 		0D88908B31906AB58C084E0A9075B370 /* GTLRDateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = D650E572D8E5DBE96510814DB1520D13 /* GTLRDateTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DB44077E3F42279CFD13A8445FADF6A /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B96492E2558AE7D960FD4DC0DAF1A83 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E9CA802C578AB3333CD3B8554281330 /* GTLRErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3A5DA6B17F93D355DB50FBB2EB5A7D /* GTLRErrorObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0ED905221144A801B9F406137CC071BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47215CC1784B0677398338AA9203AFF /* Foundation.framework */; };
 		10115868A8A44E1F9AA8234176AF55AA /* AppAuth-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CD08F27E635A0B5C8D97CB1C134A9A2 /* AppAuth-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10E9FD5992ED7F8836896262ED74B403 /* Pods-CalendarishAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 688D595713299CCB6EE7059871DC1C08 /* Pods-CalendarishAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10C239695B0D156E074DBC0C21CA0F95 /* Pods-Calendarish WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C73B506BAD7E958A5DFB648F250D4 /* Pods-Calendarish WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E9FD5992ED7F8836896262ED74B403 /* Pods-CalendarishAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B7B5D4A339866FD2F30BDBFDF69FAA /* Pods-CalendarishAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14737F7A7A267A58571337AEF28FE954 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1A817683F7287AC37E8B85F14F394 /* OIDServiceDiscovery.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		14EA694433101AAF0433848DFA302D48 /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B443EB6022FD7C12813DEC2D38CF3669 /* OIDIDToken.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1597D09AD9C5A82A099E90C20CDDDD83 /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = 38223631BD2795D476F7D1DB80659149 /* OIDAuthState.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,8 +71,8 @@
 		3E13EE5FAECC649CEB59979CB855CE23 /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C881FA9B72CF57A8B9B6198C54BC24A7 /* OIDDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E62674F94596886DD316033F1379367 /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC449338DD379A382CF02BBD432B8D08 /* AppAuth.framework */; };
 		41B6F247894C65476DD7726F502C038D /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = CA44B0DE5F868E75807BC7EF578FA357 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4212E32DAC2029E17F51A559E0F3FB36 /* Pods-Calendarish-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF94AAB0F718C3681599F21CB1A940 /* Pods-Calendarish-dummy.m */; };
-		440E2529A69FF63B219982BD992E56B0 /* Pods-Calendarish-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D269647697C1E3C7E2DFA73C44C58876 /* Pods-Calendarish-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4212E32DAC2029E17F51A559E0F3FB36 /* Pods-Calendarish-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9BD292120E6094D58EE6FDBDE12AE86 /* Pods-Calendarish-dummy.m */; };
+		440E2529A69FF63B219982BD992E56B0 /* Pods-Calendarish-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7FE930C3861FA1695B3C526C60AF4A /* Pods-Calendarish-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		464004A34271800BB17DCDD8542F94C8 /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF7D9536D9A455A9E9E0A86FB6825E2 /* GTMSessionUploadFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		471792B045E61A302A0186B06759AC75 /* GTMGatherInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACDCA6D30DD3DD254240DB60CD25B88 /* GTMGatherInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47258FC6B1ABE98F25EFE5242FC03022 /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEBFADA2EB0B865D14C777F8847A8E6 /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,6 +110,7 @@
 		6D34FB6D3DC2D686792E3ED66573B046 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 469448712531D2F63914D0943FF9B168 /* GTMSessionFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6D8628692635974DE1BDD3AD6278837A /* GTLRDuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 069070D7391EBE5EE5BBC7CC1918D2D6 /* GTLRDuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E41095485626DBA572BFA70E6E90DC8 /* GTLRDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFBD7B93D79E889152E8FB5ADD935DD /* GTLRDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F33EC525EBACF51F2EA39C3E097F447 /* Pods-Calendarish WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CE6874DD7A8793574CFC5DEC587F0 /* Pods-Calendarish WatchKit Extension-dummy.m */; };
 		70170697059E1234167A1F29DD25766C /* GTLRDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E79F5935C9D54EEC49D8A432B16707 /* GTLRDateTime.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		70D682B3DAC9B6AE820D7684CC02A397 /* GTLRFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3297B68202801DE9C0D3BA847C2876 /* GTLRFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		722E939FA0D1D2AA4EC4337CAC9E3B9E /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = CA44B0DE5F868E75807BC7EF578FA357 /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,7 +122,7 @@
 		7B8E2168AE45B4F2A37C84E1718E6232 /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 414B7DC3AB67106DE0E7E9FC75E2C0DA /* OIDResponseTypes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E8B092B8D372B98C0DB538CE13B26B7 /* OIDExternalUserAgentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF777BB6F06E33EE2FE4F8451DCA82F /* OIDExternalUserAgentRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EA786E2B71DD7B15F643B0F14917C3C /* GTLRErrorObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 43AE0515E1B7D654CCE15444092FFD95 /* GTLRErrorObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FC68DBC297E9FDA3EAAC9E2BBE8D8AB /* Pods-CalendarishAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91750F9257740ADC15E3EC8F7CCE3516 /* Pods-CalendarishAPITests-dummy.m */; };
+		7FC68DBC297E9FDA3EAAC9E2BBE8D8AB /* Pods-CalendarishAPITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E4F64FC041F8375748ACFE9F5D348D /* Pods-CalendarishAPITests-dummy.m */; };
 		8005A901F1646CB6B2ED329878E6FF64 /* GTMAppAuth-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18530C3D51E57224B235B892F7012470 /* GTMAppAuth-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8135D3002749D64A631BD86FB3A31264 /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8B4337478D2DF986BE202BBA21FA74 /* GTMGatherInputStream.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		81B1507D5431D471D2A90E7F7A31D241 /* GTLRBatchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D0E38CE45FC65CB91C1183DF590DF5 /* GTLRBatchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,7 +148,7 @@
 		92EB2D1E7A0D5A983631D2C052245825 /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A28BB1E0868A1ECF28498E2CA72F7A95 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EF5831CFCBA83C76FF92F58FD33DBD /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C21BDAE64C51E3E4CCDDDC69A72192 /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		956AA9288A5E4C99B705BEA9BA6F97E8 /* GTMSessionFetcher-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 265BA6B8D2268DD34FF5F6740226BF65 /* GTMSessionFetcher-iOS-dummy.m */; };
-		9704EE2A4A35000E0FE5280A27BD58EA /* Pods-CalendarishAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18F6A898164F770B88D4143966DEDD40 /* Pods-CalendarishAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9704EE2A4A35000E0FE5280A27BD58EA /* Pods-CalendarishAPITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45224907A15C5A159C17B205576752B0 /* Pods-CalendarishAPITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98467B3BD3ABB995A5E938F992856821 /* OIDExternalUserAgentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 957BAD14DB7910007FEEF9011DD4FBE3 /* OIDExternalUserAgentSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		997B94FECD2EB69476B9F2E2D5A1309A /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE61820341A384B75E205CF364538C2 /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A35E9B928D993FB88FC110400090A31 /* GTLRService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BB493FC3BE31B9ADAE9613C5BB260DF /* GTLRService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -270,7 +273,7 @@
 		F8A26DBED94A671A6B35D3DBAACA4453 /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAAE471A0CCAE8A0EC711101086A004 /* OIDScopeUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8E3584DB0B283349BF970480EDCD2C6 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1A817683F7287AC37E8B85F14F394 /* OIDServiceDiscovery.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F98ABE7DCFB003B85FED82001C49D8D0 /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A2ADAE36D4D730DE7336219E28862D9C /* OIDErrorUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F9A49DDD2228F29385B476F2FE3C14B5 /* Pods-CalendarishAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 809BB9F38A960EF70BADB7F4FEC37BF1 /* Pods-CalendarishAPI-dummy.m */; };
+		F9A49DDD2228F29385B476F2FE3C14B5 /* Pods-CalendarishAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B661ABDA33F95D73BC8E458EB89EF499 /* Pods-CalendarishAPI-dummy.m */; };
 		FA510AEE4E98DC054757CD383D69B8EB /* GoogleAPIClientForREST-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C430FF4E6492799F47B43309B07E776E /* GoogleAPIClientForREST-iOS-dummy.m */; };
 		FB6EA59515FBF2A38AB716903FA7CFD4 /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBEE0B14504AA88FE93728C563F946 /* OIDError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE461F6EB29CF4EA1A53BD1CA340EB14 /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 719316CBC3E8244FC1C654E2C760DD14 /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -294,6 +297,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = F6F8F4D406DC12363050F378AB79BF4F;
 			remoteInfo = "AppAuth-iOS";
+		};
+		2426B7CA977D9DC2B9677951E815245E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EFA17474056B07C5C50461282BB9ACC;
+			remoteInfo = "GoogleAPIClientForREST-watchOS";
+		};
+		27A250082599E752CC888E12C69AC59D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2183EFB35B6313096F3FC0A1090ACDA;
+			remoteInfo = "GTMSessionFetcher-watchOS";
 		};
 		280111CAE7885DEAA28F6A0F7BBC9A80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -322,6 +339,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1A86736AA540942A68FE3762846DBA25;
 			remoteInfo = "AppAuth-watchOS";
+		};
+		4AE91418045EAECD912ADB8D330CD49C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC8D55CE74C8A036170FF0B07EEF586B;
+			remoteInfo = "GTMAppAuth-watchOS";
 		};
 		4C79F075B3ADC765F014C1BAC2A8FCBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -393,6 +417,13 @@
 			remoteGlobalIDString = CF372A6582E3CD0DA9E76FE10176AC2C;
 			remoteInfo = "GTMSessionFetcher-iOS";
 		};
+		D0B917A25855A23590B1A479F6B47F8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A86736AA540942A68FE3762846DBA25;
+			remoteInfo = "AppAuth-watchOS";
+		};
 		D564999C454080E78519B4E03AE64A6B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -410,8 +441,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01F4AA6AA954CAC2964EAFEDE117479B /* Pods-CalendarishAPITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalendarishAPITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		02340E520D6A643DA0E8D2B7BA83B972 /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Source/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
-		033A69E3A7E624754C6A15C9EE19C0D1 /* Pods-CalendarishAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		02F1CF5CAD97BA9D64965A740C295B1D /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Calendarish.framework; path = "Pods-Calendarish.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069070D7391EBE5EE5BBC7CC1918D2D6 /* GTLRDuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRDuration.h; path = Source/Objects/GTLRDuration.h; sourceTree = "<group>"; };
 		06F2DA75085A977FE5943A2B02D9B0E2 /* GTMSessionFetcher-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GTMSessionFetcher-iOS.xcconfig"; sourceTree = "<group>"; };
 		08B87A064B0585EE0CBF06EA419EA503 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -420,48 +452,47 @@
 		0E1A344D44BE2A9C5458EC7D63D48231 /* AppAuth-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "AppAuth-iOS.modulemap"; sourceTree = "<group>"; };
 		107A43E03BA6D567C6E8D2A22846BA5A /* GTMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMKeychain.h; path = Source/GTMKeychain.h; sourceTree = "<group>"; };
 		10CBAFD471019899C0DB9756E1D89A22 /* OIDEndSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionResponse.h; path = Source/OIDEndSessionResponse.h; sourceTree = "<group>"; };
+		12FF96D547BB720A54B6E7CE8C372D7F /* Pods-CalendarishAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalendarishAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		1496F9F53519CC0333462160A8CF568B /* OIDTokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenResponse.m; path = Source/OIDTokenResponse.m; sourceTree = "<group>"; };
-		15146A4FF2B8D749244326B898A6A015 /* Pods-CalendarishAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalendarishAPI-acknowledgements.plist"; sourceTree = "<group>"; };
 		17A5E7858E26FEDDCCB13BB218DA5EFF /* GTMAppAuth-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GTMAppAuth-iOS.modulemap"; sourceTree = "<group>"; };
 		18530C3D51E57224B235B892F7012470 /* GTMAppAuth-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMAppAuth-iOS-umbrella.h"; sourceTree = "<group>"; };
-		18F6A898164F770B88D4143966DEDD40 /* Pods-CalendarishAPITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalendarishAPITests-umbrella.h"; sourceTree = "<group>"; };
 		1977CC55A69A109B0DD6A8FF365ACE82 /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Source/OIDFieldMapping.h; sourceTree = "<group>"; };
 		1DE1A2406CC07131AEC1DE41E5B7700D /* AppAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuthCore.h; path = Source/AppAuthCore.h; sourceTree = "<group>"; };
 		209377712425FEA70FAA21CB7EFC0900 /* OIDTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenResponse.h; path = Source/OIDTokenResponse.h; sourceTree = "<group>"; };
+		2274475AD04A69AE12BB34AE1F37F6C5 /* Pods-CalendarishAPITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalendarishAPITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		23E152F2E9BCD160CBEAFB2012FB29F2 /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/OIDScopes.m; sourceTree = "<group>"; };
 		23E79F5935C9D54EEC49D8A432B16707 /* GTLRDateTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRDateTime.m; path = Source/Objects/GTLRDateTime.m; sourceTree = "<group>"; };
+		25D8E12B9FD6E91AE6CAEA15CE273960 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = "AppAuth-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265BA6B8D2268DD34FF5F6740226BF65 /* GTMSessionFetcher-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-iOS-dummy.m"; sourceTree = "<group>"; };
 		27D1795A2E225227DEA9AA6F24F46579 /* OIDAuthorizationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationRequest.m; path = Source/OIDAuthorizationRequest.m; sourceTree = "<group>"; };
 		2A29081CA8F205F73D8C2FAD71ADA3E9 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Source/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
 		2A718DE0928B2C17D919E9EA98C36420 /* GTMAppAuthFetcherAuthorization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMAppAuthFetcherAuthorization.m; path = Source/GTMAppAuthFetcherAuthorization.m; sourceTree = "<group>"; };
 		2AA2D9651FB0D470815336DA24CDF846 /* OIDServiceDiscovery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceDiscovery.h; path = Source/OIDServiceDiscovery.h; sourceTree = "<group>"; };
+		2C1B24E38BFC5E0C1880FF9B886400DC /* Pods-Calendarish-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Calendarish-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2D88C417E2A75CAE56BCA117534A1702 /* GTLRRuntimeCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRRuntimeCommon.m; path = Source/Objects/GTLRRuntimeCommon.m; sourceTree = "<group>"; };
-		2DB728B5A9658B1A6B9B9EA769086246 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMAppAuth.framework; path = "GTMAppAuth-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ECF75A584992B97F85C13D6B7F528BD /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
 		2F3A5DA6B17F93D355DB50FBB2EB5A7D /* GTLRErrorObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRErrorObject.m; path = Source/Objects/GTLRErrorObject.m; sourceTree = "<group>"; };
+		2F6CE6874DD7A8793574CFC5DEC587F0 /* Pods-Calendarish WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Calendarish WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		32189C402B1CC5460D54973C980C2ABA /* Pods-CalendarishAPITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPITests-resources.sh"; sourceTree = "<group>"; };
 		358EA13A0BE49A7B4CADBC991EBF05FE /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Source/OIDAuthorizationService.m; sourceTree = "<group>"; };
 		35908C17177D919381D4FC86A4BA3F84 /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Source/OIDScopes.h; sourceTree = "<group>"; };
 		371434390EA9A5B022D5FF610AB42203 /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
 		38223631BD2795D476F7D1DB80659149 /* OIDAuthState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthState.h; path = Source/OIDAuthState.h; sourceTree = "<group>"; };
-		3D41E1DE090FA42FE6F6BFC0475FB732 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleAPIClientForREST.framework; path = "GoogleAPIClientForREST-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C73CB46847C832BBCEBB081575C84D2 /* Pods-CalendarishAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalendarishAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3EB508DF2D4E8889844C052A1E8DFB98 /* GTLRUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRUtilities.m; path = Source/Utilities/GTLRUtilities.m; sourceTree = "<group>"; };
 		3FB6F74272BB1F177FD4D506FFEA191A /* OIDEndSessionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionRequest.m; path = Source/OIDEndSessionRequest.m; sourceTree = "<group>"; };
-		40C45F2275A04470D496FE5528B93294 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC00404C19A4A0040ED6D3729411404 /* Pods-Calendarish WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
 		414B7DC3AB67106DE0E7E9FC75E2C0DA /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Source/OIDResponseTypes.m; sourceTree = "<group>"; };
 		43AE0515E1B7D654CCE15444092FFD95 /* GTLRErrorObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRErrorObject.h; path = Source/Objects/GTLRErrorObject.h; sourceTree = "<group>"; };
 		44B41C7D560F3AC3347B26C9A3284F78 /* GTMSessionFetcher-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-iOS-prefix.pch"; sourceTree = "<group>"; };
+		45224907A15C5A159C17B205576752B0 /* Pods-CalendarishAPITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalendarishAPITests-umbrella.h"; sourceTree = "<group>"; };
+		452F468A3FEA29942F1AA9225B5307B8 /* Pods-Calendarish WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Calendarish WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		4582629511CECCBEAE18BEBB9D1CE397 /* Pods-Calendarish-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish-frameworks.sh"; sourceTree = "<group>"; };
 		45C2C8A48AA4484492F8BDFF74257BDC /* GTLRCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRCalendar.h; path = Source/GeneratedServices/Calendar/GTLRCalendar.h; sourceTree = "<group>"; };
 		469448712531D2F63914D0943FF9B168 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
-		46C831DCC995C7C6B7D2D8EF5023BE34 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = "GTMSessionFetcher-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47332AC3A1C30FA764A85CCD96577EE9 /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
-		47C5C3A764598D2394838B628A3DF1D9 /* Pods-CalendarishAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPITests.release.xcconfig"; sourceTree = "<group>"; };
-		4AAF94AAB0F718C3681599F21CB1A940 /* Pods-Calendarish-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Calendarish-dummy.m"; sourceTree = "<group>"; };
 		4ACDCA6D30DD3DD254240DB60CD25B88 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
 		4B77475D59B8CBBE28A48963DC6F84A6 /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Source/OIDGrantTypes.h; sourceTree = "<group>"; };
-		4D2B8BC08BA3FEA768511931B3E485DB /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = "GTMSessionFetcher-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDBE02CADB87BE980D4117D08A4A47E /* AppAuth-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppAuth-watchOS-prefix.pch"; path = "../AppAuth-watchOS/AppAuth-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		4FEB8E12035A3BAB32E6E6BE65F36558 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		5212B0B3442646129B2D9AAF34F01B0D /* Pods-CalendarishAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		524879B5A4BD9EDF9D7CECCE2CBCAEE2 /* AppAuth-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-iOS-umbrella.h"; sourceTree = "<group>"; };
 		52DF9966C4D174F3E9FBFA9426A7246E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../GTMAppAuth-watchOS/Info.plist"; sourceTree = "<group>"; };
 		5312AAB75AA2787EEBE06C99CBE5DB5C /* GTMSessionFetcher-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-iOS-umbrella.h"; sourceTree = "<group>"; };
@@ -472,107 +503,117 @@
 		57EE6CE7A8D53FE784C220C67BF2C941 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../GTMSessionFetcher-watchOS/Info.plist"; sourceTree = "<group>"; };
 		5836C7C0816D4135DE9073A502DCBA5F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		5842EFCD33BDDA4803ADA4EFD2F58E1B /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Source/OIDURLSessionProvider.h; sourceTree = "<group>"; };
+		59DFCE04CEC2ADE8069D319A91200DEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A1DB50CBF23253B9AA4509BB08EBED2 /* GoogleAPIClientForREST-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GoogleAPIClientForREST-watchOS-dummy.m"; path = "../GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST-watchOS-dummy.m"; sourceTree = "<group>"; };
+		5AE56CDB2AAD66B371A1C00915F4EE06 /* Pods-Calendarish-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Calendarish-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BB493FC3BE31B9ADAE9613C5BB260DF /* GTLRService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRService.h; path = Source/Objects/GTLRService.h; sourceTree = "<group>"; };
 		5F2BADACE9323AA7DBC04727F98BA449 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
 		5F6CDC05E645209C40AF699945A6FED0 /* OIDTokenUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenUtilities.h; path = Source/OIDTokenUtilities.h; sourceTree = "<group>"; };
-		604A6BD27C8784FA5DD2820411EF0169 /* Pods-CalendarishAPITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalendarishAPITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		619BB53DA20B6A6329ED9984D50BAB26 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61BF55801533512D5D008A2966D0EFA6 /* Pods_Calendarish_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Calendarish_WatchKit_Extension.framework; path = "Pods-Calendarish WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6234286F8FAEDDFB71469E88C6ED8FD5 /* OIDEndSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionResponse.m; path = Source/OIDEndSessionResponse.m; sourceTree = "<group>"; };
 		62D0E38CE45FC65CB91C1183DF590DF5 /* GTLRBatchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRBatchResult.h; path = Source/Objects/GTLRBatchResult.h; sourceTree = "<group>"; };
+		62DC4475F8580C7CDE63EAC28A8B1EC9 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = "GTMSessionFetcher-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6382E1EC5F32236AB27AB628982B9134 /* GTMAppAuthFetcherAuthorization+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuthFetcherAuthorization+Keychain.h"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.h"; sourceTree = "<group>"; };
+		63C98BB67D90F76CF52CFD383D9D3BE9 /* Pods-Calendarish WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Calendarish WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		63E4F64FC041F8375748ACFE9F5D348D /* Pods-CalendarishAPITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalendarishAPITests-dummy.m"; sourceTree = "<group>"; };
 		64C8B6F0E4BF9D42A0B841A8A8484686 /* AppAuth-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-iOS-prefix.pch"; sourceTree = "<group>"; };
 		6755A566E3A25127E37AAFC7DFD4BCAC /* GoogleAPIClientForREST-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GoogleAPIClientForREST-iOS.modulemap"; sourceTree = "<group>"; };
 		678FC9F622BD071C49774E6D5DC704FA /* GTMAppAuth-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMAppAuth-watchOS-dummy.m"; path = "../GTMAppAuth-watchOS/GTMAppAuth-watchOS-dummy.m"; sourceTree = "<group>"; };
-		688D595713299CCB6EE7059871DC1C08 /* Pods-CalendarishAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalendarishAPI-umbrella.h"; sourceTree = "<group>"; };
+		684C7853AE46C383149D36F33CF47ED3 /* Pods-Calendarish.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Calendarish.modulemap"; sourceTree = "<group>"; };
 		69C47BBE16B74F4D16D2B121F47D2C34 /* GTMAppAuth-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GTMAppAuth-iOS.xcconfig"; sourceTree = "<group>"; };
+		6A4AAC3F8891A0A330A777A594AC2385 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = "AppAuth-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A72742A23AAA54F14123441F4B2FB91 /* GTLRUploadParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRUploadParameters.m; path = Source/Objects/GTLRUploadParameters.m; sourceTree = "<group>"; };
 		6BAAE471A0CCAE8A0EC711101086A004 /* OIDScopeUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopeUtilities.m; path = Source/OIDScopeUtilities.m; sourceTree = "<group>"; };
+		6BBD5BDD278526E44DF0E7F30F3460A6 /* Pods-CalendarishAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		6BDF8EB26BE9CD2101CD076A05CEE122 /* GTLRService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRService.m; path = Source/Objects/GTLRService.m; sourceTree = "<group>"; };
 		6CFBFD55172D953E1985BB9CF504C3F8 /* GTMSessionFetcher-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "GTMSessionFetcher-watchOS.xcconfig"; path = "../GTMSessionFetcher-watchOS/GTMSessionFetcher-watchOS.xcconfig"; sourceTree = "<group>"; };
 		711E1FEFF93F5FB86C8E145999B4FD86 /* GTLRCalendarQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarQuery.h; path = Source/GeneratedServices/Calendar/GTLRCalendarQuery.h; sourceTree = "<group>"; };
 		719316CBC3E8244FC1C654E2C760DD14 /* OIDAuthorizationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationResponse.h; path = Source/OIDAuthorizationResponse.h; sourceTree = "<group>"; };
+		736CE834923D1A2980C3091B04359BD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74744FBD3D5366B4A2D98EB4CED7B515 /* OIDServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceConfiguration.m; path = Source/OIDServiceConfiguration.m; sourceTree = "<group>"; };
 		77F9688B34FEF85A76707F4DFD58AF54 /* GTLRBatchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRBatchResult.m; path = Source/Objects/GTLRBatchResult.m; sourceTree = "<group>"; };
+		786066738866C1960ECEFAEC65A59E31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78A7F3B3CA191A8B29D67783D6C8341A /* Pods-Calendarish-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish-resources.sh"; sourceTree = "<group>"; };
 		79178F4A2596F7784619E3B230FD21E0 /* GTLRQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRQuery.m; path = Source/Objects/GTLRQuery.m; sourceTree = "<group>"; };
-		79538EE8322C7968493C6DDED872A883 /* Pods-Calendarish.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Calendarish.modulemap"; sourceTree = "<group>"; };
+		7A8D2EC1A35E226AF026102C4995A7F8 /* Pods-Calendarish WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Calendarish WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7C376B98B98DA5AE45287476783C9B14 /* Pods-CalendarishAPI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPI-resources.sh"; sourceTree = "<group>"; };
 		7C7977D977BBDF18F5B55EA5D21A0CF1 /* GTLRObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRObject.h; path = Source/Objects/GTLRObject.h; sourceTree = "<group>"; };
-		7DA3ECE71FFEB39D677A94108DA365D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EE61820341A384B75E205CF364538C2 /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
 		7FB34B9C69E0104D6F947858DF873B58 /* GTLRCalendarObjects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarObjects.h; path = Source/GeneratedServices/Calendar/GTLRCalendarObjects.h; sourceTree = "<group>"; };
-		809BB9F38A960EF70BADB7F4FEC37BF1 /* Pods-CalendarishAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalendarishAPI-dummy.m"; sourceTree = "<group>"; };
+		81929EC47455CB0C300ABD5EBA7B94C7 /* Pods-CalendarishAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalendarishAPI.modulemap"; sourceTree = "<group>"; };
 		81F63293E0746E8450F5766DDE0EAB46 /* GTLRURITemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRURITemplate.h; path = Source/Utilities/GTLRURITemplate.h; sourceTree = "<group>"; };
 		828B8788166C6F232A4C6EE1A0753F92 /* GTLRCalendarQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarQuery.m; path = Source/GeneratedServices/Calendar/GTLRCalendarQuery.m; sourceTree = "<group>"; };
 		845EA2DD0F91CAF4DA9FF64336C9CF18 /* GTLRUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRUtilities.h; path = Source/Utilities/GTLRUtilities.h; sourceTree = "<group>"; };
 		848724EF751A05AAE44EC9A75A656238 /* GTMSessionFetcher-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMSessionFetcher-watchOS-umbrella.h"; path = "../GTMSessionFetcher-watchOS/GTMSessionFetcher-watchOS-umbrella.h"; sourceTree = "<group>"; };
-		856415C6588469AE8517A73D285F6414 /* Pods-Calendarish-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish-frameworks.sh"; sourceTree = "<group>"; };
 		86C9CE469D83FEC17684AC3332BE4D3C /* GoogleAPIClientForREST-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleAPIClientForREST-iOS-prefix.pch"; sourceTree = "<group>"; };
-		86EAC69D05F0AAA8B9629874652D5FEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8701559BC5923EE40E555F377F38EFB4 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		8816097EE80CE31710D42B78C8972F18 /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Source/OIDFieldMapping.m; sourceTree = "<group>"; };
 		89405F61750D3C6471871B304F3B259D /* OIDAuthStateErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateErrorDelegate.h; path = Source/OIDAuthStateErrorDelegate.h; sourceTree = "<group>"; };
 		8B96492E2558AE7D960FD4DC0DAF1A83 /* OIDScopeUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopeUtilities.h; path = Source/OIDScopeUtilities.h; sourceTree = "<group>"; };
 		8CD08F27E635A0B5C8D97CB1C134A9A2 /* AppAuth-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppAuth-watchOS-umbrella.h"; path = "../AppAuth-watchOS/AppAuth-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		8DEF737BEEC4642F349D2A36B731300B /* Pods-CalendarishAPITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPITests-frameworks.sh"; sourceTree = "<group>"; };
 		8E8B4337478D2DF986BE202BBA21FA74 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMGatherInputStream.m; path = Source/GTMGatherInputStream.m; sourceTree = "<group>"; };
 		8F3B2CF3A10706E0D7E4A3FEC69AC454 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC0A92E363F561232CA23FF060874FA /* OIDURLQueryComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLQueryComponent.h; path = Source/OIDURLQueryComponent.h; sourceTree = "<group>"; };
+		8FCC0FEE90FE43130ECD4B2B28F72809 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = "GTMSessionFetcher-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CB97C4547A8B873A10A17E6412C989 /* AppAuth-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppAuth-iOS-dummy.m"; sourceTree = "<group>"; };
-		91750F9257740ADC15E3EC8F7CCE3516 /* Pods-CalendarishAPITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalendarishAPITests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		949A9D09A9FEA74C497E3AD1489DE29D /* GTMAppAuthFetcherAuthorization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuthFetcherAuthorization.h; path = Source/GTMAppAuthFetcherAuthorization.h; sourceTree = "<group>"; };
 		9554041F1A461DC4908DE889C3DF5DB8 /* OIDTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenRequest.h; path = Source/OIDTokenRequest.h; sourceTree = "<group>"; };
 		957BAD14DB7910007FEEF9011DD4FBE3 /* OIDExternalUserAgentSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentSession.h; path = Source/OIDExternalUserAgentSession.h; sourceTree = "<group>"; };
 		9681DC8B35CDBEEA55673502B1E5910B /* GTMAppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuth.h; path = Source/GTMAppAuth.h; sourceTree = "<group>"; };
 		97330F0A6AD64F779D97FEFC150DFB2E /* GoogleAPIClientForREST-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "GoogleAPIClientForREST-watchOS.xcconfig"; path = "../GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST-watchOS.xcconfig"; sourceTree = "<group>"; };
+		97AB3457D872934F982AEA5A4911400F /* Pods_CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarishAPI.framework; path = "Pods-CalendarishAPI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9817BCFDE102CABBDFD297C2B8EB0815 /* OIDClientMetadataParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDClientMetadataParameters.h; path = Source/OIDClientMetadataParameters.h; sourceTree = "<group>"; };
+		999303567BFE293DBCBB0D96A1538BF5 /* Pods-CalendarishAPITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalendarishAPITests.modulemap"; sourceTree = "<group>"; };
 		9A0BF6C9BB1C16D3FAAB0BCB60D94F95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A16A59F0A35D16EA38223469D1347CF /* OIDURLQueryComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLQueryComponent.m; path = Source/OIDURLQueryComponent.m; sourceTree = "<group>"; };
 		9A27ED03AE9A9CAEDDC832CAD2ED9C9F /* AppAuth-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "AppAuth-watchOS.xcconfig"; path = "../AppAuth-watchOS/AppAuth-watchOS.xcconfig"; sourceTree = "<group>"; };
 		9CE1A817683F7287AC37E8B85F14F394 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Source/OIDServiceDiscovery.m; sourceTree = "<group>"; };
 		9DF777BB6F06E33EE2FE4F8451DCA82F /* OIDExternalUserAgentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentRequest.h; path = Source/OIDExternalUserAgentRequest.h; sourceTree = "<group>"; };
 		9F07BB2B8C67644A9B85F34BE54F1D31 /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Source/OIDGrantTypes.m; sourceTree = "<group>"; };
-		9F4EEDCE3B61C335D7C19DE3C4B458AE /* Pods-Calendarish-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Calendarish-acknowledgements.plist"; sourceTree = "<group>"; };
 		A1DABD6954E2FEC360CEC8F73D4B7D95 /* GTLRBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRBase64.m; path = Source/Utilities/GTLRBase64.m; sourceTree = "<group>"; };
 		A28BB1E0868A1ECF28498E2CA72F7A95 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
 		A2ADAE36D4D730DE7336219E28862D9C /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Source/OIDErrorUtilities.m; sourceTree = "<group>"; };
 		A4854373E3F1D2D7BAE0D6DB0962DEA7 /* GTMOAuth2KeychainCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2KeychainCompatibility.h; path = Source/GTMOAuth2KeychainCompatibility/GTMOAuth2KeychainCompatibility.h; sourceTree = "<group>"; };
 		A62101F6CF800F0AB48B7938588164DD /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Source/OIDServiceConfiguration.h; sourceTree = "<group>"; };
-		A66650DBC9C353F82A449F28B175A413 /* Pods-CalendarishAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalendarishAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A673CC5959CF29F6FC29D9F9113E538B /* GTLRObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRObject.m; path = Source/Objects/GTLRObject.m; sourceTree = "<group>"; };
 		A8051518DAEE0947ED545274556CA58C /* GTMKeychain_iOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMKeychain_iOS.m; path = Source/iOS/GTMKeychain_iOS.m; sourceTree = "<group>"; };
 		A8ABAD44A2888DF7BFD54F6A878E44E4 /* GTLRRuntimeCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRRuntimeCommon.h; path = Source/Objects/GTLRRuntimeCommon.h; sourceTree = "<group>"; };
 		A8BBCF9CB1AAE2895B2A0B6A0EF8DFB3 /* GTLRCalendarService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarService.m; path = Source/GeneratedServices/Calendar/GTLRCalendarService.m; sourceTree = "<group>"; };
+		A8DF21048F395A0454120613D5807D4A /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMAppAuth.framework; path = "GTMAppAuth-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D234466E7157BF0C8DE94C04A7F36F /* Pods-CalendarishAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC21886BAB2D2276083E36B509A4C922 /* GTMAppAuth-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "GTMAppAuth-watchOS.modulemap"; path = "../GTMAppAuth-watchOS/GTMAppAuth-watchOS.modulemap"; sourceTree = "<group>"; };
-		AC9574C084DF83448A925A2EC37119DE /* Pods-CalendarishAPITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPITests-resources.sh"; sourceTree = "<group>"; };
 		B16A86E13BD4015FF21114B63BA04085 /* GTLRUploadParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRUploadParameters.h; path = Source/Objects/GTLRUploadParameters.h; sourceTree = "<group>"; };
 		B2CFE29AAF7C65855DB90C00A9568A40 /* OIDIDToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDIDToken.h; path = Source/OIDIDToken.h; sourceTree = "<group>"; };
 		B443EB6022FD7C12813DEC2D38CF3669 /* OIDIDToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDIDToken.m; path = Source/OIDIDToken.m; sourceTree = "<group>"; };
-		B589149731C69B0AFC5001C342A580B4 /* Pods-Calendarish-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish-resources.sh"; sourceTree = "<group>"; };
+		B661ABDA33F95D73BC8E458EB89EF499 /* Pods-CalendarishAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalendarishAPI-dummy.m"; sourceTree = "<group>"; };
 		B6DDE1789657F8052AD0DE484B5671A6 /* GTMAppAuthFetcherAuthorization+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMAppAuthFetcherAuthorization+Keychain.m"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.m"; sourceTree = "<group>"; };
-		B82A6519AD87C96B662ADE3846C1F21D /* Pods-CalendarishAPITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalendarishAPITests.modulemap"; sourceTree = "<group>"; };
-		BAA41E218A645334DAF8696234628E69 /* Pods-CalendarishAPITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalendarishAPITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BB0804BC0F83ED975ACD0738BAFE5E2D /* GTMAppAuth-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuth-watchOS-prefix.pch"; path = "../GTMAppAuth-watchOS/GTMAppAuth-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		BE50D00AB98EBFE541EBF0B419C7ED79 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		BEE6E1C96F02F83230EC8802C75A7A2B /* Pods-Calendarish WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Calendarish WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
 		C0188ED26ECE5B2E5876E0AE1AEFDF40 /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMReadMonitorInputStream.m; path = Source/GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
+		C15712946EFDD33DF8344770BA5B747E /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarishAPITests.framework; path = "Pods-CalendarishAPITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C21BDAE64C51E3E4CCDDDC69A72192 /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Source/OIDRegistrationResponse.h; sourceTree = "<group>"; };
 		C430FF4E6492799F47B43309B07E776E /* GoogleAPIClientForREST-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleAPIClientForREST-iOS-dummy.m"; sourceTree = "<group>"; };
 		C4D78BA30485C821D3F3ADA020753679 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
-		C5364041756BA9485E42B0B1A4954944 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = "AppAuth-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53A25E19CEB119B23891FA0461732C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C5B7D495A982FEB481058AFE023706FC /* GTMMIMEDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMMIMEDocument.m; path = Source/GTMMIMEDocument.m; sourceTree = "<group>"; };
-		C773FDAF40627E8061552F5AC372514A /* Pods-Calendarish-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Calendarish-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C78F525AAF9A29474C0969CE130D8DDD /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
 		C79E3C2AE0DE292DBEC03B95FFAC8EF9 /* GTLRCalendarService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarService.h; path = Source/GeneratedServices/Calendar/GTLRCalendarService.h; sourceTree = "<group>"; };
+		C7B7B5D4A339866FD2F30BDBFDF69FAA /* Pods-CalendarishAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalendarishAPI-umbrella.h"; sourceTree = "<group>"; };
 		C881FA9B72CF57A8B9B6198C54BC24A7 /* OIDDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDDefines.h; path = Source/OIDDefines.h; sourceTree = "<group>"; };
 		C94E7561870E028CE166723975671014 /* GTMAppAuth-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "GTMAppAuth-watchOS.xcconfig"; path = "../GTMAppAuth-watchOS/GTMAppAuth-watchOS.xcconfig"; sourceTree = "<group>"; };
 		C9A4FC67FADB78AA3A008A79256A0167 /* AppAuth-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AppAuth-watchOS-dummy.m"; path = "../AppAuth-watchOS/AppAuth-watchOS-dummy.m"; sourceTree = "<group>"; };
-		C9B12C0B1DFC8061D9813E99ACE91D91 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleAPIClientForREST.framework; path = "GoogleAPIClientForREST-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1D3E45C951D758A3B943F5F3C7846A /* GTMSessionFetcher-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "GTMSessionFetcher-watchOS.modulemap"; path = "../GTMSessionFetcher-watchOS/GTMSessionFetcher-watchOS.modulemap"; sourceTree = "<group>"; };
 		CA44B0DE5F868E75807BC7EF578FA357 /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Source/OIDAuthorizationService.h; sourceTree = "<group>"; };
-		CC4695B07AF90E524BBFED9324FD3048 /* Pods_CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarishAPI.framework; path = "Pods-CalendarishAPI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB955F1CDCDBCC1C04FCB7858509AA36 /* Pods-CalendarishAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		CCD2FD28C08DA791D4AA70F2D2393E99 /* OIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDError.m; path = Source/OIDError.m; sourceTree = "<group>"; };
-		CCE8DC856A64AFB224A91ED3FE1EB6FF /* Pods-CalendarishAPI-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPI-resources.sh"; sourceTree = "<group>"; };
 		CD0EF0A58EC2B82C7C6008E508AEC2B9 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
 		CEEBFADA2EB0B865D14C777F8847A8E6 /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Source/OIDRegistrationRequest.h; sourceTree = "<group>"; };
 		D091FF1942E8633710221D741B81B312 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D269647697C1E3C7E2DFA73C44C58876 /* Pods-Calendarish-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Calendarish-umbrella.h"; sourceTree = "<group>"; };
+		D1712175525789772B4445498180A8C1 /* Pods-Calendarish WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		D2E4811911E9C04B04D952DCC4BCAEDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3B241C0EA6735D3899D2522EE4DC893 /* GoogleAPIClientForREST-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "GoogleAPIClientForREST-watchOS.modulemap"; path = "../GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST-watchOS.modulemap"; sourceTree = "<group>"; };
 		D3C2A1AFF03807FF8D47DF4F70298670 /* OIDURLSessionProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLSessionProvider.m; path = Source/OIDURLSessionProvider.m; sourceTree = "<group>"; };
@@ -582,42 +623,43 @@
 		D650E572D8E5DBE96510814DB1520D13 /* GTLRDateTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRDateTime.h; path = Source/Objects/GTLRDateTime.h; sourceTree = "<group>"; };
 		D65CDBFD4FE988236487FC2D434140DB /* GoogleAPIClientForREST-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GoogleAPIClientForREST-watchOS-umbrella.h"; path = "../GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		D66E9248AB245E44331868D3069A3846 /* GTMSessionFetcher-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMSessionFetcher-watchOS-prefix.pch"; path = "../GTMSessionFetcher-watchOS/GTMSessionFetcher-watchOS-prefix.pch"; sourceTree = "<group>"; };
-		D68138E992DFEF032CCFD9453EC82553 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AppAuth.framework; path = "AppAuth-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7A170D38A7C2006FC3C56138445F767 /* Pods-CalendarishAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalendarishAPI.modulemap"; sourceTree = "<group>"; };
-		D87702CE7126C6306CCECB583EC13054 /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
+		D831AB12F58A6660F0FDB5F6E3B9ADB7 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleAPIClientForREST.framework; path = "GoogleAPIClientForREST-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3297B68202801DE9C0D3BA847C2876 /* GTLRFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRFramework.h; path = Source/Utilities/GTLRFramework.h; sourceTree = "<group>"; };
 		DB95F5FCD2456AAC5C3CBEF69EEC0EC1 /* OIDErrorUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDErrorUtilities.h; path = Source/OIDErrorUtilities.h; sourceTree = "<group>"; };
+		DC7FE930C3861FA1695B3C526C60AF4A /* Pods-Calendarish-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Calendarish-umbrella.h"; sourceTree = "<group>"; };
 		DDD73422B2E58C0A446757AA65A96A60 /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Source/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
 		DE68D289212D0CC8138FE673D1EAA27F /* GTLRURITemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRURITemplate.m; path = Source/Utilities/GTLRURITemplate.m; sourceTree = "<group>"; };
 		DEFBD7B93D79E889152E8FB5ADD935DD /* GTLRDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRDefines.h; path = Source/GTLRDefines.h; sourceTree = "<group>"; };
 		DF0DA3F0A79ED6AAEA56DE76349E5105 /* GTLRCalendarObjects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarObjects.m; path = Source/GeneratedServices/Calendar/GTLRCalendarObjects.m; sourceTree = "<group>"; };
+		E1FB8BB6A0C7931D5249A5C58ED659F3 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMAppAuth.framework; path = "GTMAppAuth-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3451C3AA3B40E3C46EA2D91E6CD36C9 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Source/OIDRegistrationResponse.m; sourceTree = "<group>"; };
 		E40262804E1D65C2299F8C4E373A3B2C /* GTLRBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRBase64.h; path = Source/Utilities/GTLRBase64.h; sourceTree = "<group>"; };
 		E4CBEE0B14504AA88FE93728C563F946 /* OIDError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDError.h; path = Source/OIDError.h; sourceTree = "<group>"; };
 		E5101EBA7288EBA9AEFEEA00E7F6685F /* GTLRFramework.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRFramework.m; path = Source/Utilities/GTLRFramework.m; sourceTree = "<group>"; };
-		E7E7E9AD46BD5979A4358FD1786FCCDF /* Pods-CalendarishAPITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalendarishAPITests-frameworks.sh"; sourceTree = "<group>"; };
+		E64DAF3FB245D38408BF1CFF937932AC /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
 		E8E207CDDFF6C0D462270AE5BDCE80D6 /* GTLRDuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTLRDuration.m; path = Source/Objects/GTLRDuration.m; sourceTree = "<group>"; };
 		E9395B766655D3487F1F2FBB5E74DF53 /* GoogleAPIClientForREST-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleAPIClientForREST-iOS-umbrella.h"; sourceTree = "<group>"; };
+		E9BD292120E6094D58EE6FDBDE12AE86 /* Pods-Calendarish-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Calendarish-dummy.m"; sourceTree = "<group>"; };
 		EAA5ACCF6BC185008A59EFCFC5DCDB46 /* AppAuth-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "AppAuth-iOS.xcconfig"; sourceTree = "<group>"; };
 		EB82DA37CFB67A81428F5C9EA07C957F /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
-		EC219B1A62B463AA9ADC5C0D698AC2FA /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalendarishAPITests.framework; path = "Pods-CalendarishAPITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC449338DD379A382CF02BBD432B8D08 /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC85470907A2578ADAB26DE3E59CACBE /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Source/OIDExternalUserAgent.h; sourceTree = "<group>"; };
 		EC8EBB7219B0B9E706C58F3D336B28BD /* GTMSessionFetcher-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GTMSessionFetcher-iOS.modulemap"; sourceTree = "<group>"; };
 		ECB5E6EDB6A0064CC8033DB65E0BA18B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../AppAuth-watchOS/Info.plist"; sourceTree = "<group>"; };
 		ED86912B1AC1C1F363A3E80549A5FAEF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../GoogleAPIClientForREST-watchOS/Info.plist"; sourceTree = "<group>"; };
+		EDF7F999273C33873D04855D5D98377B /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleAPIClientForREST.framework; path = "GoogleAPIClientForREST-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA8C6FC796FBE60A41EA0238BA8605A /* GTLRBatchQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRBatchQuery.h; path = Source/Objects/GTLRBatchQuery.h; sourceTree = "<group>"; };
 		F037D6CDC5343364FE22E7F2D685E6B0 /* OIDTokenUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenUtilities.m; path = Source/OIDTokenUtilities.m; sourceTree = "<group>"; };
 		F299B238780F66749DA10D5488B86CEE /* OIDClientMetadataParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDClientMetadataParameters.m; path = Source/OIDClientMetadataParameters.m; sourceTree = "<group>"; };
 		F2EFB61438F203E8FA03285D63D6DB8F /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
 		F3A2D01A14D9014905B0861B043DCAC9 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMReadMonitorInputStream.h; path = Source/GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
-		F5AEF1A68B48E28C21A8F37FBCB01AD2 /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Calendarish.framework; path = "Pods-Calendarish.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E08ECAEE234249DBB05E4607846BC7 /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
 		F5CDEB356E8D5B0F241ED1C47DCD23C8 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Source/OIDTokenRequest.m; sourceTree = "<group>"; };
 		F8086749B67FD6AED26C42BF74F1B838 /* OIDAuthState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthState.m; path = Source/OIDAuthState.m; sourceTree = "<group>"; };
 		F81F200AF12AEB623FCCB51E434C45F1 /* OIDEndSessionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionRequest.h; path = Source/OIDEndSessionRequest.h; sourceTree = "<group>"; };
 		FA288E0AF3825880A6B80ADE55D078F8 /* GTMSessionFetcher-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMSessionFetcher-watchOS-dummy.m"; path = "../GTMSessionFetcher-watchOS/GTMSessionFetcher-watchOS-dummy.m"; sourceTree = "<group>"; };
 		FAF7D9536D9A455A9E9E0A86FB6825E2 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
-		FBC02B4FD0BFF802E08A981D6870B8FB /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMAppAuth.framework; path = "GTMAppAuth-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6C73B506BAD7E958A5DFB648F250D4 /* Pods-Calendarish WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Calendarish WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
 		FD052EFFD4D59898039FC903710DBB88 /* GTLRQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTLRQuery.h; path = Source/Objects/GTLRQuery.h; sourceTree = "<group>"; };
 		FEA49530A7C03932897879705A96C11E /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Source/OIDRegistrationRequest.m; sourceTree = "<group>"; };
 		FF88392CC03EC7D79E17D090262335E0 /* GTMAppAuth-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuth-watchOS-umbrella.h"; path = "../GTMAppAuth-watchOS/GTMAppAuth-watchOS-umbrella.h"; sourceTree = "<group>"; };
@@ -630,6 +672,14 @@
 			files = (
 				0C0E880B054CF824CDFB81FA4D5ED116 /* Foundation.framework in Frameworks */,
 				F161C79BF96BF822499277E43D719F4F /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		102D075065306B945CD1EC8B5079E43B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ED905221144A801B9F406137CC071BA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +788,25 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		22A3A168AFF95443960E097937C90395 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25D8E12B9FD6E91AE6CAEA15CE273960 /* AppAuth.framework */,
+				6A4AAC3F8891A0A330A777A594AC2385 /* AppAuth.framework */,
+				D831AB12F58A6660F0FDB5F6E3B9ADB7 /* GoogleAPIClientForREST.framework */,
+				EDF7F999273C33873D04855D5D98377B /* GoogleAPIClientForREST.framework */,
+				A8DF21048F395A0454120613D5807D4A /* GTMAppAuth.framework */,
+				E1FB8BB6A0C7931D5249A5C58ED659F3 /* GTMAppAuth.framework */,
+				8FCC0FEE90FE43130ECD4B2B28F72809 /* GTMSessionFetcher.framework */,
+				62DC4475F8580C7CDE63EAC28A8B1EC9 /* GTMSessionFetcher.framework */,
+				02F1CF5CAD97BA9D64965A740C295B1D /* Pods_Calendarish.framework */,
+				61BF55801533512D5D008A2966D0EFA6 /* Pods_Calendarish_WatchKit_Extension.framework */,
+				97AB3457D872934F982AEA5A4911400F /* Pods_CalendarishAPI.framework */,
+				C15712946EFDD33DF8344770BA5B747E /* Pods_CalendarishAPITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3018884785B2FF63E1BB8CEE9CCEC224 /* GTMAppAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +823,24 @@
 			);
 			name = GTMAppAuth;
 			path = GTMAppAuth;
+			sourceTree = "<group>";
+		};
+		30C89383F74E2536C278ACDA381E1F16 /* Pods-CalendarishAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				619BB53DA20B6A6329ED9984D50BAB26 /* Info.plist */,
+				999303567BFE293DBCBB0D96A1538BF5 /* Pods-CalendarishAPITests.modulemap */,
+				01F4AA6AA954CAC2964EAFEDE117479B /* Pods-CalendarishAPITests-acknowledgements.markdown */,
+				2274475AD04A69AE12BB34AE1F37F6C5 /* Pods-CalendarishAPITests-acknowledgements.plist */,
+				63E4F64FC041F8375748ACFE9F5D348D /* Pods-CalendarishAPITests-dummy.m */,
+				8DEF737BEEC4642F349D2A36B731300B /* Pods-CalendarishAPITests-frameworks.sh */,
+				32189C402B1CC5460D54973C980C2ABA /* Pods-CalendarishAPITests-resources.sh */,
+				45224907A15C5A159C17B205576752B0 /* Pods-CalendarishAPITests-umbrella.h */,
+				A9D234466E7157BF0C8DE94C04A7F36F /* Pods-CalendarishAPITests.debug.xcconfig */,
+				CB955F1CDCDBCC1C04FCB7858509AA36 /* Pods-CalendarishAPITests.release.xcconfig */,
+			);
+			name = "Pods-CalendarishAPITests";
+			path = "Target Support Files/Pods-CalendarishAPITests";
 			sourceTree = "<group>";
 		};
 		3E8A627D28C81092AEBC5161156C2C4D /* Support Files */ = {
@@ -787,22 +874,15 @@
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
-		4CE4CF2F43AED1FDCCB28B687E412F8D /* Pods-Calendarish */ = {
+		42A3DB7067B81DA8F64F5866461E5160 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DA3ECE71FFEB39D677A94108DA365D7 /* Info.plist */,
-				79538EE8322C7968493C6DDED872A883 /* Pods-Calendarish.modulemap */,
-				C773FDAF40627E8061552F5AC372514A /* Pods-Calendarish-acknowledgements.markdown */,
-				9F4EEDCE3B61C335D7C19DE3C4B458AE /* Pods-Calendarish-acknowledgements.plist */,
-				4AAF94AAB0F718C3681599F21CB1A940 /* Pods-Calendarish-dummy.m */,
-				856415C6588469AE8517A73D285F6414 /* Pods-Calendarish-frameworks.sh */,
-				B589149731C69B0AFC5001C342A580B4 /* Pods-Calendarish-resources.sh */,
-				D269647697C1E3C7E2DFA73C44C58876 /* Pods-Calendarish-umbrella.h */,
-				2ECF75A584992B97F85C13D6B7F528BD /* Pods-Calendarish.debug.xcconfig */,
-				47332AC3A1C30FA764A85CCD96577EE9 /* Pods-Calendarish.release.xcconfig */,
+				A29501F0F3A7F12A7ECD8E4B7BF223A9 /* Pods-Calendarish */,
+				72BE4D9666481016D8D231B3112EC006 /* Pods-Calendarish WatchKit Extension */,
+				9B734F679AD7DE34EE860FF39AFDE1F4 /* Pods-CalendarishAPI */,
+				30C89383F74E2536C278ACDA381E1F16 /* Pods-CalendarishAPITests */,
 			);
-			name = "Pods-Calendarish";
-			path = "Target Support Files/Pods-Calendarish";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		50C406730E5397C9D00D2929CBFA2159 /* Pods */ = {
@@ -814,23 +894,6 @@
 				40ECAD5DEC234177C0678743B578D004 /* GTMSessionFetcher */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		5808D9DA2447EAFB044BA9EED5EB77B6 /* Pods-CalendarishAPI */ = {
-			isa = PBXGroup;
-			children = (
-				86EAC69D05F0AAA8B9629874652D5FEB /* Info.plist */,
-				D7A170D38A7C2006FC3C56138445F767 /* Pods-CalendarishAPI.modulemap */,
-				A66650DBC9C353F82A449F28B175A413 /* Pods-CalendarishAPI-acknowledgements.markdown */,
-				15146A4FF2B8D749244326B898A6A015 /* Pods-CalendarishAPI-acknowledgements.plist */,
-				809BB9F38A960EF70BADB7F4FEC37BF1 /* Pods-CalendarishAPI-dummy.m */,
-				CCE8DC856A64AFB224A91ED3FE1EB6FF /* Pods-CalendarishAPI-resources.sh */,
-				688D595713299CCB6EE7059871DC1C08 /* Pods-CalendarishAPI-umbrella.h */,
-				033A69E3A7E624754C6A15C9EE19C0D1 /* Pods-CalendarishAPI.debug.xcconfig */,
-				D87702CE7126C6306CCECB583EC13054 /* Pods-CalendarishAPI.release.xcconfig */,
-			);
-			name = "Pods-CalendarishAPI";
-			path = "Target Support Files/Pods-CalendarishAPI";
 			sourceTree = "<group>";
 		};
 		58748DA50FF83D2D8D7283032BB29EE7 /* Core */ = {
@@ -895,6 +958,24 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		72BE4D9666481016D8D231B3112EC006 /* Pods-Calendarish WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				59DFCE04CEC2ADE8069D319A91200DEC /* Info.plist */,
+				63C98BB67D90F76CF52CFD383D9D3BE9 /* Pods-Calendarish WatchKit Extension.modulemap */,
+				7A8D2EC1A35E226AF026102C4995A7F8 /* Pods-Calendarish WatchKit Extension-acknowledgements.markdown */,
+				452F468A3FEA29942F1AA9225B5307B8 /* Pods-Calendarish WatchKit Extension-acknowledgements.plist */,
+				2F6CE6874DD7A8793574CFC5DEC587F0 /* Pods-Calendarish WatchKit Extension-dummy.m */,
+				3FC00404C19A4A0040ED6D3729411404 /* Pods-Calendarish WatchKit Extension-frameworks.sh */,
+				BEE6E1C96F02F83230EC8802C75A7A2B /* Pods-Calendarish WatchKit Extension-resources.sh */,
+				FC6C73B506BAD7E958A5DFB648F250D4 /* Pods-Calendarish WatchKit Extension-umbrella.h */,
+				8701559BC5923EE40E555F377F38EFB4 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */,
+				D1712175525789772B4445498180A8C1 /* Pods-Calendarish WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-Calendarish WatchKit Extension";
+			path = "Target Support Files/Pods-Calendarish WatchKit Extension";
+			sourceTree = "<group>";
+		};
 		74EB75ACEAE417E936F8D747745D7B10 /* AppAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -905,24 +986,14 @@
 			path = AppAuth;
 			sourceTree = "<group>";
 		};
-		7994E3583CBB45CBC93758BC31968ACC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4CE4CF2F43AED1FDCCB28B687E412F8D /* Pods-Calendarish */,
-				5808D9DA2447EAFB044BA9EED5EB77B6 /* Pods-CalendarishAPI */,
-				A6E9B1ABA5C0BB39A2F2BEB593698E64 /* Pods-CalendarishAPITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				9BE98A0D29ACAD28D107AF5D1A021814 /* Frameworks */,
 				50C406730E5397C9D00D2929CBFA2159 /* Pods */,
-				B51B17506985A586DBBCE47B3D07EE84 /* Products */,
-				7994E3583CBB45CBC93758BC31968ACC /* Targets Support Files */,
+				22A3A168AFF95443960E097937C90395 /* Products */,
+				42A3DB7067B81DA8F64F5866461E5160 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -940,6 +1011,23 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		9B734F679AD7DE34EE860FF39AFDE1F4 /* Pods-CalendarishAPI */ = {
+			isa = PBXGroup;
+			children = (
+				786066738866C1960ECEFAEC65A59E31 /* Info.plist */,
+				81929EC47455CB0C300ABD5EBA7B94C7 /* Pods-CalendarishAPI.modulemap */,
+				3C73CB46847C832BBCEBB081575C84D2 /* Pods-CalendarishAPI-acknowledgements.markdown */,
+				12FF96D547BB720A54B6E7CE8C372D7F /* Pods-CalendarishAPI-acknowledgements.plist */,
+				B661ABDA33F95D73BC8E458EB89EF499 /* Pods-CalendarishAPI-dummy.m */,
+				7C376B98B98DA5AE45287476783C9B14 /* Pods-CalendarishAPI-resources.sh */,
+				C7B7B5D4A339866FD2F30BDBFDF69FAA /* Pods-CalendarishAPI-umbrella.h */,
+				6BBD5BDD278526E44DF0E7F30F3460A6 /* Pods-CalendarishAPI.debug.xcconfig */,
+				E64DAF3FB245D38408BF1CFF937932AC /* Pods-CalendarishAPI.release.xcconfig */,
+			);
+			name = "Pods-CalendarishAPI";
+			path = "Target Support Files/Pods-CalendarishAPI";
+			sourceTree = "<group>";
+		};
 		9BE98A0D29ACAD28D107AF5D1A021814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -951,40 +1039,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A6E9B1ABA5C0BB39A2F2BEB593698E64 /* Pods-CalendarishAPITests */ = {
+		A29501F0F3A7F12A7ECD8E4B7BF223A9 /* Pods-Calendarish */ = {
 			isa = PBXGroup;
 			children = (
-				40C45F2275A04470D496FE5528B93294 /* Info.plist */,
-				B82A6519AD87C96B662ADE3846C1F21D /* Pods-CalendarishAPITests.modulemap */,
-				604A6BD27C8784FA5DD2820411EF0169 /* Pods-CalendarishAPITests-acknowledgements.markdown */,
-				BAA41E218A645334DAF8696234628E69 /* Pods-CalendarishAPITests-acknowledgements.plist */,
-				91750F9257740ADC15E3EC8F7CCE3516 /* Pods-CalendarishAPITests-dummy.m */,
-				E7E7E9AD46BD5979A4358FD1786FCCDF /* Pods-CalendarishAPITests-frameworks.sh */,
-				AC9574C084DF83448A925A2EC37119DE /* Pods-CalendarishAPITests-resources.sh */,
-				18F6A898164F770B88D4143966DEDD40 /* Pods-CalendarishAPITests-umbrella.h */,
-				5212B0B3442646129B2D9AAF34F01B0D /* Pods-CalendarishAPITests.debug.xcconfig */,
-				47C5C3A764598D2394838B628A3DF1D9 /* Pods-CalendarishAPITests.release.xcconfig */,
+				736CE834923D1A2980C3091B04359BD8 /* Info.plist */,
+				684C7853AE46C383149D36F33CF47ED3 /* Pods-Calendarish.modulemap */,
+				2C1B24E38BFC5E0C1880FF9B886400DC /* Pods-Calendarish-acknowledgements.markdown */,
+				5AE56CDB2AAD66B371A1C00915F4EE06 /* Pods-Calendarish-acknowledgements.plist */,
+				E9BD292120E6094D58EE6FDBDE12AE86 /* Pods-Calendarish-dummy.m */,
+				4582629511CECCBEAE18BEBB9D1CE397 /* Pods-Calendarish-frameworks.sh */,
+				78A7F3B3CA191A8B29D67783D6C8341A /* Pods-Calendarish-resources.sh */,
+				DC7FE930C3861FA1695B3C526C60AF4A /* Pods-Calendarish-umbrella.h */,
+				F3E08ECAEE234249DBB05E4607846BC7 /* Pods-Calendarish.debug.xcconfig */,
+				C78F525AAF9A29474C0969CE130D8DDD /* Pods-Calendarish.release.xcconfig */,
 			);
-			name = "Pods-CalendarishAPITests";
-			path = "Target Support Files/Pods-CalendarishAPITests";
-			sourceTree = "<group>";
-		};
-		B51B17506985A586DBBCE47B3D07EE84 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C5364041756BA9485E42B0B1A4954944 /* AppAuth.framework */,
-				D68138E992DFEF032CCFD9453EC82553 /* AppAuth.framework */,
-				3D41E1DE090FA42FE6F6BFC0475FB732 /* GoogleAPIClientForREST.framework */,
-				C9B12C0B1DFC8061D9813E99ACE91D91 /* GoogleAPIClientForREST.framework */,
-				FBC02B4FD0BFF802E08A981D6870B8FB /* GTMAppAuth.framework */,
-				2DB728B5A9658B1A6B9B9EA769086246 /* GTMAppAuth.framework */,
-				46C831DCC995C7C6B7D2D8EF5023BE34 /* GTMSessionFetcher.framework */,
-				4D2B8BC08BA3FEA768511931B3E485DB /* GTMSessionFetcher.framework */,
-				F5AEF1A68B48E28C21A8F37FBCB01AD2 /* Pods_Calendarish.framework */,
-				CC4695B07AF90E524BBFED9324FD3048 /* Pods_CalendarishAPI.framework */,
-				EC219B1A62B463AA9ADC5C0D698AC2FA /* Pods_CalendarishAPITests.framework */,
-			);
-			name = Products;
+			name = "Pods-Calendarish";
+			path = "Target Support Files/Pods-Calendarish";
 			sourceTree = "<group>";
 		};
 		BE6D2FC7AA6D9DC6B7FBE3D5D3866C8F /* watchOS */ = {
@@ -1318,6 +1388,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8C999608BFB909A45A96BC13A13ADD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C239695B0D156E074DBC0C21CA0F95 /* Pods-Calendarish WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D670061AA82BA630EFE837AA9F8E5B97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1366,7 +1444,7 @@
 			);
 			name = "Pods-CalendarishAPITests";
 			productName = "Pods-CalendarishAPITests";
-			productReference = EC219B1A62B463AA9ADC5C0D698AC2FA /* Pods_CalendarishAPITests.framework */;
+			productReference = C15712946EFDD33DF8344770BA5B747E /* Pods_CalendarishAPITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1A86736AA540942A68FE3762846DBA25 /* AppAuth-watchOS */ = {
@@ -1383,7 +1461,7 @@
 			);
 			name = "AppAuth-watchOS";
 			productName = "AppAuth-watchOS";
-			productReference = D68138E992DFEF032CCFD9453EC82553 /* AppAuth.framework */;
+			productReference = 6A4AAC3F8891A0A330A777A594AC2385 /* AppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1EBBA7FB273545D1D4C29596ACDE3BBD /* GTMAppAuth-iOS */ = {
@@ -1402,7 +1480,7 @@
 			);
 			name = "GTMAppAuth-iOS";
 			productName = "GTMAppAuth-iOS";
-			productReference = 2DB728B5A9658B1A6B9B9EA769086246 /* GTMAppAuth.framework */;
+			productReference = A8DF21048F395A0454120613D5807D4A /* GTMAppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2ACFC7EF1915FE353744D7B83742D77B /* Pods-Calendarish */ = {
@@ -1423,7 +1501,7 @@
 			);
 			name = "Pods-Calendarish";
 			productName = "Pods-Calendarish";
-			productReference = F5AEF1A68B48E28C21A8F37FBCB01AD2 /* Pods_Calendarish.framework */;
+			productReference = 02F1CF5CAD97BA9D64965A740C295B1D /* Pods_Calendarish.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		64057C003B46E729534020280D94B41F /* GoogleAPIClientForREST-iOS */ = {
@@ -1441,7 +1519,7 @@
 			);
 			name = "GoogleAPIClientForREST-iOS";
 			productName = "GoogleAPIClientForREST-iOS";
-			productReference = 3D41E1DE090FA42FE6F6BFC0475FB732 /* GoogleAPIClientForREST.framework */;
+			productReference = EDF7F999273C33873D04855D5D98377B /* GoogleAPIClientForREST.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7EFA17474056B07C5C50461282BB9ACC /* GoogleAPIClientForREST-watchOS */ = {
@@ -1459,7 +1537,28 @@
 			);
 			name = "GoogleAPIClientForREST-watchOS";
 			productName = "GoogleAPIClientForREST-watchOS";
-			productReference = C9B12C0B1DFC8061D9813E99ACE91D91 /* GoogleAPIClientForREST.framework */;
+			productReference = D831AB12F58A6660F0FDB5F6E3B9ADB7 /* GoogleAPIClientForREST.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F7EC5E271316327E765DFB4B4DE0371 /* Pods-Calendarish WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32200479F9DD61276FB526BA0D551AE7 /* Build configuration list for PBXNativeTarget "Pods-Calendarish WatchKit Extension" */;
+			buildPhases = (
+				B56F2AEB66C0EB8C5E1CC55A93D0F712 /* Sources */,
+				102D075065306B945CD1EC8B5079E43B /* Frameworks */,
+				C8C999608BFB909A45A96BC13A13ADD3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E13D767838D8BF3141C3D0B7510EF77B /* PBXTargetDependency */,
+				B1AFF8D1DE7533FC6244E228F7E74872 /* PBXTargetDependency */,
+				54B08279535D60176D6A5E0A1C57E113 /* PBXTargetDependency */,
+				40A2DEE9699C8A1A5B9521E9910B853A /* PBXTargetDependency */,
+			);
+			name = "Pods-Calendarish WatchKit Extension";
+			productName = "Pods-Calendarish WatchKit Extension";
+			productReference = 61BF55801533512D5D008A2966D0EFA6 /* Pods_Calendarish_WatchKit_Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CF372A6582E3CD0DA9E76FE10176AC2C /* GTMSessionFetcher-iOS */ = {
@@ -1476,7 +1575,7 @@
 			);
 			name = "GTMSessionFetcher-iOS";
 			productName = "GTMSessionFetcher-iOS";
-			productReference = 46C831DCC995C7C6B7D2D8EF5023BE34 /* GTMSessionFetcher.framework */;
+			productReference = 8FCC0FEE90FE43130ECD4B2B28F72809 /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EC8D55CE74C8A036170FF0B07EEF586B /* GTMAppAuth-watchOS */ = {
@@ -1495,7 +1594,7 @@
 			);
 			name = "GTMAppAuth-watchOS";
 			productName = "GTMAppAuth-watchOS";
-			productReference = FBC02B4FD0BFF802E08A981D6870B8FB /* GTMAppAuth.framework */;
+			productReference = E1FB8BB6A0C7931D5249A5C58ED659F3 /* GTMAppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F2183EFB35B6313096F3FC0A1090ACDA /* GTMSessionFetcher-watchOS */ = {
@@ -1512,7 +1611,7 @@
 			);
 			name = "GTMSessionFetcher-watchOS";
 			productName = "GTMSessionFetcher-watchOS";
-			productReference = 4D2B8BC08BA3FEA768511931B3E485DB /* GTMSessionFetcher.framework */;
+			productReference = 62DC4475F8580C7CDE63EAC28A8B1EC9 /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F3F92E1077F9F7B61E0E80A87BD89981 /* Pods-CalendarishAPI */ = {
@@ -1533,7 +1632,7 @@
 			);
 			name = "Pods-CalendarishAPI";
 			productName = "Pods-CalendarishAPI";
-			productReference = CC4695B07AF90E524BBFED9324FD3048 /* Pods_CalendarishAPI.framework */;
+			productReference = 97AB3457D872934F982AEA5A4911400F /* Pods_CalendarishAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F6F8F4D406DC12363050F378AB79BF4F /* AppAuth-iOS */ = {
@@ -1550,7 +1649,7 @@
 			);
 			name = "AppAuth-iOS";
 			productName = "AppAuth-iOS";
-			productReference = C5364041756BA9485E42B0B1A4954944 /* AppAuth.framework */;
+			productReference = 25D8E12B9FD6E91AE6CAEA15CE273960 /* AppAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1570,7 +1669,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B51B17506985A586DBBCE47B3D07EE84 /* Products */;
+			productRefGroup = 22A3A168AFF95443960E097937C90395 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1583,6 +1682,7 @@
 				CF372A6582E3CD0DA9E76FE10176AC2C /* GTMSessionFetcher-iOS */,
 				F2183EFB35B6313096F3FC0A1090ACDA /* GTMSessionFetcher-watchOS */,
 				2ACFC7EF1915FE353744D7B83742D77B /* Pods-Calendarish */,
+				9F7EC5E271316327E765DFB4B4DE0371 /* Pods-Calendarish WatchKit Extension */,
 				F3F92E1077F9F7B61E0E80A87BD89981 /* Pods-CalendarishAPI */,
 				04348AADF42D4A92981A078CA1208D6C /* Pods-CalendarishAPITests */,
 			);
@@ -1766,6 +1866,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B56F2AEB66C0EB8C5E1CC55A93D0F712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F33EC525EBACF51F2EA39C3E097F447 /* Pods-Calendarish WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5FF366C4EEDF4CF5E49DA4387CF36A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1796,11 +1904,23 @@
 			target = CF372A6582E3CD0DA9E76FE10176AC2C /* GTMSessionFetcher-iOS */;
 			targetProxy = CA7D178BFBB1E140269B923B652FDF81 /* PBXContainerItemProxy */;
 		};
+		40A2DEE9699C8A1A5B9521E9910B853A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAPIClientForREST-watchOS";
+			target = 7EFA17474056B07C5C50461282BB9ACC /* GoogleAPIClientForREST-watchOS */;
+			targetProxy = 2426B7CA977D9DC2B9677951E815245E /* PBXContainerItemProxy */;
+		};
 		4AA1833B69E5E50EA85D906CE2E9BE03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "GTMAppAuth-iOS";
 			target = 1EBBA7FB273545D1D4C29596ACDE3BBD /* GTMAppAuth-iOS */;
 			targetProxy = 96A67DFD804E4D3D357DBBF32ECE2844 /* PBXContainerItemProxy */;
+		};
+		54B08279535D60176D6A5E0A1C57E113 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GTMSessionFetcher-watchOS";
+			target = F2183EFB35B6313096F3FC0A1090ACDA /* GTMSessionFetcher-watchOS */;
+			targetProxy = 27A250082599E752CC888E12C69AC59D /* PBXContainerItemProxy */;
 		};
 		591554D490BAD280041F42698906F9AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1862,6 +1982,12 @@
 			target = CF372A6582E3CD0DA9E76FE10176AC2C /* GTMSessionFetcher-iOS */;
 			targetProxy = 5835AAD4CE1DC5FE0CBE54E3350A4CCE /* PBXContainerItemProxy */;
 		};
+		B1AFF8D1DE7533FC6244E228F7E74872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GTMAppAuth-watchOS";
+			target = EC8D55CE74C8A036170FF0B07EEF586B /* GTMAppAuth-watchOS */;
+			targetProxy = 4AE91418045EAECD912ADB8D330CD49C /* PBXContainerItemProxy */;
+		};
 		C7993ED72FF9D1E763EF1026CC1CDD92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "AppAuth-iOS";
@@ -1885,6 +2011,12 @@
 			name = "AppAuth-iOS";
 			target = F6F8F4D406DC12363050F378AB79BF4F /* AppAuth-iOS */;
 			targetProxy = 285C82AF949A5323EC561393B405EFF6 /* PBXContainerItemProxy */;
+		};
+		E13D767838D8BF3141C3D0B7510EF77B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AppAuth-watchOS";
+			target = 1A86736AA540942A68FE3762846DBA25 /* AppAuth-watchOS */;
+			targetProxy = D0B917A25855A23590B1A479F6B47F8C /* PBXContainerItemProxy */;
 		};
 		FFC15DBF2D41141CC686063C8385F00E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1970,7 +2102,7 @@
 		};
 		47FF0AE98EF5204BA3A8AE7BD7D38E2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5212B0B3442646129B2D9AAF34F01B0D /* Pods-CalendarishAPITests.debug.xcconfig */;
+			baseConfigurationReference = A9D234466E7157BF0C8DE94C04A7F36F /* Pods-CalendarishAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2045,7 +2177,7 @@
 		};
 		6476E64B1E461CA1FBBEFEE78E4DA88D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 033A69E3A7E624754C6A15C9EE19C0D1 /* Pods-CalendarishAPI.debug.xcconfig */;
+			baseConfigurationReference = 6BBD5BDD278526E44DF0E7F30F3460A6 /* Pods-CalendarishAPI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -2115,6 +2247,45 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		6D863525C031BC409E436BB8D95377A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1712175525789772B4445498180A8C1 /* Pods-Calendarish WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Calendarish WatchKit Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
 		};
 		7CA41A05A91CDF4587131010F69054E3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2333,6 +2504,44 @@
 			};
 			name = Debug;
 		};
+		9BEB13F3FCBAE184A42B868FEDB0EBBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8701559BC5923EE40E555F377F38EFB4 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Calendarish WatchKit Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Debug;
+		};
 		A413457616224701864EE19366E8A617 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2434,7 +2643,7 @@
 		};
 		BF7B0F0DB48108B68FEACBD885A363E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47332AC3A1C30FA764A85CCD96577EE9 /* Pods-Calendarish.release.xcconfig */;
+			baseConfigurationReference = C78F525AAF9A29474C0969CE130D8DDD /* Pods-Calendarish.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2473,7 +2682,7 @@
 		};
 		C522A98BC4311C40A590253335FB692C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47C5C3A764598D2394838B628A3DF1D9 /* Pods-CalendarishAPITests.release.xcconfig */;
+			baseConfigurationReference = CB955F1CDCDBCC1C04FCB7858509AA36 /* Pods-CalendarishAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2548,7 +2757,7 @@
 		};
 		DA7D408E25EC028DF8D339C795675BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ECF75A584992B97F85C13D6B7F528BD /* Pods-Calendarish.debug.xcconfig */;
+			baseConfigurationReference = F3E08ECAEE234249DBB05E4607846BC7 /* Pods-Calendarish.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2729,7 +2938,7 @@
 		};
 		F4974B0347AF8F637B3701B1F44053D6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D87702CE7126C6306CCECB583EC13054 /* Pods-CalendarishAPI.release.xcconfig */;
+			baseConfigurationReference = E64DAF3FB245D38408BF1CFF937932AC /* Pods-CalendarishAPI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -2851,6 +3060,15 @@
 			buildConfigurations = (
 				A413457616224701864EE19366E8A617 /* Debug */,
 				FE551C425173C0115D02F283FBB24CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32200479F9DD61276FB526BA0D551AE7 /* Build configuration list for PBXNativeTarget "Pods-Calendarish WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEB13F3FCBAE184A42B868FEDB0EBBD /* Debug */,
+				6D863525C031BC409E436BB8D95377A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

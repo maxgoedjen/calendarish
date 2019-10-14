@@ -5,13 +5,6 @@ import CalendarishAPI
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
-    let accountStore = AccountStore()
-    let eventStore = EventStore()
-
-    func applicationDidFinishLaunching() {
-        WCSession.default.delegate = self
-    }
-
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
         for task in backgroundTasks {
@@ -41,17 +34,5 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
-
-}
-
-extension ExtensionDelegate: WCSessionDelegate {
-
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    }
-
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print(message)
-    }
-
 
 }
