@@ -29,7 +29,7 @@ class HostingController : WKHostingController<MainView> {
                 let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
                 self.subscriptions.append(cancellable)
             } else {
-                assertionFailure()
+//                assertionFailure()
             }
         }
     }

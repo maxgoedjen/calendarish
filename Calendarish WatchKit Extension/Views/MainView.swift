@@ -9,7 +9,7 @@ struct MainView: View {
     var body: some View {
         return EventListView(store: eventStore)
         .contextMenu {
-            NavigationLink(destination: AccountListView(store: AccountStore.sampleStore)) {
+            NavigationLink(destination: AccountListView(store: accountStore)) {
                 VStack {
                     Image(systemName: "list.bullet")
                     Text("Accounts")
