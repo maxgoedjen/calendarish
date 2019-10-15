@@ -3,7 +3,7 @@ import CalendarishCore
 
 struct EventDetailView: View {
 
-    let event: Event
+    @State var event: Event
 
     var body: some View {
         List {
