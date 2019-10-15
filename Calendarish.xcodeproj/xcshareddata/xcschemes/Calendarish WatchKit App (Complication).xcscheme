@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "50935B9222B4AA8D00DB2178"
-               BuildableName = "Calendarish WatchKit App.app"
+               BuildableName = "Calendarish.app"
                BlueprintName = "Calendarish WatchKit App"
                ReferencedContainer = "container:Calendarish.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50935B9222B4AA8D00DB2178"
-            BuildableName = "Calendarish WatchKit App.app"
+            BuildableName = "Calendarish.app"
             BlueprintName = "Calendarish WatchKit App"
             ReferencedContainer = "container:Calendarish.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50935B9222B4AA8D00DB2178"
-            BuildableName = "Calendarish WatchKit App.app"
+            BuildableName = "Calendarish.app"
             BlueprintName = "Calendarish WatchKit App"
             ReferencedContainer = "container:Calendarish.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50935B9222B4AA8D00DB2178"
-            BuildableName = "Calendarish WatchKit App.app"
+            BuildableName = "Calendarish.app"
             BlueprintName = "Calendarish WatchKit App"
             ReferencedContainer = "container:Calendarish.xcodeproj">
          </BuildableReference>

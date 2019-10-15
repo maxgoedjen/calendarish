@@ -11,7 +11,8 @@ public struct API {
     fileprivate let calendarService = GTLRCalendarService()
 
     public init(account: Account) {
-//        calendarService.authorizer = authenticator.authorization
+        let authorizer = try! NSKeyedUnarchiver.unarchivedObject(ofClass: GTMAppAuthFetcherAuthorization.self, from: account.authorization)
+        calendarService.authorizer = authorizer
     }
 
 }

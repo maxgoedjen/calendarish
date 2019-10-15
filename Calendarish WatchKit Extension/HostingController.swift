@@ -4,19 +4,34 @@ import SwiftUI
 import CalendarishCore
 import WatchConnectivity
 import Combine
+import CalendarishAPI
 
 class HostingController : WKHostingController<EventListView> {
 
     let eventStore = EventStore()
     let accountStore = AccountStore()
     let shortcutController = ShortcutController()
-    fileprivate var shortcutSubscription: AnyCancellable?
+    fileprivate var subscriptions: [AnyCancellable] = []
+    fileprivate var apis: [API] = []
+//    fileprivate let eventPublishers: [AnyPublisher<[Event], API.Error>] = []
 
     override init() {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        shortcutSubscription = eventStore.didChange.assign(to: \.events, on: shortcutController)
+        subscriptions.append(eventStore.didChange.assign(to: \.events, on: shortcutController))
+
+        // !!!: Hacks
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if let first = self.accountStore.accounts.first?.value {
+                let api = API(account: first)
+                self.apis.append(api)
+                let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
+                self.subscriptions.append(cancellable)
+            } else {
+//                assertionFailure()
+            }
+        }
     }
 
     override var body: EventListView {
