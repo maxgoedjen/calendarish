@@ -6,7 +6,7 @@ import WatchConnectivity
 import Combine
 import CalendarishAPI
 
-class HostingController : WKHostingController<EventListView> {
+class HostingController : WKHostingController<MainView> {
 
     let eventStore = EventStore()
     let accountStore = AccountStore()
@@ -22,20 +22,20 @@ class HostingController : WKHostingController<EventListView> {
         subscriptions.append(eventStore.$events.assign(to: \.events, on: shortcutController))
 
         // !!!: Hacks
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            if let first = self.accountStore.accounts.first {
-//                let api = API(account: first)
-//                self.apis.append(api)
-//                let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
-//                self.subscriptions.append(cancellable)
-//            } else {
-//                assertionFailure()
-//            }
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if let first = self.accountStore.accounts.first {
+                let api = API(account: first)
+                self.apis.append(api)
+                let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
+                self.subscriptions.append(cancellable)
+            } else {
+                assertionFailure()
+            }
+        }
     }
 
-    override var body: EventListView {
-        return EventListView(store: eventStore)
+    override var body: MainView {
+        return MainView(accountStore: accountStore, eventStore: eventStore)
     }
 
 }

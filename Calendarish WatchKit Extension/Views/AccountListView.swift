@@ -11,8 +11,8 @@ struct AccountListView: View {
                 Text(account.email)
             }.onDelete(perform: {
                 self.store.accounts.remove(atOffsets: $0)
-            })
-        }
+                })
+        }.navigationBarTitle("Accounts")
     }
 
 }

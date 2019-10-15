@@ -10,7 +10,10 @@ struct MainView: View {
         return EventListView(store: eventStore)
         .contextMenu {
             NavigationLink(destination: AccountListView(store: AccountStore.sampleStore)) {
-                Text("Accounts")
+                VStack {
+                    Image(systemName: "list.bullet")
+                    Text("Accounts")
+                }
             }
         }
     }
