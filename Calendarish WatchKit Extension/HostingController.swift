@@ -19,7 +19,7 @@ class HostingController : WKHostingController<EventListView> {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        subscriptions.append(eventStore.didChange.assign(to: \.events, on: shortcutController))
+        subscriptions.append(eventStore.$events.assign(to: \.events, on: shortcutController))
 
         // !!!: Hacks
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

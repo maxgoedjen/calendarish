@@ -3,12 +3,10 @@ import Combine
 
 public class EventStore: ObservableObject {
 
-    public let didChange = PassthroughSubject<[Event], Never>()
-    let queue = DispatchQueue(label: "com.calendarish.core.eventstore.disk", qos: .userInitiated)
+    fileprivate let queue = DispatchQueue(label: "com.calendarish.core.eventstore.disk", qos: .userInitiated)
 
-    public var events: [Event] {
+    @Published public var events: [Event] {
         didSet {
-            didChange.send(events)
             saveToDisk()
         }
     }
