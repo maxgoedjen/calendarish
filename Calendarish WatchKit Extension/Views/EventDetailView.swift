@@ -94,11 +94,3 @@ struct EventDetailView_Previews : PreviewProvider {
     }
 }
 #endif
-
-
-
-
-
-
-
-

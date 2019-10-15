@@ -22,16 +22,16 @@ class HostingController : WKHostingController<EventListView> {
         subscriptions.append(eventStore.$events.assign(to: \.events, on: shortcutController))
 
         // !!!: Hacks
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if let first = self.accountStore.accounts.first?.value {
-                let api = API(account: first)
-                self.apis.append(api)
-                let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
-                self.subscriptions.append(cancellable)
-            } else {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            if let first = self.accountStore.accounts.first {
+//                let api = API(account: first)
+//                self.apis.append(api)
+//                let cancellable = api.eventPublisher.assertNoFailure().replaceError(with: []).assign(to: \.events, on: self.eventStore)
+//                self.subscriptions.append(cancellable)
+//            } else {
 //                assertionFailure()
-            }
-        }
+//            }
+//        }
     }
 
     override var body: EventListView {
@@ -48,7 +48,7 @@ extension HostingController: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         guard let email = message["Email"] as? String else { return }
         guard let authorization = message["Authorization"] as? Data else { return }
-        accountStore.accounts[email] = Account(email: email, authorization: authorization)
+        accountStore.accounts.append(Account(email: email, authorization: authorization))
     }
 
 

@@ -41,7 +41,8 @@ struct EventListView: View {
                     }
                     .padding()
                 }
-        }.listStyle(CarouselListStyle())
+        }
+        .listStyle(CarouselListStyle())
     }
 
 }
