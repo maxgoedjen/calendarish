@@ -39,6 +39,8 @@
 		50935BE022B4AD6100DB2178 /* CalendarishCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BDF22B4AD6100DB2178 /* CalendarishCoreTests.swift */; };
 		50935BF522B4CBAD00DB2178 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50935BF422B4CBAD00DB2178 /* Configuration.swift */; };
 		50A09F4B22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */; };
+		50ABF49B2356C8390000DFEA /* BatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABF49A2356C8390000DFEA /* BatchAPI.swift */; };
+		50ABF49D2356C8770000DFEA /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABF49C2356C8770000DFEA /* APIProtocol.swift */; };
 		50B1E76122BB512A004A0B0D /* CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; };
 		50B1E76222BB512A004A0B0D /* CalendarishCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50B1E76722BB519A004A0B0D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
@@ -198,6 +200,8 @@
 		50935BEE22B4AD7B00DB2178 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutController.swift; sourceTree = "<group>"; };
+		50ABF49A2356C8390000DFEA /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
+		50ABF49C2356C8770000DFEA /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970E022BA0CB2005AF478 /* CalendarishAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPI.h; sourceTree = "<group>"; };
 		50C970E122BA0CB2005AF478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -432,7 +436,9 @@
 			children = (
 				50C970E022BA0CB2005AF478 /* CalendarishAPI.h */,
 				50D2D49722B5FCAD00480806 /* APIInits.swift */,
+				50ABF49C2356C8770000DFEA /* APIProtocol.swift */,
 				50935BEE22B4AD7B00DB2178 /* API.swift */,
+				50ABF49A2356C8390000DFEA /* BatchAPI.swift */,
 				50C970E122BA0CB2005AF478 /* Info.plist */,
 			);
 			path = CalendarishAPI;
@@ -932,8 +938,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50ABF49D2356C8770000DFEA /* APIProtocol.swift in Sources */,
 				5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */,
 				5061CDCC23504AB9001E6546 /* API.swift in Sources */,
+				50ABF49B2356C8390000DFEA /* BatchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

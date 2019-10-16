@@ -17,11 +17,11 @@ public struct API {
 
 }
 
-extension API {
+extension API: APIProtocol {
 
-    public var eventPublisher: AnyPublisher<[Event], Error> {
+    public var eventPublisher: AnyPublisher<[Event], API.Error> {
         return
-            calendarList().flatMap { calendars -> Publishers.MergeMany<Future<[Event], Error>> in
+            calendarList().flatMap { calendars -> Publishers.MergeMany<Future<[Event], API.Error>> in
             let events = calendars.map { calendar in
                 self.events(in: calendar)
             }
@@ -30,6 +30,9 @@ extension API {
             .reduce([], +)
             .map({ $0.sorted() })
             .eraseToAnyPublisher()
+    }
+
+    func reload() {
     }
 
 }
