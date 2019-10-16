@@ -74,13 +74,16 @@ extension ComplicationController {
         case .extraLarge:
             return nil
         case .graphicCorner:
-            return nil
+            let template = CLKComplicationTemplateGraphicCornerStackText()
+            template.innerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.outerTextProvider = CLKSimpleTextProvider(text: event.name)
+            return template
         case .graphicBezel:
             return nil
         case .graphicCircular:
             let template = CLKComplicationTemplateGraphicCircularStackText()
             template.line1TextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
-            template.line2TextProvider = CLKSimpleTextProvider(text: DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime) ?? "")
+            template.line2TextProvider = CLKSimpleTextProvider(text: event.name)
             return template
         case .graphicRectangular:
             return nil
