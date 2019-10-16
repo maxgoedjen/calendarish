@@ -15,6 +15,14 @@ struct MainView: View {
                     Text("Accounts")
                 }
             }
+            Button(action: {
+                // TODO: https://github.com/maxgoedjen/calendarish/issues/11
+            }) {
+                VStack {
+                    Image(systemName: "arrow.clockwise")
+                    Text("Refresh")
+                }
+            }
         }
     }
 
