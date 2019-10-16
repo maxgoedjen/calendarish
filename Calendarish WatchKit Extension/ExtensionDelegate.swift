@@ -2,8 +2,13 @@ import WatchKit
 import WatchConnectivity
 import CalendarishCore
 import CalendarishAPI
+import Sentry
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+
+    func applicationDidFinishLaunching() {
+        configureSentry()
+    }
 
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
@@ -32,6 +37,19 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                 // make sure to complete unhandled task types
                 task.setTaskCompletedWithSnapshot(false)
             }
+        }
+    }
+
+}
+
+extension ExtensionDelegate {
+
+    func configureSentry() {
+        do {
+            Client.shared = try Client(dsn: "https://4cb5596c00f44edfa68a033f8ec402fc@sentry.io/156458")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
         }
     }
 

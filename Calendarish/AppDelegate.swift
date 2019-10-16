@@ -1,15 +1,8 @@
-//
-//  AppDelegate.swift
-//  Calendarish
-//
-//  Created by Max Goedjen on 6/14/19.
-//  Copyright © 2019 Max Goedjen. All rights reserved.
-//
-
 import UIKit
 import SwiftUI
 import Combine
 import WatchConnectivity
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate var authorizationSubscription: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        // Use a UIHostingController as window root view controller
+        configureSentry()
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         window.rootViewController = UIHostingController(rootView: ContentView(authorizationController: authorizationController))
@@ -33,6 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window.makeKeyAndVisible()
         return true
+    }
+
+}
+
+extension AppDelegate {
+
+    func configureSentry() {
+        do {
+            Client.shared = try Client(dsn: "https://4cb5596c00f44edfa68a033f8ec402fc@sentry.io/156458")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
+        }
     }
 
 }

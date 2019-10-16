@@ -6,6 +6,7 @@ def common
     pod 'GoogleAPIClientForREST/Calendar'
     pod 'GTMSessionFetcher'
   	pod 'GTMAppAuth', :git => 'https://github.com/maxgoedjen/GTMAppAuth.git'
+    pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '4.3.1'
 end
 
 target 'Calendarish' do

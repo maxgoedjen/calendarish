@@ -147,12 +147,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sentry-watchOS/Sentry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AppAuth-watchOS/AppAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sentry-watchOS/Sentry.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

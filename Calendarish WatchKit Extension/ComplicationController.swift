@@ -3,10 +3,14 @@ import CalendarishCore
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
-    #if DEBUG
-    let store = EventStore.sampleStore
-    #endif
-    
+    let store = EventStore()
+
+    let dateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.timeStyle = .short
+        return f
+    }()
+
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -54,14 +58,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Placeholder Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
-        handler(template(for: complication))
+        handler(emptyEntry(for: complication)?.complicationTemplate)
     }
 
 }
 
 extension ComplicationController {
 
-    func template(for complication: CLKComplication) -> CLKComplicationTemplate? {
+    func template(for complication: CLKComplication, event: Event) -> CLKComplicationTemplate? {
         switch complication.family {
         case .modularSmall:
             return nil
@@ -74,7 +78,10 @@ extension ComplicationController {
         case .utilitarianLarge:
             return nil
         case .circularSmall:
-            return nil
+            let template = CLKComplicationTemplateCircularSmallStackText()
+            template.line1TextProvider = CLKTextProvider(format: dateFormatter.string(from: event.startTime))
+            template.line2TextProvider = CLKTextProvider(format: "--")
+            return template
         case .extraLarge:
             return nil
         case .graphicCorner:
@@ -82,7 +89,10 @@ extension ComplicationController {
         case .graphicBezel:
             return nil
         case .graphicCircular:
-            return nil
+            let template = CLKComplicationTemplateGraphicCircularStackText()
+            template.line1TextProvider = CLKTextProvider(format: "--")
+            template.line2TextProvider = CLKTextProvider(format: "--")
+            return template
         case .graphicRectangular:
             return nil
         @unknown default:
@@ -91,71 +101,15 @@ extension ComplicationController {
     }
 
     func timelineEntry(for event: Event, complication: CLKComplication) -> CLKComplicationTimelineEntry? {
-        guard let template = template(for: complication) else { return nil }
-        let timelineEntry: CLKComplicationTimelineEntry
-        switch complication.family {
-        default:
-            timelineEntry = CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
-            //        case .modularSmall:
-            //            timelineEntry = nil
-            //        case .modularLarge:
-            //            timelineEntry = nil
-            //        case .utilitarianSmall:
-            //            timelineEntry = nil
-            //        case .utilitarianSmallFlat:
-            //            timelineEntry = nil
-            //        case .utilitarianLarge:
-            //            timelineEntry = nil
-            //        case .circularSmall:
-            //            timelineEntry = nil
-            //        case .extraLarge:
-            //            timelineEntry = nil
-            //        case .graphicCorner:
-            //            timelineEntry = nil
-            //        case .graphicBezel:
-            //            timelineEntry = nil
-            //        case .graphicCircular:
-            //            timelineEntry = nil
-            //        case .graphicRectangular:
-            //            timelineEntry = nil
-            //        @unknown default:
-            //            timelineEntry = nil
-        }
-        return timelineEntry
+        guard let template = template(for: complication, event: event) else { return nil }
+        return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
     }
 
     func emptyEntry(for complication: CLKComplication) -> CLKComplicationTimelineEntry? {
-        guard let template = template(for: complication) else { return nil }
-        let timelineEntry: CLKComplicationTimelineEntry
-        switch complication.family {
-        default:
-            timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-            //        case .modularSmall:
-            //            timelineEntry = nil
-            //        case .modularLarge:
-            //            timelineEntry = nil
-            //        case .utilitarianSmall:
-            //            timelineEntry = nil
-            //        case .utilitarianSmallFlat:
-            //            timelineEntry = nil
-            //        case .utilitarianLarge:
-            //            timelineEntry = nil
-            //        case .circularSmall:
-            //            timelineEntry = nil
-            //        case .extraLarge:
-            //            timelineEntry = nil
-            //        case .graphicCorner:
-            //            timelineEntry = nil
-            //        case .graphicBezel:
-            //            timelineEntry = nil
-            //        case .graphicCircular:
-            //            timelineEntry = nil
-            //        case .graphicRectangular:
-            //            timelineEntry = nil
-            //        @unknown default:
-            //            timelineEntry = nil
-        }
-        return timelineEntry
+        let calendar = CalendarishCore.Calendar(identifier: UUID().uuidString, name: "Calendar")
+        let event = Event(identifier: UUID().uuidString, name: "Event", startTime: Date.distantPast, endTime: Date.distantFuture, attendees: [], description: nil, location: nil, calendar: calendar)
+        guard let template = template(for: complication, event: event) else { return nil }
+        return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
     }
 
 
