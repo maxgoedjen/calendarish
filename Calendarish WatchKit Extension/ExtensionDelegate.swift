@@ -48,6 +48,7 @@ extension ExtensionDelegate {
         do {
             Client.shared = try Client(dsn: "https://4cb5596c00f44edfa68a033f8ec402fc@sentry.io/156458")
             try Client.shared?.startCrashHandler()
+            Client.shared?.environment = "Watch"
         } catch let error {
             print("\(error)")
         }

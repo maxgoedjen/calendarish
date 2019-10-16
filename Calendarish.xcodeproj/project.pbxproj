@@ -529,7 +529,6 @@
 				50935B9122B4AA8D00DB2178 /* Resources */,
 				50935BBF22B4AA8E00DB2178 /* Embed App Extensions */,
 				3415002E4E26B2649457CDD6 /* Frameworks */,
-				506AF35C2356BDE300A89545 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -819,24 +818,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which sentry-cli >/dev/null; then\nexport SENTRY_ORG=max-goedjen\nexport SENTRY_PROJECT=calendarish\nexport SENTRY_AUTH_TOKEN=0b539a4d199b4fceb2b941796a5682158df73391c1c247c886d94a23b20f8801\nERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n\n";
-		};
-		506AF35C2356BDE300A89545 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which sentry-cli >/dev/null; then\nexport SENTRY_ORG=max-goedjen\nexport SENTRY_PROJECT=calendarish\nexport SENTRY_AUTH_TOKEN=0b539a4d199b4fceb2b941796a5682158df73391c1c247c886d94a23b20f8801\nERROR=$(sentry-cli upload-dif \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
 		};
 		A8DD4556446552735B9CC6CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
