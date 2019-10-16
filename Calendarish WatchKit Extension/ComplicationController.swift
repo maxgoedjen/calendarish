@@ -4,13 +4,7 @@ import CalendarishCore
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
     let store = EventStore()
-
-    let dateFormatter: DateFormatter = {
-        let f = DateFormatter()
-        f.timeStyle = .short
-        return f
-    }()
-
+    
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -72,9 +66,10 @@ extension ComplicationController {
         case .utilitarianLarge:
             return nil
         case .circularSmall:
-            let template = CLKComplicationTemplateCircularSmallStackText()
-            template.line1TextProvider = CLKTextProvider(format: dateFormatter.string(from: event.startTime))
-            template.line2TextProvider = CLKTextProvider(format: "--")
+            let template = CLKComplicationTemplateCircularSmallRingText()
+            template.textProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.ringStyle = .open
+            template.fillFraction = 0.5
             return template
         case .extraLarge:
             return nil
@@ -84,8 +79,8 @@ extension ComplicationController {
             return nil
         case .graphicCircular:
             let template = CLKComplicationTemplateGraphicCircularStackText()
-            template.line1TextProvider = CLKTextProvider(format: "--")
-            template.line2TextProvider = CLKTextProvider(format: "--")
+            template.line1TextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.line2TextProvider = CLKSimpleTextProvider(text: DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime) ?? "")
             return template
         case .graphicRectangular:
             return nil

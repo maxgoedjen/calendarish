@@ -19,25 +19,12 @@ struct EventDescriptionView: View {
 
     let event: Event
 
-    let dateFormatter: DateFormatter = {
-        let f = DateFormatter()
-        f.timeStyle = .short
-        return f
-    }()
-
-    let durationFormatter: DateComponentsFormatter = {
-        let f = DateComponentsFormatter()
-        f.allowedUnits = [.hour, .minute]
-        f.formattingContext = .standalone
-        return f
-    }()
-
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(self.dateFormatter.string(from: event.startTime))
+                Text(DateFormatter.dateFormatter.string(from: event.startTime))
                 Spacer()
-                Text(self.durationFormatter.string(from: event.startTime, to: event.endTime)!)
+                Text(DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime)!)
                     .font(.subheadline)
                     .fontWeight(.semibold)
             }

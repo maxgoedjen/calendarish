@@ -41,6 +41,7 @@
 		50A09F4B22C5EBFF005CDEA1 /* ShortcutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */; };
 		50ABF49B2356C8390000DFEA /* BatchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABF49A2356C8390000DFEA /* BatchAPI.swift */; };
 		50ABF49D2356C8770000DFEA /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABF49C2356C8770000DFEA /* APIProtocol.swift */; };
+		50ABF49F2356F0630000DFEA /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ABF49E2356F0630000DFEA /* Formatters.swift */; };
 		50B1E76122BB512A004A0B0D /* CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; };
 		50B1E76222BB512A004A0B0D /* CalendarishCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50B1E76722BB519A004A0B0D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
@@ -202,6 +203,7 @@
 		50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutController.swift; sourceTree = "<group>"; };
 		50ABF49A2356C8390000DFEA /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
 		50ABF49C2356C8770000DFEA /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		50ABF49E2356F0630000DFEA /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C970E022BA0CB2005AF478 /* CalendarishAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarishAPI.h; sourceTree = "<group>"; };
 		50C970E122BA0CB2005AF478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				50935BAD22B4AA8D00DB2178 /* NotificationController.swift */,
 				50EA2B8723558DF300C11B6B /* Views */,
 				50935BB122B4AA8D00DB2178 /* ComplicationController.swift */,
+				50ABF49E2356F0630000DFEA /* Formatters.swift */,
 				50935BB322B4AA8E00DB2178 /* Assets.xcassets */,
 				50935BB822B4AA8E00DB2178 /* Info.plist */,
 				50935BB922B4AA8E00DB2178 /* PushNotificationPayload.apns */,
@@ -963,6 +966,7 @@
 			files = (
 				50EA2B8623558DE200C11B6B /* AccountListView.swift in Sources */,
 				50935BAA22B4AA8D00DB2178 /* HostingController.swift in Sources */,
+				50ABF49F2356F0630000DFEA /* Formatters.swift in Sources */,
 				50935BA822B4AA8D00DB2178 /* EventListView.swift in Sources */,
 				506AF3582355961700A89545 /* MainView.swift in Sources */,
 				50935BAE22B4AA8D00DB2178 /* NotificationController.swift in Sources */,
