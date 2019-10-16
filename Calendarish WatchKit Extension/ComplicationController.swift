@@ -14,7 +14,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
-        handler([.forward, .backward])
+        handler([.forward])
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
@@ -42,13 +42,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         handler(entry)
     }
-    
-    func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
-        let events = store.events.filter({ $0.startTime < date }).prefix(limit)
-        let entries = events.compactMap({ timelineEntry(for: $0, complication: complication) })
-        handler(entries)
-    }
-    
+
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         let events = store.events.filter({ $0.startTime > date }).prefix(limit)
         let entries = events.compactMap({ timelineEntry(for: $0, complication: complication) })

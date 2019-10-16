@@ -9,6 +9,7 @@ import GTMAppAuth
 public struct API {
 
     fileprivate let calendarService = GTLRCalendarService()
+    fileprivate let rootSubject: PassthroughSubject<[CalendarishCalendar], API.Error> = PassthroughSubject()
 
     public init(account: Account) {
         let authorizer = try! NSKeyedUnarchiver.unarchivedObject(ofClass: GTMAppAuthFetcherAuthorization.self, from: account.authorization)
@@ -33,6 +34,7 @@ extension API: APIProtocol {
     }
 
     func reload() {
+        
     }
 
 }

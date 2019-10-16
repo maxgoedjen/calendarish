@@ -16,7 +16,7 @@ public class EventStore: ObservableObject {
             self.events = events
         } else {
             self.events = []
-            loadFromDisk()
+            self.events = loadFromDisk()
         }
     }
 
@@ -31,15 +31,13 @@ extension EventStore {
         }
     }
 
-    func loadFromDisk() {
-        queue.async {
+    func loadFromDisk() -> [Event] {
+        var savedEvents: [Event] = []
+        queue.sync {
             guard let data = try? Data(contentsOf: Constants.diskURL) else { return }
-            guard let savedEvents = try? JSONDecoder().decode([Event].self, from: data) else { return }
-            DispatchQueue.main.async {
-                guard self.events.isEmpty else { return }
-                self.events = savedEvents
-            }
+            savedEvents = (try? JSONDecoder().decode([Event].self, from: data)) ?? []
         }
+        return savedEvents
     }
 
 }

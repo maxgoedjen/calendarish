@@ -17,7 +17,7 @@ public class AccountStore: ObservableObject {
             self.accounts = accounts
         } else {
             self.accounts = []
-            loadFromKeychain()
+            self.accounts = loadFromKeychain()
         }
     }
 
@@ -44,8 +44,9 @@ extension AccountStore {
         }
     }
 
-    func loadFromKeychain() {
-        queue.async {
+    func loadFromKeychain() -> [Account] {
+        var savedAccounts: [Account] = []
+        queue.sync {
             let query: [String: Any] = [
                 kSecClass as String: kSecClassKey,
                 kSecAttrApplicationTag as String: Constants.keychainTag,
@@ -55,12 +56,9 @@ extension AccountStore {
             let status = SecItemCopyMatching(query as CFDictionary, &item)
             assert(status == errSecSuccess || status == errSecItemNotFound, "Failed to retrieve from keychain")
             guard let data = item as? Data else { return }
-            guard let savedAccounts = try? JSONDecoder().decode([Account].self, from: data) else { return }
-            guard self.accounts.isEmpty else { return }
-            DispatchQueue.main.async {
-                self.accounts = savedAccounts
-            }
+            savedAccounts = (try? JSONDecoder().decode([Account].self, from: data)) ?? []
         }
+        return savedAccounts
     }
 
 }
