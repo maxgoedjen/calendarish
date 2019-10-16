@@ -15,6 +15,7 @@ struct EventListView: View {
         let f = DateComponentsFormatter()
         f.allowedUnits = [.hour, .minute]
         f.formattingContext = .standalone
+        f.unitsStyle = .short
         return f
     }()
 

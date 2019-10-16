@@ -35,7 +35,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         let entry: CLKComplicationTimelineEntry?
-        if let event = store.events.filter({ $0.startTime > Date() }).first {
+        if let event = store.events.filter({ $0.startTime >= Date() }).first {
             entry = timelineEntry(for: event, complication: complication)
         } else {
             entry = emptyEntry(for: complication)
@@ -44,7 +44,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
 
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
-        let events = store.events.filter({ $0.startTime > date }).prefix(limit)
+        let events = store.events.filter({ $0.startTime >= date }).prefix(limit)
         let entries = events.compactMap({ timelineEntry(for: $0, complication: complication) })
         handler(entries)
     }
