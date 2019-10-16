@@ -12,13 +12,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let firstEvent = store.events.first?.startTime
+        let firstEvent = store.events.map({ $0.startTime }).sorted().first
         handler(firstEvent)
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let firstEvent = store.events.last?.endTime
-        handler(firstEvent)
+        let lastEvent = store.events.map({ $0.endTime }).sorted().last
+        handler(lastEvent)
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
@@ -32,7 +32,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if let event = store.events.filter({ $0.startTime >= Date() }).first {
             entry = timelineEntry(for: event, complication: complication)
         } else {
-            entry = emptyEntry(for: complication)
+            entry = nil
         }
         handler(entry)
     }
@@ -74,9 +74,15 @@ extension ComplicationController {
         case .extraLarge:
             return nil
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCornerStackText()
-            template.innerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            let template = CLKComplicationTemplateGraphicCornerGaugeText()
+            template.gaugeProvider = CLKTimeIntervalGaugeProvider(style: .fill, gaugeColors: nil, gaugeColorLocations: [0, 1], start: event.startTime, end: event.endTime)
+            template.leadingTextProvider = CLKTimeTextProvider(date: event.startTime)
+            template.trailingTextProvider = CLKTimeTextProvider(date: event.endTime)
             template.outerTextProvider = CLKSimpleTextProvider(text: event.name)
+
+//            let template = CLKComplicationTemplateGraphicCornerStackText()
+//            template.innerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+//            template.outerTextProvider = CLKSimpleTextProvider(text: event.name)
             return template
         case .graphicBezel:
             return nil
@@ -93,15 +99,18 @@ extension ComplicationController {
     }
 
     func timelineEntry(for event: Event, complication: CLKComplication) -> CLKComplicationTimelineEntry? {
-        guard let template = template(for: complication, event: event) else { return nil }
-        return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
+        guard let template = template(for: complication, event: event) else {
+            return nil
+
+        }
+        return CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
     }
 
     func emptyEntry(for complication: CLKComplication) -> CLKComplicationTimelineEntry? {
         let calendar = CalendarishCore.Calendar(identifier: UUID().uuidString, name: "Calendar")
         let event = Event(identifier: UUID().uuidString, name: "Event", startTime: Date.distantPast, endTime: Date.distantFuture, attendees: [], description: nil, location: nil, calendar: calendar)
         guard let template = template(for: complication, event: event) else { return nil }
-        return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
+        return CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
     }
 
 
