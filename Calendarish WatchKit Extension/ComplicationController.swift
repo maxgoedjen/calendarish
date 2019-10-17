@@ -74,15 +74,9 @@ extension ComplicationController {
         case .extraLarge:
             return nil
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCornerGaugeText()
-            template.gaugeProvider = CLKTimeIntervalGaugeProvider(style: .fill, gaugeColors: nil, gaugeColorLocations: [0, 1], start: event.startTime, end: event.endTime)
-            template.leadingTextProvider = CLKTimeTextProvider(date: event.startTime)
-            template.trailingTextProvider = CLKTimeTextProvider(date: event.endTime)
-            template.outerTextProvider = CLKSimpleTextProvider(text: event.name)
-
-//            let template = CLKComplicationTemplateGraphicCornerStackText()
-//            template.innerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
-//            template.outerTextProvider = CLKSimpleTextProvider(text: event.name)
+            let template = CLKComplicationTemplateGraphicCornerStackText()
+            template.innerTextProvider = CLKSimpleTextProvider(text: event.name)
+            template.outerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
             return template
         case .graphicBezel:
             return nil
