@@ -86,7 +86,11 @@ extension ComplicationController {
             template.line2TextProvider = CLKSimpleTextProvider(text: event.name)
             return template
         case .graphicRectangular:
-            return nil
+            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
+            template.headerTextProvider = CLKSimpleTextProvider(text: event.name)
+            template.body1TextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
+            return template
         @unknown default:
             return nil
         }
