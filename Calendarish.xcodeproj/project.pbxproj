@@ -12,6 +12,7 @@
 		500B0FDE235446F600C16CD0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDD235446F600C16CD0 /* WatchController.swift */; };
 		500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
+		5056176C235958D100B73186 /* ConnectPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056176B235958D100B73186 /* ConnectPromptView.swift */; };
 		5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; };
 		5061CDC623504AAC001E6546 /* CalendarishAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5061CDCB23504AB9001E6546 /* APIInits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49722B5FCAD00480806 /* APIInits.swift */; };
@@ -165,6 +166,7 @@
 		500B0FDD235446F600C16CD0 /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
 		5020C7D422C48E5300031599 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		5037D7EE22C34FD700B76927 /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
+		5056176B235958D100B73186 /* ConnectPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectPromptView.swift; sourceTree = "<group>"; };
 		5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506AF3572355961700A89545 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5076FD852353F5C6005AE0D1 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				508257FE22C357DE00733C3C /* EventDetailView.swift */,
 				50EA2B8523558DE200C11B6B /* AccountListView.swift */,
 				50935BAF22B4AA8D00DB2178 /* NotificationView.swift */,
+				5056176B235958D100B73186 /* ConnectPromptView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -965,6 +968,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EA2B8623558DE200C11B6B /* AccountListView.swift in Sources */,
+				5056176C235958D100B73186 /* ConnectPromptView.swift in Sources */,
 				50935BAA22B4AA8D00DB2178 /* HostingController.swift in Sources */,
 				50ABF49F2356F0630000DFEA /* Formatters.swift in Sources */,
 				50935BA822B4AA8D00DB2178 /* EventListView.swift in Sources */,
