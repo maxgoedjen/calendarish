@@ -33,7 +33,7 @@ extension API: APIProtocol {
             .eraseToAnyPublisher()
     }
 
-    func reload() {
+    public func reload() {
         
     }
 
