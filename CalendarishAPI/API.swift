@@ -65,6 +65,7 @@ extension API {
             if let nextWeek = Foundation.Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: today, wrappingComponents: false) {
                 query.timeMax = GTLRDateTime(date: nextWeek)
             }
+            query.singleEvents = true
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
