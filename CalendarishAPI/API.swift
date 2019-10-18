@@ -31,8 +31,8 @@ extension API: APIProtocol {
                 }
                 return Publishers.MergeMany(events)
             }
+            .reduce([], +)
         }
-        .reduce([], +)
         .map{ $0.sorted() }
         .eraseToAnyPublisher()
     }
