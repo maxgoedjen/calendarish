@@ -36,7 +36,11 @@ struct MainView: View {
 #if DEBUG
 struct MainView_Previews : PreviewProvider {
     static var previews: some View {
-        MainView(accountStore: AccountStore.sampleStore, eventStore: EventStore.sampleStore)
+        Group {
+            MainView(accountStore: AccountStore.sampleStore, eventStore: EventStore.sampleStore)
+            MainView(accountStore: AccountStore(), eventStore: EventStore.sampleStore)
+
+        }
     }
 }
 #endif
