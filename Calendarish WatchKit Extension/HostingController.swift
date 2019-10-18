@@ -12,7 +12,7 @@ class HostingController : WKHostingController<MainView> {
     let eventStore = EventStore()
     let accountStore = AccountStore()
     let shortcutController = ShortcutController()
-    fileprivate var batchAPI: BatchAPI
+    var batchAPI: BatchAPI
     fileprivate var subscriptions: [AnyCancellable] = []
 
     override init() {
