@@ -3,8 +3,8 @@ import CalendarishCore
 
 struct MainView: View {
 
-    @State var accountStore: AccountStore
-    @State var eventStore: EventStore
+    @ObservedObject var accountStore: AccountStore
+    @ObservedObject var eventStore: EventStore
 
     var body: some View {
         Group {

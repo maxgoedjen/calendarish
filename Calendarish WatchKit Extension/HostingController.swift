@@ -5,6 +5,7 @@ import CalendarishCore
 import WatchConnectivity
 import Combine
 import CalendarishAPI
+import UserNotifications
 
 class HostingController : WKHostingController<MainView> {
 
