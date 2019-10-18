@@ -107,7 +107,7 @@ extension ComplicationController {
             return nil
 
         }
-        return CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+        return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
     }
 
     func emptyEntry(for complication: CLKComplication) -> CLKComplicationTimelineEntry? {
