@@ -8,6 +8,12 @@ extension DateFormatter {
         return f
     }()
 
+    static let dateFormatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        return f
+    }()
+
     static let compactTimeFormatter: DateFormatter = {
         let f = DateFormatter()
         f.timeStyle = .short

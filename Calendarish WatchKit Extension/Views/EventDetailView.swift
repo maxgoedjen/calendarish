@@ -28,6 +28,7 @@ struct EventDescriptionView: View {
                     .font(.subheadline)
                     .fontWeight(.semibold)
             }
+            Text(DateFormatter.dateFormatter.string(from: event.startTime))
             Text(event.name)
                 .font(.headline)
                 .fontWeight(.bold)
