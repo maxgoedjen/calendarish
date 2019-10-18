@@ -4,7 +4,7 @@ struct NoEventsView: View {
     var body: some View {
         VStack {
             Image(systemName: "calendar")
-            Text("You don't have any events soon.")
+            Text("You don't have any events coming up.")
                 .multilineTextAlignment(.center)
                 .padding()
         }
