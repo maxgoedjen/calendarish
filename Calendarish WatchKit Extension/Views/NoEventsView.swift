@@ -6,6 +6,7 @@ struct NoEventsView: View {
             Image(systemName: "calendar")
             Text("You don't have any events soon.")
                 .multilineTextAlignment(.center)
+                .padding()
         }
     }
 }

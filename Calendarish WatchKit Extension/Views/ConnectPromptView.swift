@@ -6,6 +6,7 @@ struct ConnectPromptView: View {
             Image(systemName: "calendar.badge.plus")
             Text("Add an account on your iPhone to get started.")
                 .multilineTextAlignment(.center)
+                .padding()
         }
     }
 }
