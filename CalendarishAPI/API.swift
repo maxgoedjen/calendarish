@@ -9,7 +9,7 @@ import GTMAppAuth
 public struct API {
 
     fileprivate let calendarService = GTLRCalendarService()
-    fileprivate let rootSubject: PassthroughSubject<[CalendarishCalendar], API.Error> = PassthroughSubject()
+    fileprivate let refreshSubject = PassthroughSubject<Void, API.Error>()
 
     public init(account: Account) {
         let authorizer = try! NSKeyedUnarchiver.unarchivedObject(ofClass: GTMAppAuthFetcherAuthorization.self, from: account.authorization)
@@ -21,8 +21,11 @@ public struct API {
 extension API: APIProtocol {
 
     public var eventPublisher: AnyPublisher<[Event], API.Error> {
-        return
-            calendarList().flatMap { calendars -> Publishers.MergeMany<Future<[Event], API.Error>> in
+        return refreshSubject
+            .prepend(())
+            .flatMap {
+            self.calendarList()
+                .flatMap { calendars -> Publishers.MergeMany<Future<[Event], API.Error>> in
                 let events = calendars.map { calendar in
                     self.events(in: calendar)
                 }
@@ -30,11 +33,11 @@ extension API: APIProtocol {
             }
             .reduce([], +)
             .map{ $0.sorted() }
-            .eraseToAnyPublisher()
+        }.eraseToAnyPublisher()
     }
 
     public func reload() {
-        
+        refreshSubject.send()
     }
 
 }
