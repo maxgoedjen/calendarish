@@ -2,13 +2,13 @@ import Foundation
 
 extension DateFormatter {
 
-    static let dateFormatter: DateFormatter = {
+    static let timeFormatter: DateFormatter = {
         let f = DateFormatter()
         f.timeStyle = .short
         return f
     }()
 
-    static let compactFormatter: DateFormatter = {
+    static let compactTimeFormatter: DateFormatter = {
         let f = DateFormatter()
         f.timeStyle = .short
         f.amSymbol = ""

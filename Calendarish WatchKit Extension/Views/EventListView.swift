@@ -14,7 +14,7 @@ struct EventListView: View {
                     NavigationLink(destination: EventDetailView(event: event)) {
                         VStack(alignment: .leading) {
                             HStack {
-                                Text(DateFormatter.dateFormatter.string(from: event.startTime))
+                                Text(DateFormatter.timeFormatter.string(from: event.startTime))
                                 Spacer()
                             Text(DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime)!)
                                 .font(.subheadline)
