@@ -32,7 +32,7 @@ class HostingController : WKHostingController<MainView> {
     }
 
     override var body: MainView {
-        return MainView(accountStore: accountStore, eventStore: eventStore)
+        return MainView(accountStore: accountStore, eventStore: eventStore, api: batchAPI)
     }
 
 }
