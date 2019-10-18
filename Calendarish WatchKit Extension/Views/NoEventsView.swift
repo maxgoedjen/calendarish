@@ -11,7 +11,7 @@ struct NoEventsView: View {
     }
 }
 
-struct _Previews: PreviewProvider {
+struct NoEventsView_Previews: PreviewProvider {
     static var previews: some View {
         NoEventsView()
     }
