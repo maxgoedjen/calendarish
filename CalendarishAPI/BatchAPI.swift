@@ -15,7 +15,9 @@ public class BatchAPI {
 extension BatchAPI: APIProtocol {
 
     public var eventPublisher: AnyPublisher<[Event], API.Error> {
-        return Publishers.MergeMany(apis.map({ $0.eventPublisher })).eraseToAnyPublisher()
+        return Publishers.MergeMany(apis.map({ $0.eventPublisher }))
+            .map { $0.sorted() }
+            .eraseToAnyPublisher()
     }
 
     public func reload() {
