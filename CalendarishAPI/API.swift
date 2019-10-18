@@ -23,13 +23,13 @@ extension API: APIProtocol {
     public var eventPublisher: AnyPublisher<[Event], API.Error> {
         return
             calendarList().flatMap { calendars -> Publishers.MergeMany<Future<[Event], API.Error>> in
-            let events = calendars.map { calendar in
-                self.events(in: calendar)
-            }
-            return Publishers.MergeMany(events)
+                let events = calendars.map { calendar in
+                    self.events(in: calendar)
+                }
+                return Publishers.MergeMany(events)
             }
             .reduce([], +)
-            .map({ $0.sorted() })
+            .map{ $0.sorted() }
             .eraseToAnyPublisher()
     }
 
