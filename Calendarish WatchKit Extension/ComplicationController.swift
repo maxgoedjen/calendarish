@@ -46,7 +46,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Placeholder Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
-        handler(emptyEntry(for: complication)?.complicationTemplate)
+        handler(emptyTemplate(for: complication))
     }
 
 }
@@ -54,6 +54,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 extension ComplicationController {
 
     func template(for complication: CLKComplication, event: Event) -> CLKComplicationTemplate? {
+        let nameProvider = CLKSimpleTextProvider(text: event.name)
+        let timeIntervalProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+        let durationProvider = CLKSimpleTextProvider(text: DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime) ?? "")
+
         switch complication.family {
         case .modularSmall:
             return nil
@@ -67,7 +71,7 @@ extension ComplicationController {
             return nil
         case .circularSmall:
             let template = CLKComplicationTemplateCircularSmallRingText()
-            template.textProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.textProvider = timeIntervalProvider
             template.ringStyle = .open
             template.fillFraction = 0.5
             return template
@@ -75,26 +79,26 @@ extension ComplicationController {
             return nil
         case .graphicCorner:
             let template = CLKComplicationTemplateGraphicCornerStackText()
-            template.innerTextProvider = CLKSimpleTextProvider(text: event.name)
-            template.outerTextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.innerTextProvider = nameProvider
+            template.outerTextProvider = timeIntervalProvider
             return template
         case .graphicBezel:
             let template = CLKComplicationTemplateGraphicBezelCircularText()
             template.textProvider = CLKSimpleTextProvider(text: event.name)
             let circular = CLKComplicationTemplateGraphicCircularStackText()
             circular.line1TextProvider = CLKTimeTextProvider(date: event.startTime)
-            circular.line2TextProvider = CLKSimpleTextProvider(text: DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime) ?? "")
+            circular.line2TextProvider = durationProvider
             template.circularTemplate = circular
             return template
         case .graphicCircular:
             let template = CLKComplicationTemplateGraphicCircularStackText()
-            template.line1TextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
-            template.line2TextProvider = CLKSimpleTextProvider(text: event.name)
+            template.line1TextProvider = timeIntervalProvider
+            template.line2TextProvider = nameProvider
             return template
         case .graphicRectangular:
             let template = CLKComplicationTemplateGraphicRectangularStandardBody()
-            template.headerTextProvider = CLKSimpleTextProvider(text: event.name)
-            template.body1TextProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+            template.headerTextProvider = nameProvider
+            template.body1TextProvider = timeIntervalProvider
             template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
             return template
         @unknown default:
@@ -110,11 +114,56 @@ extension ComplicationController {
         return CLKComplicationTimelineEntry(date: event.startTime, complicationTemplate: template)
     }
 
-    func emptyEntry(for complication: CLKComplication) -> CLKComplicationTimelineEntry? {
-        let calendar = CalendarishCore.Calendar(identifier: UUID().uuidString, name: "Calendar")
-        let event = Event(identifier: UUID().uuidString, name: "Event", startTime: Date.distantPast, endTime: Date.distantFuture, attendees: [], description: nil, location: nil, calendar: calendar)
-        guard let template = template(for: complication, event: event) else { return nil }
-        return CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+    func emptyTemplate(for complication: CLKComplication) -> CLKComplicationTemplate? {
+        let unlockTextProvider = CLKSimpleTextProvider(text: "Unlock")
+        let calendarTextProvider = CLKSimpleTextProvider(text: "Calendar")
+        let blankTextProvider = CLKSimpleTextProvider(text: "")
+        switch complication.family {
+        case .modularSmall:
+            return nil
+        case .modularLarge:
+            return nil
+        case .utilitarianSmall:
+            return nil
+        case .utilitarianSmallFlat:
+            return nil
+        case .utilitarianLarge:
+            return nil
+        case .circularSmall:
+            let template = CLKComplicationTemplateCircularSmallRingText()
+            template.textProvider = blankTextProvider
+            template.ringStyle = .open
+            template.fillFraction = 0
+            return template
+        case .extraLarge:
+            return nil
+        case .graphicCorner:
+            let template = CLKComplicationTemplateGraphicCornerStackText()
+            template.innerTextProvider = calendarTextProvider
+            template.outerTextProvider = unlockTextProvider
+            return template
+        case .graphicBezel:
+            let template = CLKComplicationTemplateGraphicBezelCircularText()
+            template.textProvider = blankTextProvider
+            let circular = CLKComplicationTemplateGraphicCircularStackText()
+            circular.line1TextProvider = blankTextProvider
+            circular.line2TextProvider = blankTextProvider
+            template.circularTemplate = circular
+            return template
+        case .graphicCircular:
+            let template = CLKComplicationTemplateGraphicCircularStackText()
+            template.line1TextProvider = blankTextProvider
+            template.line2TextProvider = blankTextProvider
+            return template
+        case .graphicRectangular:
+            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
+            template.headerTextProvider = unlockTextProvider
+            template.body1TextProvider = calendarTextProvider
+            template.body2TextProvider = blankTextProvider
+            return template
+        @unknown default:
+            return nil
+        }
     }
 
 
