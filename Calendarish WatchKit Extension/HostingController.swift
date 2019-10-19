@@ -45,7 +45,9 @@ extension HostingController: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         guard let email = message["Email"] as? String else { return }
         guard let authorization = message["Authorization"] as? Data else { return }
-        accountStore.accounts.append(Account(email: email, authorization: authorization))
+        DispatchQueue.main.async {
+            self.accountStore.accounts.append(Account(email: email, authorization: authorization))
+        }
     }
 
 
