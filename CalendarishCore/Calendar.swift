@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Calendar: Codable {
+public struct Calendar: Codable, Equatable {
 
     public let identifier: String
     public let name: String

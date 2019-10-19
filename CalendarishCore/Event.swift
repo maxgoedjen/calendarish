@@ -28,10 +28,6 @@ public struct Event: Codable {
 
 extension Event: Comparable {
 
-    public static func == (lhs: Event, rhs: Event) -> Bool {
-        return lhs.startTime == rhs.startTime
-    }
-
     public static func < (lhs: Self, rhs: Self) -> Bool {
         return lhs.startTime < rhs.startTime
     }

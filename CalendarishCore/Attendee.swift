@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Attendee: Codable {
+public struct Attendee: Codable, Equatable {
 
     public let identifier: String
     public let name: String
