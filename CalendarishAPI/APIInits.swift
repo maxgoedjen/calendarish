@@ -7,7 +7,7 @@ extension CalendarishCalendar {
 
     init(_ calendar: GTLRCalendar_CalendarListEntry) {
         // TODO: Hex color parse
-        self.init(identifier: calendar.identifier!, name: calendar.summary!)
+        self.init(identifier: calendar.identifier!, name: calendar.summary!, color: calendar.backgroundColor!)
     }
 
 }
