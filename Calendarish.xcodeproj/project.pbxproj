@@ -207,6 +207,7 @@
 		50935BF422B4CBAD00DB2178 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		50A09F4922C5EBFF005CDEA1 /* ShortcutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutController.swift; sourceTree = "<group>"; };
 		50A79B7E235BE43B00F61687 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		50A79BB4235D43DC00F61687 /* Calendarish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calendarish.entitlements; sourceTree = "<group>"; };
 		50ABF49A2356C8390000DFEA /* BatchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchAPI.swift; sourceTree = "<group>"; };
 		50ABF49C2356C8770000DFEA /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		50ABF49E2356F0630000DFEA /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
@@ -392,6 +393,7 @@
 		50935BA622B4AA8D00DB2178 /* Calendarish WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				50A79BB4235D43DC00F61687 /* Calendarish.entitlements */,
 				50935BA922B4AA8D00DB2178 /* HostingController.swift */,
 				50935BAB22B4AA8D00DB2178 /* ExtensionDelegate.swift */,
 				50935BAD22B4AA8D00DB2178 /* NotificationController.swift */,
@@ -1261,6 +1263,7 @@
 			baseConfigurationReference = 04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Calendarish WatchKit Extension/Calendarish.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Calendarish WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z72PRUAWF6;
@@ -1273,7 +1276,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.watchkitapp.extension;
 				PRODUCT_NAME = Calendarish;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1289,6 +1292,7 @@
 			baseConfigurationReference = 92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Calendarish WatchKit Extension/Calendarish.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Calendarish WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z72PRUAWF6;
@@ -1301,7 +1305,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.watchkitapp.extension;
 				PRODUCT_NAME = Calendarish;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1363,6 +1367,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Calendarish/Calendarish.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Calendarish/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z72PRUAWF6;
@@ -1391,6 +1396,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Calendarish/Calendarish.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Calendarish/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z72PRUAWF6;

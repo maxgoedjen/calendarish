@@ -23,11 +23,14 @@ extension ShortcutController {
 
     func updateIntents() {
         let shortcuts = events.map({ shortcut(for: $0 )})
-        INRelevantShortcutStore.default.setRelevantShortcuts(shortcuts, completionHandler: nil)
+        INRelevantShortcutStore.default.setRelevantShortcuts(shortcuts, completionHandler: { error in
+            assert(error == nil)
+        })
     }
 
     func shortcut(for event: Event) -> INRelevantShortcut {
         let activity = NSUserActivity(activityType: "com.calendarish.event")
+        activity.persistentIdentifier = event.identifier
         activity.title = event.name
         activity.expirationDate = event.endTime
 
