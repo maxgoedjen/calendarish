@@ -4,7 +4,8 @@ import CalendarishCore
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
     let store = EventStore()
-    
+    let settings = Settings()
+
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -22,7 +23,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
-        handler(.hideOnLockScreen)
+        let behavior: CLKComplicationPrivacyBehavior = settings.showOnLockScreen ? .showOnLockScreen : .hideOnLockScreen
+        handler(behavior)
     }
     
     // MARK: - Timeline Population
@@ -35,6 +37,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             entry = nil
         }
         handler(entry)
+    }
+
+    func getAlwaysOnTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
+        guard !settings.showOnIdleScreen else {
+            handler(emptyTemplate(for: complication))
+            return
+        }
+        handler(emptyTemplate(for: complication))
     }
 
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
