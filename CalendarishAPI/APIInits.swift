@@ -37,7 +37,8 @@ extension Attendee {
 
     init?(_ attendee: GTLRCalendar_EventAttendee) {
         self.init(identifier: attendee.email!,
-                  name: attendee.displayName! ?? attendee.email!,
+                  name: attendee.displayName ?? attendee.email!,
+                  email: attendee.email!,
                   response: Response(rawValue: attendee.responseStatus!)!
                   )
     }

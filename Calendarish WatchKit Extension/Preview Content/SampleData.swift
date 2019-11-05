@@ -19,12 +19,12 @@ extension EventStore {
                   startTime: Date(timeIntervalSince1970: -21600),
                   endTime: Date(timeIntervalSince1970: -19800),
                   attendees: [
-                    Attendee(identifier: UUID().uuidString, name: "Max Goedjen", response: .accepted),
-                    Attendee(identifier: UUID().uuidString, name: "Aaron Houssney", response: .accepted),
-                    Attendee(identifier: UUID().uuidString, name: "Lance Schultz", response: .needsAction),
-                    Attendee(identifier: UUID().uuidString, name: "Taylor Blau", response: .needsAction),
-                    Attendee(identifier: UUID().uuidString, name: "Kaitlyn Hoang", response: .tentative),
-                    Attendee(identifier: UUID().uuidString, name: "Alexa Chernov", response: .declined)
+                    Attendee(identifier: UUID().uuidString, name: "Max Goedjen", email: "max@example.com", response: .accepted),
+                    Attendee(identifier: UUID().uuidString, name: "Aaron Houssney", email: "aaron@example.com",response: .accepted),
+                    Attendee(identifier: UUID().uuidString, name: "Lance Schultz", email: "lance@example.com",response: .needsAction),
+                    Attendee(identifier: UUID().uuidString, name: "Taylor Blau", email: "taylor@example.com",response: .needsAction),
+                    Attendee(identifier: UUID().uuidString, name: "Kaitlyn Hoang", email: "kaitlyn@example.com",response: .tentative),
+                    Attendee(identifier: UUID().uuidString, name: "Alexa Chernov", email: "alexa@example.com",response: .declined)
                 ],
                   description: "Catch up on projects, go over any high priority isues for next release.",
                   location: "Blue Devils",

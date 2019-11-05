@@ -33,10 +33,15 @@ class HostingController : WKHostingController<MainView> {
                 }
             }
         )
+        let userEmails = accountStore.accounts.map { $0.email }
         subscriptions.append(
             batchAPI.eventPublisher
                 .breakpointOnError()
                 .replaceError(with: [])
+                .map { $0.filter { event in
+                    !self.settingsStore.showOnlyAcceptedEvents || event.attendees.first(where: { attendee in userEmails.contains(attendee.name) })?.response == .accepted
+                    }
+                }
                 .assign(to: \.events, on: self.eventStore)
         )
     }
