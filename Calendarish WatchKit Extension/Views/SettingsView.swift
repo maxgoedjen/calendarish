@@ -2,11 +2,10 @@ import SwiftUI
 
 struct SettingsView: View {
 
-    var settings: Settings
-    var te: Bool = false
+    var settingsStore: SettingsStore
 
     var body: some View {
-        List(settings.all) { setting in
+        List(settingsStore.allSettings) { setting in
             Toggle(isOn: setting.binding) {
                 Text(setting.description)
             }
@@ -16,6 +15,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(settings: Settings())
+        SettingsView(settingsStore: SettingsStore())
     }
 }

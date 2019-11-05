@@ -1,6 +1,6 @@
 import Foundation
 
-struct Settings {
+struct SettingsStore {
 
     @UserDefault("show_only_accepted_events", description: "Show only accepted events", defaultValue: true)
     var showOnlyAcceptedEvents: Bool
@@ -11,7 +11,7 @@ struct Settings {
     @UserDefault("idle_screen_privacy", description: "Show complication while Apple Watch screen is dimmed", defaultValue: false)
     var showOnIdleScreen: Bool
 
-    var all: [UserDefault<Bool>] {
+    var allSettings: [UserDefault<Bool>] {
         return [_showOnlyAcceptedEvents, _showOnLockScreen, _showOnIdleScreen]
     }
 

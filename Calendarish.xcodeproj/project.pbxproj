@@ -52,7 +52,7 @@
 		50B1E76922BB519A004A0B0D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* EventStore.swift */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50DC320923714A30004CC676 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320823714A30004CC676 /* UserDefault.swift */; };
-		50DC320B23714BCA004CC676 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320A23714BCA004CC676 /* Settings.swift */; };
+		50DC320B23714BCA004CC676 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320A23714BCA004CC676 /* SettingsStore.swift */; };
 		50DC320D23714D00004CC676 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320C23714D00004CC676 /* SettingsView.swift */; };
 		50EA2B8623558DE200C11B6B /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EA2B8523558DE200C11B6B /* AccountListView.swift */; };
 		50EF0BF922C352660070C192 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
@@ -225,7 +225,7 @@
 		50D2D49522B5FC7400480806 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		50D2D49722B5FCAD00480806 /* APIInits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInits.swift; sourceTree = "<group>"; };
 		50DC320823714A30004CC676 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
-		50DC320A23714BCA004CC676 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		50DC320A23714BCA004CC676 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		50DC320C23714D00004CC676 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		50EA2B8523558DE200C11B6B /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
 		7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
@@ -406,7 +406,7 @@
 				50EA2B8723558DF300C11B6B /* Views */,
 				50935BB122B4AA8D00DB2178 /* ComplicationController.swift */,
 				50DC320823714A30004CC676 /* UserDefault.swift */,
-				50DC320A23714BCA004CC676 /* Settings.swift */,
+				50DC320A23714BCA004CC676 /* SettingsStore.swift */,
 				50ABF49E2356F0630000DFEA /* Formatters.swift */,
 				50A79B7E235BE43B00F61687 /* Color.swift */,
 				50935BB322B4AA8E00DB2178 /* Assets.xcassets */,
@@ -995,7 +995,7 @@
 				506AF3582355961700A89545 /* MainView.swift in Sources */,
 				50935BAE22B4AA8D00DB2178 /* NotificationController.swift in Sources */,
 				50935BAC22B4AA8D00DB2178 /* ExtensionDelegate.swift in Sources */,
-				50DC320B23714BCA004CC676 /* Settings.swift in Sources */,
+				50DC320B23714BCA004CC676 /* SettingsStore.swift in Sources */,
 				50A79B7F235BE43B00F61687 /* Color.swift in Sources */,
 				50935BB022B4AA8D00DB2178 /* NotificationView.swift in Sources */,
 				50935BB222B4AA8D00DB2178 /* ComplicationController.swift in Sources */,

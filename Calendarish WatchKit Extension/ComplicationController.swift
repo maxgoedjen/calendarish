@@ -4,7 +4,7 @@ import CalendarishCore
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
     let store = EventStore()
-    let settings = Settings()
+    let settings = SettingsStore()
 
     // MARK: - Timeline Configuration
     

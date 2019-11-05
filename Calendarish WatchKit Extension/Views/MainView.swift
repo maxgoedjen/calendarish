@@ -6,6 +6,8 @@ struct MainView: View {
 
     @ObservedObject var accountStore: AccountStore
     @ObservedObject var eventStore: EventStore
+    var settingsStore: SettingsStore
+
     var api: APIProtocol
 
     var body: some View {
@@ -22,7 +24,7 @@ struct MainView: View {
                     Text("Accounts")
                 }
             }
-            NavigationLink(destination: SettingsView(settings: Settings())) {
+            NavigationLink(destination: SettingsView(settingsStore: settingsStore)) {
                 VStack {
                     Image(systemName: "gear")
                     Text("Settings")
@@ -43,8 +45,8 @@ struct MainView: View {
 struct MainView_Previews : PreviewProvider {
     static var previews: some View {
         Group {
-            MainView(accountStore: AccountStore.sampleStore, eventStore: EventStore.sampleStore, api: BatchAPI(apis: []))
-            MainView(accountStore: AccountStore(), eventStore: EventStore.sampleStore, api: BatchAPI(apis: []))
+            MainView(accountStore: AccountStore.sampleStore, eventStore: EventStore.sampleStore, settingsStore: SettingsStore(), api: BatchAPI(apis: []))
+            MainView(accountStore: AccountStore(), eventStore: EventStore.sampleStore, settingsStore: SettingsStore(), api: BatchAPI(apis: []))
 
         }
     }
