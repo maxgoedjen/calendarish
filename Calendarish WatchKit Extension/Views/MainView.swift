@@ -14,22 +14,28 @@ struct MainView: View {
                 ConnectPromptView()
             } else {
                 EventListView(store: eventStore)
-                .contextMenu {
-                    NavigationLink(destination: AccountListView(store: accountStore)) {
-                        VStack {
-                            Image(systemName: "list.bullet")
-                            Text("Accounts")
-                        }
-                    }
-                    Button(action: api.reload) {
-                        VStack {
-                            Image(systemName: "arrow.clockwise")
-                            Text("Refresh")
-                        }
-                    }
+            }
+        }.contextMenu {
+            NavigationLink(destination: AccountListView(store: accountStore)) {
+                VStack {
+                    Image(systemName: "list.bullet")
+                    Text("Accounts")
+                }
+            }
+            NavigationLink(destination: SettingsView(settings: Settings())) {
+                VStack {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
+            }
+            Button(action: api.reload) {
+                VStack {
+                    Image(systemName: "arrow.clockwise")
+                    Text("Refresh")
                 }
             }
         }
+
     }
 }
 

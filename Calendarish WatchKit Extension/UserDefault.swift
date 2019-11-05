@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 @propertyWrapper
 struct UserDefault<DefaultType>: Identifiable {
@@ -26,9 +27,15 @@ struct UserDefault<DefaultType>: Identifiable {
         get {
             return suite.object(forKey: key) as? DefaultType ?? defaultValue
         }
-        set {
+        nonmutating set {
             suite.set(newValue, forKey: key)
         }
+    }
+
+    var binding: Binding<DefaultType> {
+        return Binding(get: {
+            return self.wrappedValue
+        }, set: { self.wrappedValue = $0 })
     }
 
     var id: String {

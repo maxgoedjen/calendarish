@@ -2,12 +2,12 @@ import SwiftUI
 
 struct SettingsView: View {
 
-    @State var settings: Settings
-    @State var te: Bool = false
+    var settings: Settings
+    var te: Bool = false
 
     var body: some View {
         List(settings.all) { setting in
-            Toggle(isOn: self.$te) {
+            Toggle(isOn: setting.binding) {
                 Text(setting.description)
             }
         }
