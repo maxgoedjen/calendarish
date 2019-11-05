@@ -22,14 +22,23 @@ class HostingController : WKHostingController<MainView> {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        subscriptions.append(eventStore.$events.assign(to: \.events, on: shortcutController))
-        subscriptions.append(batchAPI.eventPublisher.breakpointOnError().replaceError(with: []).assign(to: \.events, on: self.eventStore))
-        subscriptions.append(eventStore.$events.sink { _ in
-            let server = CLKComplicationServer.sharedInstance()
-            for complication in server.activeComplications ?? [] {
-                server.reloadTimeline(for: complication)
+        subscriptions.append(
+            eventStore.$events.assign(to: \.events, on: shortcutController)
+        )
+        subscriptions.append(
+            eventStore.$events.sink { _ in
+                let server = CLKComplicationServer.sharedInstance()
+                for complication in server.activeComplications ?? [] {
+                    server.reloadTimeline(for: complication)
+                }
             }
-        })
+        )
+        subscriptions.append(
+            batchAPI.eventPublisher
+                .breakpointOnError()
+                .replaceError(with: [])
+                .assign(to: \.events, on: self.eventStore)
+        )
     }
 
     override var body: MainView {
