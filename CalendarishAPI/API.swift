@@ -51,7 +51,7 @@ extension API {
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_CalendarList, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
-                let calendars = items.map({ CalendarishCalendar($0)})
+                let calendars = items.compactMap({ CalendarishCalendar($0)})
                 promise(.success(calendars))
             }
         }
@@ -69,7 +69,7 @@ extension API {
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
-                let events = items.map({ Event($0, calendar: calendar) })
+                let events = items.compactMap({ Event($0, calendar: calendar) })
                 promise(.success(events))
             }
         }
