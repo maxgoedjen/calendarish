@@ -36,11 +36,8 @@ extension Event {
 extension Attendee {
 
     init?(_ attendee: GTLRCalendar_EventAttendee) {
-        guard let identifier = attendee.identifier else {
-return nil
-        }
-        self.init(identifier: identifier,
-                  name: attendee.displayName!,
+        self.init(identifier: attendee.email!,
+                  name: attendee.displayName! ?? attendee.email!,
                   response: Response(rawValue: attendee.responseStatus!)!
                   )
     }
