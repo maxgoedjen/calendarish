@@ -1,4 +1,4 @@
-name: TestFlight
+name: Distribute
 
 on: 
   push:
