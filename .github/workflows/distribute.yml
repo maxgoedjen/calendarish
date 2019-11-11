@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build
-      run: echo ""
+      run: fastlane distribute
