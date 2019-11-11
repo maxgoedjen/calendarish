@@ -11,8 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build
     - env:
         FASTLANE_USER: ${{ secrets.ITC_EMAIL }}
         FASTLANE_PASSWORD:  ${{ secrets.ITC_PASSWORD }}
-    - run: fastlane distribute
+    - name: Build
+      run: fastlane distribute
