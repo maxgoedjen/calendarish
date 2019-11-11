@@ -30,4 +30,4 @@ jobs:
       env:
         FASTLANE_USER: ${{ secrets.ITC_EMAIL }}
         FASTLANE_PASSWORD:  ${{ secrets.ITC_PASSWORD }}
-      run: fastlane distribute
+      run: bundle exec fastlane distribute

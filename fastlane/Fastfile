@@ -16,10 +16,11 @@ platform :ios do
 
   desc "Distribute to TestFlight"
   lane :distribute do
-    disable_automatic_code_signing
+    disable_automatic_code_signing(targets: ["Calendarish", "Calendarish WatchKit App", "Calendarish WatchKit Extension"])
     update_project_provisioning(
       xcodeproj: "Calendarish.xcodeproj",
       profile: "./Profile.mobileprovision",
+      target_filter: "Calendarish",
       build_configuration: "Release"
     )
   	build_app(scheme: "Calendarish")
