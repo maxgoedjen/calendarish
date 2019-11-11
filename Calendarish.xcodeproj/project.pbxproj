@@ -56,6 +56,7 @@
 		50DC320D23714D00004CC676 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320C23714D00004CC676 /* SettingsView.swift */; };
 		50EA2B8623558DE200C11B6B /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EA2B8523558DE200C11B6B /* AccountListView.swift */; };
 		50EF0BF922C352660070C192 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
+		50F7D15F2378DF3400420604 /* CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; };
 		76C50E60BA4434FDA9F19ACD /* Pods_CalendarishAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */; };
 		B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */; };
@@ -90,13 +91,6 @@
 			remoteGlobalIDString = 50935BA122B4AA8D00DB2178;
 			remoteInfo = "Calendarish WatchKit Extension";
 		};
-		50935BDC22B4AD6100DB2178 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 50935B8022B4AA8A00DB2178;
-			remoteInfo = Calendarish;
-		};
 		50B1E75F22BB512A004A0B0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
@@ -104,12 +98,19 @@
 			remoteGlobalIDString = 50B1E75922BB512A004A0B0D;
 			remoteInfo = CalendarishCoreWatch;
 		};
-		50C970EA22BA0CB2005AF478 /* PBXContainerItemProxy */ = {
+		50F7D15A2378DEE500420604 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 50935B8022B4AA8A00DB2178;
-			remoteInfo = Calendarish;
+			remoteGlobalIDString = 50B1E75922BB512A004A0B0D;
+			remoteInfo = CalendarishCore;
+		};
+		50F7D1602378DF6A00420604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50935B7922B4AA8A00DB2178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5061CDBD23504AAC001E6546;
+			remoteInfo = CalendarishAPI;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -279,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F7D15F2378DF3400420604 /* CalendarishCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +605,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				50935BDD22B4AD6100DB2178 /* PBXTargetDependency */,
+				50F7D15B2378DEE500420604 /* PBXTargetDependency */,
 			);
 			name = CalendarishCoreTests;
 			productName = CalendarishCoreTests;
@@ -641,7 +643,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				50C970EB22BA0CB2005AF478 /* PBXTargetDependency */,
+				50F7D1612378DF6A00420604 /* PBXTargetDependency */,
 			);
 			name = CalendarishAPITests;
 			productName = CalendarishAPITests;
@@ -673,14 +675,12 @@
 					};
 					50935BD722B4AD6100DB2178 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 50935B8022B4AA8A00DB2178;
 					};
 					50B1E75922BB512A004A0B0D = {
 						CreatedOnToolsVersion = 11.0;
 					};
 					50C970E522BA0CB2005AF478 = {
 						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 50935B8022B4AA8A00DB2178;
 					};
 				};
 			};
@@ -1057,20 +1057,20 @@
 			target = 50935BA122B4AA8D00DB2178 /* Calendarish WatchKit Extension */;
 			targetProxy = 50935BA422B4AA8D00DB2178 /* PBXContainerItemProxy */;
 		};
-		50935BDD22B4AD6100DB2178 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 50935B8022B4AA8A00DB2178 /* Calendarish */;
-			targetProxy = 50935BDC22B4AD6100DB2178 /* PBXContainerItemProxy */;
-		};
 		50B1E76022BB512A004A0B0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 50B1E75922BB512A004A0B0D /* CalendarishCore */;
 			targetProxy = 50B1E75F22BB512A004A0B0D /* PBXContainerItemProxy */;
 		};
-		50C970EB22BA0CB2005AF478 /* PBXTargetDependency */ = {
+		50F7D15B2378DEE500420604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50935B8022B4AA8A00DB2178 /* Calendarish */;
-			targetProxy = 50C970EA22BA0CB2005AF478 /* PBXContainerItemProxy */;
+			target = 50B1E75922BB512A004A0B0D /* CalendarishCore */;
+			targetProxy = 50F7D15A2378DEE500420604 /* PBXContainerItemProxy */;
+		};
+		50F7D1612378DF6A00420604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5061CDBD23504AAC001E6546 /* CalendarishAPI */;
+			targetProxy = 50F7D1602378DF6A00420604 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1443,10 +1443,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calendarish.app/Calendarish";
 			};
 			name = Debug;
 		};
@@ -1466,10 +1466,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calendarish.app/Calendarish";
 			};
 			name = Release;
 		};
@@ -1556,10 +1556,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calendarish.app/Calendarish";
 			};
 			name = Debug;
 		};
@@ -1580,10 +1580,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.CalendarishAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calendarish.app/Calendarish";
 			};
 			name = Release;
 		};
