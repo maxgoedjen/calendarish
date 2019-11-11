@@ -16,8 +16,9 @@ platform :ios do
 
   desc "Distribute to TestFlight"
   lane :distribute do
+    sync_code_signing
   	build_app(scheme: "Calendarish")
-        # Cron will release these later, don't wait for processing.
+        # Cron will release these later, don't wait for processing
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
   	
