@@ -11,6 +11,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Set up signing
+      env: 
+        SIGNING_DATA: ${{ secrets.SIGNING_DATA }}
+        SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+      run: |
+        echo $SIGNING_DATA | base64 -d -o Signing.p12
+        security import ./Signing.p12 -k Keychain -P $SIGNING_PASSWORD
     - name: Build
       env:
         FASTLANE_USER: ${{ secrets.ITC_EMAIL }}
