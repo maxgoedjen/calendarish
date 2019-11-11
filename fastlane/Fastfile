@@ -16,6 +16,7 @@ platform :ios do
 
   desc "Distribute to TestFlight"
   lane :distribute do
+    disable_automatic_code_signing
     update_project_provisioning(
       xcodeproj: "Calendarish.xcodeproj",
       profile: "./Profile.mobileprovision",
