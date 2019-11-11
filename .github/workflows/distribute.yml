@@ -21,7 +21,7 @@ jobs:
         echo $SIGNING_DATA | base64 -d -o Signing.p12
         security import ./Signing.p12 -k login.keychain -P $SIGNING_PASSWORD
         # Import provisioning profile. Adapted from https://stackoverflow.com/a/10775025
-        echo $PROFILE | base64 -d -o Profile.mobileprovision
+        echo $PROFILE_DATA | base64 -d -o Profile.mobileprovision
         UUID=`grep UUID -A1 -a Profile.mobileprovision | grep -io "[-A-F0-9]\{36\}"`
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
         cp Profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$uuid.mobileprovision
