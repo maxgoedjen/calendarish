@@ -1,13 +1,13 @@
-name: Test
+# name: Test
 
-on: [push]
+# on: [push]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: macOS-latest
+#     runs-on: macOS-latest
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Test
-      run: fastlane test
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Test
+#       run: fastlane test
