@@ -20,6 +20,7 @@ platform :ios do
     update_project_provisioning(
       xcodeproj: "Calendarish.xcodeproj",
       profile: "./Profile.mobileprovision",
+      code_signing_identity: "Apple Distribution",
       target_filter: "Calendarish( WatchKit (App|Extension))?$",
     )
   	build_app(scheme: "Calendarish")
