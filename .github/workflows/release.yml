@@ -1,0 +1,52 @@
+name: Release
+
+on: 
+  push:
+    tags:
+      - '*'
+jobs:
+  build:
+    runs-on: macOS-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v1
+    - uses: olegtarasov/get-tag@v1
+      id: tag_name
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ${{ github.ref }}
+        body: ''
+        draft: true
+        prerelease: false
+    - name: Set up signing
+      env: 
+        SIGNING_DATA: ${{ secrets.SIGNING_DATA }}
+        SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        PROFILE_DATA: ${{ secrets.PROFILE_DATA }}
+      run: ./scripts/configure_signing.sh
+    - name: Build
+      run: bundle exec fastlane build
+    - name: Upload
+      env:
+        FASTLANE_USER: ${{ secrets.ITC_EMAIL }}
+        FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD:  ${{ secrets.ITC_APP_SPECIFIC_PASSWORD }}
+      run: bundle exec fastlane upload
+    - name: Create Archive ZIP
+      env:
+        TAG: ${{ steps.tag_name.outputs.tag }}
+      run: ditto -c -k --sequesterRsrc --keepParent Archive.xcarchive ./$TAG.zip
+    - name: Upload Archive
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./${{ steps.tag_name.outputs.tag }}.zip
+        asset_name: ${{ steps.tag_name.outputs.tag }}.zip
+        asset_content_type: application/zip
