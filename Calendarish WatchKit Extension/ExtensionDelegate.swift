@@ -6,7 +6,6 @@ import CalendarishAPI
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        configureSentry()
     }
 
     func applicationWillEnterForeground() {
