@@ -1,8 +1,9 @@
 import Foundation
 import Combine
 import SwiftUI
-import GoogleAPIClientForREST
-import GTMSessionFetcher
+import GoogleAPIClientForRESTCore
+import GoogleAPIClientForREST_Calendar
+import GTMSessionFetcherCore
 import CalendarishCore
 import GTMAppAuth
 

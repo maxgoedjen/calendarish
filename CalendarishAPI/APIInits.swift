@@ -1,5 +1,5 @@
 import SwiftUI
-import GoogleAPIClientForREST
+import GoogleAPIClientForREST_Calendar
 import CalendarishCore
 typealias CalendarishCalendar = CalendarishCore.Calendar
 

@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44BF01E7A36F2FB6E549C7B0 /* Pods_Calendarish_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */; };
 		500B0FDC2354448800C16CD0 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDB2354448800C16CD0 /* AuthorizationController.swift */; };
 		500B0FDE235446F600C16CD0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDD235446F600C16CD0 /* WatchController.swift */; };
 		500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
+		5034948A24D29AF7007469B1 /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5034948924D29AF7007469B1 /* GTMAppAuth */; };
 		5056176C235958D100B73186 /* ConnectPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056176B235958D100B73186 /* ConnectPromptView.swift */; };
 		5056176E2359722100B73186 /* NoEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056176D2359722100B73186 /* NoEventsView.swift */; };
 		5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; };
@@ -50,6 +50,8 @@
 		50B1E76722BB519A004A0B0D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49322B5FB9F00480806 /* Event.swift */; };
 		50B1E76822BB519A004A0B0D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2D49522B5FC7400480806 /* Calendar.swift */; };
 		50B1E76922BB519A004A0B0D /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C9717622BA11E1005AF478 /* EventStore.swift */; };
+		50C95BE124D295F0006D1318 /* GoogleAPIClientForREST_Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = 50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */; };
+		50C95BE324D295F0006D1318 /* GoogleAPIClientForRESTCore in Frameworks */ = {isa = PBXBuildFile; productRef = 50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50DC320923714A30004CC676 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320823714A30004CC676 /* UserDefault.swift */; };
 		50DC320B23714BCA004CC676 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320A23714BCA004CC676 /* SettingsStore.swift */; };
@@ -57,9 +59,6 @@
 		50EA2B8623558DE200C11B6B /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EA2B8523558DE200C11B6B /* AccountListView.swift */; };
 		50EF0BF922C352660070C192 /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037D7EE22C34FD700B76927 /* Attendee.swift */; };
 		50F7D15F2378DF3400420604 /* CalendarishCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B1E75A22BB512A004A0B0D /* CalendarishCore.framework */; };
-		76C50E60BA4434FDA9F19ACD /* Pods_CalendarishAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */; };
-		B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,12 +161,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		016DDFC9EBE1D9A5E537773E /* Pods_CalendarishCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPIWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.release.xcconfig"; sourceTree = "<group>"; };
-		4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		500B0FDB2354448800C16CD0 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		500B0FDD235446F600C16CD0 /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
 		5020C7D422C48E5300031599 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
@@ -229,17 +222,6 @@
 		50DC320A23714BCA004CC676 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		50DC320C23714D00004CC676 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		50EA2B8523558DE200C11B6B /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
-		7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.debug.xcconfig"; sourceTree = "<group>"; };
-		92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests.release.xcconfig"; sourceTree = "<group>"; };
-		984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendarish_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EC095C88D5287299600BC71 /* Pods-Calendarish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendarish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendarish/Pods-Calendarish.release.xcconfig"; sourceTree = "<group>"; };
-		A90343CD3C31D805868D8A88 /* Pods_CalendarishCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPIWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPIWatch/Pods-CalendarishAPIWatch.debug.xcconfig"; sourceTree = "<group>"; };
-		B84826427BE82D638C1401DC /* Pods-CalendarishAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPIWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPIWatch/Pods-CalendarishAPIWatch.release.xcconfig"; sourceTree = "<group>"; };
-		DD62F4DEBBE62AF1FEF6B064 /* Pods-CalendarishAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalendarishAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalendarishAPI/Pods-CalendarishAPI.debug.xcconfig"; sourceTree = "<group>"; };
-		F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalendarishAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +236,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A58FE986CAF8305F5CC8EF /* Pods_CalendarishAPI.framework in Frameworks */,
+				50C95BE324D295F0006D1318 /* GoogleAPIClientForRESTCore in Frameworks */,
+				50C95BE124D295F0006D1318 /* GoogleAPIClientForREST_Calendar in Frameworks */,
+				5034948A24D29AF7007469B1 /* GTMAppAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B7B92BA426C9BC3D8305C9 /* Pods_Calendarish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +255,6 @@
 			files = (
 				5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */,
 				50B1E76122BB512A004A0B0D /* CalendarishCore.framework in Frameworks */,
-				44BF01E7A36F2FB6E549C7B0 /* Pods_Calendarish_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,40 +277,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C50E60BA4434FDA9F19ACD /* Pods_CalendarishAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		204FB92CD9410039C6A06AEB /* Pods */ = {
+		5033B5D424D28B2A00C1F296 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */,
-				9EC095C88D5287299600BC71 /* Pods-Calendarish.release.xcconfig */,
-				DD62F4DEBBE62AF1FEF6B064 /* Pods-CalendarishAPI.debug.xcconfig */,
-				13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */,
-				B84826427BE82D638C1401DC /* Pods-CalendarishAPITests.debug.xcconfig */,
-				96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */,
-				B7145AECA284E5641D929C96 /* Pods-CalendarishAPIWatch.debug.xcconfig */,
-				B8EAE03D3BB03FEEC43CB2B0 /* Pods-CalendarishAPIWatch.release.xcconfig */,
-				04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */,
-				92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2CEDFE23BF1EC92F7AF73B61 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A90343CD3C31D805868D8A88 /* Pods_CalendarishCore.framework */,
-				4ED0EA67F87705565EE4D1CC /* Pods_Calendarish.framework */,
-				016DDFC9EBE1D9A5E537773E /* Pods_CalendarishCoreTests.framework */,
-				F6181A04639EF66A1686BFCE /* Pods_CalendarishAPI.framework */,
-				4E176773A04F3E5E0CA8B2CE /* Pods_CalendarishAPITests.framework */,
-				076363A745E8E01EC6BD6B1C /* Pods_CalendarishAPIWatch.framework */,
-				984C2F14C064F56B936A4481 /* Pods_Calendarish_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,8 +301,7 @@
 				50C970DF22BA0CB2005AF478 /* CalendarishAPI */,
 				50C970EC22BA0CB2005AF478 /* CalendarishAPITests */,
 				50935B8222B4AA8A00DB2178 /* Products */,
-				204FB92CD9410039C6A06AEB /* Pods */,
-				2CEDFE23BF1EC92F7AF73B61 /* Frameworks */,
+				5033B5D424D28B2A00C1F296 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -514,7 +470,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5061CDC923504AAC001E6546 /* Build configuration list for PBXNativeTarget "CalendarishAPI" */;
 			buildPhases = (
-				A8DD4556446552735B9CC6CF /* [CP] Check Pods Manifest.lock */,
 				5061CDB923504AAC001E6546 /* Headers */,
 				5061CDBA23504AAC001E6546 /* Sources */,
 				5061CDBB23504AAC001E6546 /* Frameworks */,
@@ -526,6 +481,11 @@
 				5061CDCE23504BAE001E6546 /* PBXTargetDependency */,
 			);
 			name = CalendarishAPI;
+			packageProductDependencies = (
+				50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */,
+				50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */,
+				5034948924D29AF7007469B1 /* GTMAppAuth */,
+			);
 			productName = CalendarishAPIWatch;
 			productReference = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -534,13 +494,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50935BC422B4AA8E00DB2178 /* Build configuration list for PBXNativeTarget "Calendarish" */;
 			buildPhases = (
-				C5D6A586BB329F63D88C586B /* [CP] Check Pods Manifest.lock */,
 				50935B7D22B4AA8A00DB2178 /* Sources */,
 				50935B7E22B4AA8A00DB2178 /* Frameworks */,
 				50935B7F22B4AA8A00DB2178 /* Resources */,
 				50935BC322B4AA8E00DB2178 /* Embed Watch Content */,
 				50935BEA22B4AD6100DB2178 /* Embed Frameworks */,
-				F9B7ADB98AF75B430389E365 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -548,6 +506,8 @@
 				50935B9622B4AA8D00DB2178 /* PBXTargetDependency */,
 			);
 			name = Calendarish;
+			packageProductDependencies = (
+			);
 			productName = Calendarish;
 			productReference = 50935B8122B4AA8A00DB2178 /* Calendarish.app */;
 			productType = "com.apple.product-type.application";
@@ -574,12 +534,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50935BBC22B4AA8E00DB2178 /* Build configuration list for PBXNativeTarget "Calendarish WatchKit Extension" */;
 			buildPhases = (
-				C1477B87343548D6643EE7FB /* [CP] Check Pods Manifest.lock */,
 				50935B9E22B4AA8D00DB2178 /* Sources */,
 				50935B9F22B4AA8D00DB2178 /* Frameworks */,
 				50935BA022B4AA8D00DB2178 /* Resources */,
 				50B1E76622BB512A004A0B0D /* Embed Frameworks */,
-				FC388377C5C76321A8975030 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -632,11 +590,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50C970FA22BA0CB2005AF478 /* Build configuration list for PBXNativeTarget "CalendarishAPITests" */;
 			buildPhases = (
-				378731168583224F0A5F79C4 /* [CP] Check Pods Manifest.lock */,
 				50C970E222BA0CB2005AF478 /* Sources */,
 				50C970E322BA0CB2005AF478 /* Frameworks */,
 				50C970E422BA0CB2005AF478 /* Resources */,
-				285F69EA5CD60019A50AC5B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -691,6 +647,10 @@
 				Base,
 			);
 			mainGroup = 50935B7822B4AA8A00DB2178;
+			packageReferences = (
+				50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */,
+				5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */,
+			);
 			productRefGroup = 50935B8222B4AA8A00DB2178 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -764,132 +724,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		285F69EA5CD60019A50AC5B9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalendarishAPITests/Pods-CalendarishAPITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		378731168583224F0A5F79C4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CalendarishAPITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8DD4556446552735B9CC6CF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CalendarishAPI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1477B87343548D6643EE7FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Calendarish WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5D6A586BB329F63D88C586B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Calendarish-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9B7ADB98AF75B430389E365 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Calendarish/Pods-Calendarish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Calendarish/Pods-Calendarish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calendarish/Pods-Calendarish-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC388377C5C76321A8975030 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calendarish WatchKit Extension/Pods-Calendarish WatchKit Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5061CDBA23504AAC001E6546 /* Sources */ = {
@@ -1031,7 +865,6 @@
 /* Begin XCBuildConfiguration section */
 		5061CDC723504AAC001E6546 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD62F4DEBBE62AF1FEF6B064 /* Pods-CalendarishAPI.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1041,6 +874,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
 				INFOPLIST_FILE = CalendarishAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1062,7 +900,6 @@
 		};
 		5061CDC823504AAC001E6546 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13A0C5BC728F29889BE2DE8F /* Pods-CalendarishAPI.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1072,6 +909,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "SWIFT_PACKAGE=1";
 				INFOPLIST_FILE = CalendarishAPI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1207,7 +1045,6 @@
 		};
 		50935BBD22B4AA8E00DB2178 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04E253F2953AC23957F016B8 /* Pods-Calendarish WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Calendarish WatchKit Extension/Calendarish.entitlements";
@@ -1236,7 +1073,6 @@
 		};
 		50935BBE22B4AA8E00DB2178 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D585995C59D0BBCAACEEEB /* Pods-Calendarish WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Calendarish WatchKit Extension/Calendarish.entitlements";
@@ -1309,7 +1145,6 @@
 		};
 		50935BC522B4AA8E00DB2178 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A1187AE55FBD6F94BFA7A3A /* Pods-Calendarish.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1325,7 +1160,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.iosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Calendarish/Calendarish-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1337,7 +1172,6 @@
 		};
 		50935BC622B4AA8E00DB2178 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EC095C88D5287299600BC71 /* Pods-Calendarish.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1353,7 +1187,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxgoedjen.Calendarish.iosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Calendarish/Calendarish-Bridging-Header.h";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -1476,7 +1310,6 @@
 		};
 		50C970F722BA0CB2005AF478 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B84826427BE82D638C1401DC /* Pods-CalendarishAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1500,7 +1333,6 @@
 		};
 		50C970F822BA0CB2005AF478 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96B550CF3B58F7D5D44833E5 /* Pods-CalendarishAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1598,6 +1430,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxgoedjen/GTMAppAuth";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+		50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/google-api-objectivec-client-for-rest";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5034948924D29AF7007469B1 /* GTMAppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
+			productName = GTMAppAuth;
+		};
+		50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForREST_Calendar;
+		};
+		50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForRESTCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50935B7922B4AA8A00DB2178 /* Project object */;
 }
