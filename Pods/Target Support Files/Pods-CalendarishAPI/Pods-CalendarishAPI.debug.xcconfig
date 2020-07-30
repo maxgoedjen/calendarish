@@ -1,10 +1,11 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/Sentry-watchOS"
-GCC_ENABLE_CPP_EXCEPTIONS = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS/AppAuth.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS/AppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Sentry-watchOS/Sentry.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "AppAuth" -framework "GTMAppAuth" -framework "GTMSessionFetcher" -framework "GoogleAPIClientForREST" -framework "Sentry"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS/AppAuth.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS/GTMAppAuth.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS/GTMSessionFetcher.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS/GoogleAPIClientForREST.framework/Headers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/AppAuth-watchOS" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/GTMAppAuth-watchOS" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher-watchOS" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/GoogleAPIClientForREST-watchOS"
+OTHER_LDFLAGS = $(inherited) -framework "AppAuth" -framework "GTMAppAuth" -framework "GTMSessionFetcher" -framework "GoogleAPIClientForREST" -framework "Security"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

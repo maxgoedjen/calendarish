@@ -2,7 +2,6 @@ import WatchKit
 import WatchConnectivity
 import CalendarishCore
 import CalendarishAPI
-import Sentry
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
@@ -41,20 +40,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                 // make sure to complete unhandled task types
                 task.setTaskCompletedWithSnapshot(false)
             }
-        }
-    }
-
-}
-
-extension ExtensionDelegate {
-
-    func configureSentry() {
-        do {
-            Client.shared = try Client(dsn: "https://4cb5596c00f44edfa68a033f8ec402fc@sentry.io/156458")
-            try Client.shared?.startCrashHandler()
-            Client.shared?.environment = "Watch"
-        } catch let error {
-            print("\(error)")
         }
     }
 

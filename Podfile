@@ -1,4 +1,4 @@
-platform :ios, '13.1'
+platform :ios, '14.0'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -6,7 +6,6 @@ def common
     pod 'GoogleAPIClientForREST/Calendar'
     pod 'GTMSessionFetcher'
   	pod 'GTMAppAuth', :git => 'https://github.com/maxgoedjen/GTMAppAuth.git'
-    pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '4.3.1'
 end
 
 target 'Calendarish' do
@@ -14,12 +13,12 @@ target 'Calendarish' do
 end
 
 target 'CalendarishAPI' do
-  platform :watchos, '6.0'
+  platform :watchos, '7.0'
   common
 end
 
 target 'Calendarish WatchKit Extension' do
-  platform :watchos, '6.0'
+  platform :watchos, '7.0'
   common
 end
 
