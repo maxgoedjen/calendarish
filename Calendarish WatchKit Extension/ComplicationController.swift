@@ -111,6 +111,12 @@ extension ComplicationController {
             template.body1TextProvider = timeIntervalProvider
             template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
             return template
+        case .graphicExtraLarge:
+            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
+            template.headerTextProvider = nameProvider
+            template.body1TextProvider = timeIntervalProvider
+            template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
+            return template
         @unknown default:
             return nil
         }
@@ -166,6 +172,12 @@ extension ComplicationController {
             template.line2TextProvider = blankTextProvider
             return template
         case .graphicRectangular:
+            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
+            template.headerTextProvider = unlockTextProvider
+            template.body1TextProvider = calendarTextProvider
+            template.body2TextProvider = blankTextProvider
+            return template
+        case .graphicExtraLarge:
             let template = CLKComplicationTemplateGraphicRectangularStandardBody()
             template.headerTextProvider = unlockTextProvider
             template.body1TextProvider = calendarTextProvider
