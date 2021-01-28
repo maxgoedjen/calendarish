@@ -80,43 +80,20 @@ extension ComplicationController {
         case .utilitarianLarge:
             return nil
         case .circularSmall:
-            let template = CLKComplicationTemplateCircularSmallRingText()
-            template.textProvider = timeIntervalProvider
-            template.ringStyle = .open
-            template.fillFraction = 0.5
-            return template
+            return CLKComplicationTemplateCircularSmallRingText(textProvider: timeIntervalProvider, fillFraction: 0.5, ringStyle: .open)
         case .extraLarge:
             return nil
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCornerStackText()
-            template.innerTextProvider = nameProvider
-            template.outerTextProvider = timeIntervalProvider
-            return template
+            return CLKComplicationTemplateGraphicCornerStackText(innerTextProvider: nameProvider, outerTextProvider: timeIntervalProvider)
         case .graphicBezel:
-            let template = CLKComplicationTemplateGraphicBezelCircularText()
-            template.textProvider = CLKSimpleTextProvider(text: event.name)
-            let circular = CLKComplicationTemplateGraphicCircularStackText()
-            circular.line1TextProvider = CLKTimeTextProvider(date: event.startTime)
-            circular.line2TextProvider = durationProvider
-            template.circularTemplate = circular
-            return template
+            let circular = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKTimeTextProvider(date: event.startTime), line2TextProvider: durationProvider)
+            return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: circular, textProvider: CLKSimpleTextProvider(text: event.name))
         case .graphicCircular:
-            let template = CLKComplicationTemplateGraphicCircularStackText()
-            template.line1TextProvider = timeIntervalProvider
-            template.line2TextProvider = nameProvider
-            return template
+            return CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: timeIntervalProvider, line2TextProvider: nameProvider)
         case .graphicRectangular:
-            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
-            template.headerTextProvider = nameProvider
-            template.body1TextProvider = timeIntervalProvider
-            template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
-            return template
+            return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: nameProvider, body1TextProvider: timeIntervalProvider, body2TextProvider: CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name))
         case .graphicExtraLarge:
-            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
-            template.headerTextProvider = nameProvider
-            template.body1TextProvider = timeIntervalProvider
-            template.body2TextProvider = CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name)
-            return template
+            return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: nameProvider, body1TextProvider: timeIntervalProvider, body2TextProvider: CLKSimpleTextProvider(text: event.location ?? event.description ?? event.calendar.name))
         @unknown default:
             return nil
         }
@@ -146,43 +123,20 @@ extension ComplicationController {
         case .utilitarianLarge:
             return nil
         case .circularSmall:
-            let template = CLKComplicationTemplateCircularSmallRingText()
-            template.textProvider = blankTextProvider
-            template.ringStyle = .open
-            template.fillFraction = 0
-            return template
+            return CLKComplicationTemplateCircularSmallRingText(textProvider: blankTextProvider, fillFraction: 0, ringStyle: .open)
         case .extraLarge:
             return nil
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCornerStackText()
-            template.innerTextProvider = calendarTextProvider
-            template.outerTextProvider = unlockTextProvider
-            return template
+            return CLKComplicationTemplateGraphicCornerStackText(innerTextProvider: calendarTextProvider, outerTextProvider: unlockTextProvider)
         case .graphicBezel:
-            let template = CLKComplicationTemplateGraphicBezelCircularText()
-            template.textProvider = blankTextProvider
-            let circular = CLKComplicationTemplateGraphicCircularStackText()
-            circular.line1TextProvider = blankTextProvider
-            circular.line2TextProvider = blankTextProvider
-            template.circularTemplate = circular
-            return template
+            let circular = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: blankTextProvider, line2TextProvider: blankTextProvider)
+            return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: circular, textProvider: blankTextProvider)
         case .graphicCircular:
-            let template = CLKComplicationTemplateGraphicCircularStackText()
-            template.line1TextProvider = blankTextProvider
-            template.line2TextProvider = blankTextProvider
-            return template
+            return CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: blankTextProvider, line2TextProvider: blankTextProvider)
         case .graphicRectangular:
-            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
-            template.headerTextProvider = unlockTextProvider
-            template.body1TextProvider = calendarTextProvider
-            template.body2TextProvider = blankTextProvider
-            return template
+            return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: unlockTextProvider, body1TextProvider: calendarTextProvider, body2TextProvider: blankTextProvider)
         case .graphicExtraLarge:
-            let template = CLKComplicationTemplateGraphicRectangularStandardBody()
-            template.headerTextProvider = unlockTextProvider
-            template.body1TextProvider = calendarTextProvider
-            template.body2TextProvider = blankTextProvider
-            return template
+            return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: unlockTextProvider, body1TextProvider: calendarTextProvider, body2TextProvider: blankTextProvider)
         @unknown default:
             return nil
         }

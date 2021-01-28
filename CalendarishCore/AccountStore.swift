@@ -56,9 +56,17 @@ extension AccountStore {
             let status = SecItemCopyMatching(query as CFDictionary, &item)
             assert(status == errSecSuccess || status == errSecItemNotFound, "Failed to retrieve from keychain")
             guard let data = item as? Data else { return }
-            savedAccounts = (try? JSONDecoder().decode([Account].self, from: data)) ?? []
+            savedAccounts = ((try? JSONDecoder().decode([Account].self, from: data)) ?? []) + [diagnosticAccount].compactMap({ $0 })
         }
         return savedAccounts
+    }
+
+    var diagnosticAccount: Account? {
+        let env = ProcessInfo.processInfo.environment
+        guard let email = env["DIAGNOSTIC_EMAIL"],
+              let base64Auth = env["DIAGNOSTIC_AUTH"],
+              let auth = Data(base64Encoded: base64Auth) else { return nil }
+        return Account(email: email, authorization: auth)
     }
 
 }
