@@ -51,6 +51,18 @@
             ReferencedContainer = "container:Calendarish.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "DIAGNOSTIC_EMAIL"
+            value = ""
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "DIAGNOSTIC_AUTH"
+            value = ""
+            isEnabled = "NO">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

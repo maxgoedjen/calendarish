@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/google/google-api-objectivec-client-for-rest",
         "state": {
           "branch": null,
-          "revision": "6ca9e11f9a074284034f0c4dfc2f894ca83da06d",
-          "version": "1.4.2"
+          "revision": "9b6cd59f0974cb4105bdc9cece4f4ebf3b3893c7",
+          "version": "1.5.1"
         }
       },
       {
@@ -30,11 +30,11 @@
       },
       {
         "package": "GTMAppAuth",
-        "repositoryURL": "https://github.com/maxgoedjen/GTMAppAuth",
+        "repositoryURL": "https://github.com/google/GTMAppAuth.git",
         "state": {
-          "branch": "spm",
-          "revision": "47366764f57de8f485608f40124a92ab65a72bd9",
-          "version": null
+          "branch": null,
+          "revision": "319b2371c69138665d8cbd7c6700ceccbb49e04f",
+          "version": "1.1.0"
         }
       }
     ]

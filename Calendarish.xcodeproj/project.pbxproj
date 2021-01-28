@@ -10,8 +10,10 @@
 		500B0FDC2354448800C16CD0 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDB2354448800C16CD0 /* AuthorizationController.swift */; };
 		500B0FDE235446F600C16CD0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500B0FDD235446F600C16CD0 /* WatchController.swift */; };
 		500B0FDF23544B3100C16CD0 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5076FD852353F5C6005AE0D1 /* AccountStore.swift */; };
+		5018D8C725C298CF00F6844B /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5018D8C625C298CF00F6844B /* GTMAppAuth */; };
+		5018D8CE25C298DE00F6844B /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5018D8CD25C298DE00F6844B /* GTMAppAuth */; };
+		5018D8D525C2991100F6844B /* GoogleAPIClientForREST_Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5018D8D425C2991100F6844B /* GoogleAPIClientForREST_Calendar */; };
 		5020C7D522C48E5300031599 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5020C7D422C48E5300031599 /* SampleData.swift */; };
-		5034948A24D29AF7007469B1 /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5034948924D29AF7007469B1 /* GTMAppAuth */; };
 		5056176C235958D100B73186 /* ConnectPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056176B235958D100B73186 /* ConnectPromptView.swift */; };
 		5056176E2359722100B73186 /* NoEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056176D2359722100B73186 /* NoEventsView.swift */; };
 		5061CDC523504AAC001E6546 /* CalendarishAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */; };
@@ -54,7 +56,7 @@
 		50C95BE324D295F0006D1318 /* GoogleAPIClientForRESTCore in Frameworks */ = {isa = PBXBuildFile; productRef = 50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
 		50D8463325C280E200D6C476 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 50D8463225C280E200D6C476 /* AppAuth */; };
-		50D8463F25C2810F00D6C476 /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 50D8463E25C2810F00D6C476 /* GTMAppAuth */; };
+		50D8469925C2974800D6C476 /* GoogleAPIClientForRESTCore in Frameworks */ = {isa = PBXBuildFile; productRef = 50D8469825C2974800D6C476 /* GoogleAPIClientForRESTCore */; };
 		50DC320923714A30004CC676 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320823714A30004CC676 /* UserDefault.swift */; };
 		50DC320B23714BCA004CC676 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320A23714BCA004CC676 /* SettingsStore.swift */; };
 		50DC320D23714D00004CC676 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320C23714D00004CC676 /* SettingsView.swift */; };
@@ -240,7 +242,7 @@
 			files = (
 				50C95BE324D295F0006D1318 /* GoogleAPIClientForRESTCore in Frameworks */,
 				50C95BE124D295F0006D1318 /* GoogleAPIClientForREST_Calendar in Frameworks */,
-				5034948A24D29AF7007469B1 /* GTMAppAuth in Frameworks */,
+				5018D8CE25C298DE00F6844B /* GTMAppAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D8463325C280E200D6C476 /* AppAuth in Frameworks */,
-				50D8463F25C2810F00D6C476 /* GTMAppAuth in Frameworks */,
+				50D8469925C2974800D6C476 /* GoogleAPIClientForRESTCore in Frameworks */,
+				5018D8C725C298CF00F6844B /* GTMAppAuth in Frameworks */,
+				5018D8D525C2991100F6844B /* GoogleAPIClientForREST_Calendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +492,7 @@
 			packageProductDependencies = (
 				50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */,
 				50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */,
-				5034948924D29AF7007469B1 /* GTMAppAuth */,
+				5018D8CD25C298DE00F6844B /* GTMAppAuth */,
 			);
 			productName = CalendarishAPIWatch;
 			productReference = 5061CDBE23504AAC001E6546 /* CalendarishAPI.framework */;
@@ -507,12 +511,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				50D8468225C2944C00D6C476 /* PBXTargetDependency */,
 				50935B9622B4AA8D00DB2178 /* PBXTargetDependency */,
 			);
 			name = Calendarish;
 			packageProductDependencies = (
 				50D8463225C280E200D6C476 /* AppAuth */,
-				50D8463E25C2810F00D6C476 /* GTMAppAuth */,
+				50D8469825C2974800D6C476 /* GoogleAPIClientForRESTCore */,
+				5018D8C625C298CF00F6844B /* GTMAppAuth */,
+				5018D8D425C2991100F6844B /* GoogleAPIClientForREST_Calendar */,
 			);
 			productName = Calendarish;
 			productReference = 50935B8122B4AA8A00DB2178 /* Calendarish.app */;
@@ -655,8 +662,8 @@
 			mainGroup = 50935B7822B4AA8A00DB2178;
 			packageReferences = (
 				50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */,
-				5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */,
 				50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+				5018D8B425C2989800F6844B /* XCRemoteSwiftPackageReference "GTMAppAuth" */,
 			);
 			productRefGroup = 50935B8222B4AA8A00DB2178 /* Products */;
 			projectDirPath = "";
@@ -837,6 +844,10 @@
 			isa = PBXTargetDependency;
 			target = 50B1E75922BB512A004A0B0D /* CalendarishCore */;
 			targetProxy = 50B1E75F22BB512A004A0B0D /* PBXContainerItemProxy */;
+		};
+		50D8468225C2944C00D6C476 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 50D8468125C2944C00D6C476 /* GTMAppAuth */;
 		};
 		50F7D15B2378DEE500420604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1447,6 +1458,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5018D8B425C2989800F6844B /* XCRemoteSwiftPackageReference "GTMAppAuth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GTMAppAuth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 		5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxgoedjen/GTMAppAuth";
@@ -1460,7 +1479,7 @@
 			repositoryURL = "https://github.com/google/google-api-objectivec-client-for-rest";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.2;
+				minimumVersion = 1.5.1;
 			};
 		};
 		50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
@@ -1474,10 +1493,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5034948924D29AF7007469B1 /* GTMAppAuth */ = {
+		5018D8C625C298CF00F6844B /* GTMAppAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
+			package = 5018D8B425C2989800F6844B /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
 			productName = GTMAppAuth;
+		};
+		5018D8CD25C298DE00F6844B /* GTMAppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5018D8B425C2989800F6844B /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
+			productName = GTMAppAuth;
+		};
+		5018D8D425C2991100F6844B /* GoogleAPIClientForREST_Calendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForREST_Calendar;
 		};
 		50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1494,10 +1523,15 @@
 			package = 50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
 			productName = AppAuth;
 		};
-		50D8463E25C2810F00D6C476 /* GTMAppAuth */ = {
+		50D8468125C2944C00D6C476 /* GTMAppAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
 			productName = GTMAppAuth;
+		};
+		50D8469825C2974800D6C476 /* GoogleAPIClientForRESTCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
+			productName = GoogleAPIClientForRESTCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
