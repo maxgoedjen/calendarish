@@ -18,26 +18,29 @@ struct MainView: View {
                 EventListView(store: eventStore)
             }
         }
-//        .contextMenu(menuItems: {
-//            NavigationLink(destination: AccountListView(store: accountStore)) {
-//                VStack {
-//                    Image(systemName: "list.bullet")
-//                    Text("Accounts")
-//                }
-//            }
-//            NavigationLink(destination: SettingsView(settingsStore: settingsStore)) {
-//                VStack {
-//                    Image(systemName: "gear")
-//                    Text("Settings")
-//                }
-//            }
-//            Button(action: api.reload) {
-//                VStack {
-//                    Image(systemName: "arrow.clockwise")
-//                    Text("Refresh")
-//                }
-//            }
-//        }
+        .toolbar {
+            VStack {
+                NavigationLink(destination: AccountListView(store: accountStore)) {
+                    HStack {
+                        Image(systemName: "list.bullet")
+                        Text("Accounts")
+                    }
+                }
+                NavigationLink(destination: SettingsView(settingsStore: settingsStore)) {
+                    HStack {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                }
+                Button(action: api.reload) {
+                    HStack {
+                        Image(systemName: "arrow.clockwise")
+                        Text("Refresh")
+                    }
+                }
+
+            }.padding()
+        }
 
     }
 }
