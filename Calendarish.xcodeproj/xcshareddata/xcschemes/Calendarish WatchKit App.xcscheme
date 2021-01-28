@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Calendarish.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50935B8022B4AA8A00DB2178"
-               BuildableName = "Calendarish.app"
-               BlueprintName = "Calendarish"
-               ReferencedContainer = "container:Calendarish.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

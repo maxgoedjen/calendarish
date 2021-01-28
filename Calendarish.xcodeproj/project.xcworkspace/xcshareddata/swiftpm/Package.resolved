@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "AppAuth",
-        "repositoryURL": "https://github.com/openid/AppAuth-iOS.git",
+        "repositoryURL": "https://github.com/maxgoedjen/AppAuth-iOS",
         "state": {
-          "branch": null,
-          "revision": "01131d68346c8ae552961c768d583c715fbe1410",
-          "version": "1.4.0"
+          "branch": "nullability",
+          "revision": "16d14f242c54efe60fe622845ee530e97f410437",
+          "version": null
         }
       },
       {
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/maxgoedjen/GTMAppAuth",
         "state": {
           "branch": "spm",
-          "revision": "907ae9ca19c290932b075a492a55abafc798dbf2",
+          "revision": "47366764f57de8f485608f40124a92ab65a72bd9",
           "version": null
         }
       }

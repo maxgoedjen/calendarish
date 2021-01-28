@@ -53,6 +53,8 @@
 		50C95BE124D295F0006D1318 /* GoogleAPIClientForREST_Calendar in Frameworks */ = {isa = PBXBuildFile; productRef = 50C95BE024D295F0006D1318 /* GoogleAPIClientForREST_Calendar */; };
 		50C95BE324D295F0006D1318 /* GoogleAPIClientForRESTCore in Frameworks */ = {isa = PBXBuildFile; productRef = 50C95BE224D295F0006D1318 /* GoogleAPIClientForRESTCore */; };
 		50C970EE22BA0CB2005AF478 /* CalendarishAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C970ED22BA0CB2005AF478 /* CalendarishAPITests.swift */; };
+		50D8463325C280E200D6C476 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 50D8463225C280E200D6C476 /* AppAuth */; };
+		50D8463F25C2810F00D6C476 /* GTMAppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 50D8463E25C2810F00D6C476 /* GTMAppAuth */; };
 		50DC320923714A30004CC676 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320823714A30004CC676 /* UserDefault.swift */; };
 		50DC320B23714BCA004CC676 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320A23714BCA004CC676 /* SettingsStore.swift */; };
 		50DC320D23714D00004CC676 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC320C23714D00004CC676 /* SettingsView.swift */; };
@@ -246,6 +248,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D8463325C280E200D6C476 /* AppAuth in Frameworks */,
+				50D8463F25C2810F00D6C476 /* GTMAppAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +511,8 @@
 			);
 			name = Calendarish;
 			packageProductDependencies = (
+				50D8463225C280E200D6C476 /* AppAuth */,
+				50D8463E25C2810F00D6C476 /* GTMAppAuth */,
 			);
 			productName = Calendarish;
 			productReference = 50935B8122B4AA8A00DB2178 /* Calendarish.app */;
@@ -650,6 +656,7 @@
 			packageReferences = (
 				50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */,
 				5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */,
+				50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
 			);
 			productRefGroup = 50935B8222B4AA8A00DB2178 /* Products */;
 			projectDirPath = "";
@@ -970,8 +977,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"$(inhereted)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1027,6 +1034,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SWIFT_PACKAGE=1",
+					"$(inhereted)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1052,6 +1063,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Calendarish WatchKit Extension\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z72PRUAWF6;
 				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = "Calendarish WatchKit Extension/Info.plist";
@@ -1448,6 +1463,14 @@
 				minimumVersion = 1.4.2;
 			};
 		};
+		50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxgoedjen/AppAuth-iOS";
+			requirement = {
+				branch = nullability;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1465,6 +1488,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50C95BDF24D295F0006D1318 /* XCRemoteSwiftPackageReference "google-api-objectivec-client-for-rest" */;
 			productName = GoogleAPIClientForRESTCore;
+		};
+		50D8463225C280E200D6C476 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50D8463125C280E200D6C476 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		50D8463E25C2810F00D6C476 /* GTMAppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5034948824D29AF7007469B1 /* XCRemoteSwiftPackageReference "GTMAppAuth" */;
+			productName = GTMAppAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
