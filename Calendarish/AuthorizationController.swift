@@ -3,7 +3,8 @@ import AuthenticationServices
 import Combine
 import AppAuth
 import GTMAppAuth
-import GoogleAPIClientForREST
+import GoogleAPIClientForRESTCore
+import GoogleAPIClientForREST_Calendar
 
 class AuthorizationController: NSObject {
 
