@@ -5,7 +5,6 @@ import CalendarishCore
 import WatchConnectivity
 import Combine
 import CalendarishAPI
-import UserNotifications
 import ClockKit
 import os.log
 
