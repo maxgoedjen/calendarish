@@ -61,7 +61,8 @@ extension API {
     func events(in calendar: CalendarishCalendar) -> Future<[Event], Error> {
         return Future { promise in
             let query = GTLRCalendarQuery_EventsList.query(withCalendarId: calendar.identifier)
-            let today = Date()
+            let components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+            let today = Calendar.current.date(from: components)!
             query.timeMin = GTLRDateTime(date: today)
             if let nextWeek = Foundation.Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: today, wrappingComponents: false) {
                 query.timeMax = GTLRDateTime(date: nextWeek)
@@ -70,7 +71,9 @@ extension API {
             self.calendarService.executeQuery(query) { _, any, error in
                 guard error == nil else { promise(.failure(.serverError(error!))); return }
                 guard let list = any as? GTLRCalendar_Events, let items = list.items else { promise(.failure(.invalidResponse(any))); return }
-                let events = items.compactMap({ Event($0, calendar: calendar) })
+                let events = items
+                    .compactMap({ Event($0, calendar: calendar) })
+                    .filter({ $0.endTime > Date() })
                 promise(.success(events))
             }
         }

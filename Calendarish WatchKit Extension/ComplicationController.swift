@@ -6,6 +6,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     let store = EventStore()
     let settings = SettingsStore()
 
+    func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
+        handler([
+            CLKComplicationDescriptor(identifier: Complication.currentOrUpcoming.rawValue, displayName: "Current or Upcoming", supportedFamilies: CLKComplicationFamily.allCases),
+            CLKComplicationDescriptor(identifier: Complication.onlyFuture.rawValue, displayName: "Future Only", supportedFamilies: CLKComplicationFamily.allCases),
+        ])
+    }
+
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -13,12 +20,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let firstEvent = store.events.map({ $0.startTime }).first
+        let firstEvent = events(for: complication)
+            .map({ $0.startTime })
+            .first
         handler(firstEvent)
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let lastEvent = store.events.map({ $0.endTime }).last
+        let lastEvent = events(for: complication)
+            .map({ $0.endTime })
+            .last
         handler(lastEvent)
     }
     
@@ -31,7 +42,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         let entry: CLKComplicationTimelineEntry?
-        if let event = store.events.filter({ $0.startTime >= Date() }).first {
+        if let event = events(for: complication)
+            .first {
             entry = timelineEntry(for: event, complication: complication)
         } else {
             entry = nil
@@ -48,7 +60,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
 
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
-        let events = store.events.filter({ $0.startTime >= date }).prefix(limit)
+        let events = self.events(for: complication).prefix(limit)
         let entries = events.compactMap({ timelineEntry(for: $0, complication: complication) })
         handler(entries)
     }
@@ -63,9 +75,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
 extension ComplicationController {
 
+    func events(for complication: CLKComplication) -> [Event] {
+        guard let type = Complication(rawValue: complication.identifier) else { return [] }
+        switch type {
+        case .currentOrUpcoming:
+            return store.events
+                .filter { $0.endTime > Date() }
+        case .onlyFuture:
+            return store.events
+                .filter { $0.startTime > Date() }
+        }
+    }
+
     func template(for complication: CLKComplication, event: Event) -> CLKComplicationTemplate? {
         let nameProvider = CLKSimpleTextProvider(text: event.name)
         let timeIntervalProvider = CLKTimeIntervalTextProvider(start: event.startTime, end: event.endTime)
+//        let startTimeProvider = CLKTimeTextProvider(date: event.startTime)
+        let endTimeProvider = CLKTimeTextProvider(date: event.endTime)
         let durationProvider = CLKSimpleTextProvider(text: DateComponentsFormatter.durationFormatter.string(from: event.startTime, to: event.endTime) ?? "")
 
         switch complication.family {
@@ -84,7 +110,19 @@ extension ComplicationController {
         case .extraLarge:
             return nil
         case .graphicCorner:
-            return CLKComplicationTemplateGraphicCornerStackText(innerTextProvider: nameProvider, outerTextProvider: timeIntervalProvider)
+            switch Complication(rawValue: complication.identifier) {
+            case .currentOrUpcoming:
+                if event.startTime < Date() {
+                    let remainingGauge = CLKTimeIntervalGaugeProvider(style: .fill, gaugeColors: nil, gaugeColorLocations: nil, start: event.startTime, end: event.endTime)
+                    return CLKComplicationTemplateGraphicCornerGaugeText(gaugeProvider: remainingGauge, leadingTextProvider: nil, trailingTextProvider: endTimeProvider, outerTextProvider: nameProvider)
+                } else {
+                    return CLKComplicationTemplateGraphicCornerStackText(innerTextProvider: nameProvider, outerTextProvider: timeIntervalProvider)
+                }
+            case .onlyFuture:
+                return CLKComplicationTemplateGraphicCornerStackText(innerTextProvider: nameProvider, outerTextProvider: timeIntervalProvider)
+            case .none:
+                return nil
+            }
         case .graphicBezel:
             let circular = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKTimeTextProvider(date: event.startTime), line2TextProvider: durationProvider)
             return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: circular, textProvider: CLKSimpleTextProvider(text: event.name))
@@ -142,6 +180,13 @@ extension ComplicationController {
         }
     }
 
+}
 
+extension ComplicationController {
+
+    private enum Complication: String {
+        case currentOrUpcoming = "com.calendarish.complication.current_or_upcoming_meeting"
+        case onlyFuture = "com.calendarish.complication.only_future"
+    }
 
 }

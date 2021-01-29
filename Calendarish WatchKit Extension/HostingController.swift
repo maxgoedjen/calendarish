@@ -40,10 +40,9 @@ class HostingController : WKHostingController<MainView> {
                 .breakpointOnError()
                 .replaceError(with: [])
                 .map { $0.filter { event in
-                    !self.settingsStore.showOnlyAcceptedEvents || event.attendees.first(where: { attendee in userEmails.contains(attendee.name) })?.response == .accepted
+                    !self.settingsStore.showOnlyAcceptedEvents || event.attendees.isEmpty || event.attendees.first(where: { attendee in userEmails.contains(attendee.name) })?.response == .accepted
                     }
                 }
-                .map { $0.sorted() }
                 .assign(to: \.events, on: self.eventStore)
                 .store(in: &bag)
     }
