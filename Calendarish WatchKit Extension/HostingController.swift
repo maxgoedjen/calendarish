@@ -7,6 +7,7 @@ import Combine
 import CalendarishAPI
 import UserNotifications
 import ClockKit
+import os.log
 
 class HostingController : WKHostingController<MainView> {
 
@@ -15,7 +16,9 @@ class HostingController : WKHostingController<MainView> {
     let settingsStore = SettingsStore()
     let shortcutController = ShortcutController()
     var batchAPI: BatchAPI
-    fileprivate var subscriptions: [AnyCancellable] = []
+
+    private var bag: Set<AnyCancellable> = []
+    private let logger = Logger(subsystem: "com.maxgoedjen.calendarish.watch", category: "HostingController")
 
     override init() {
         let apis = accountStore.accounts.map({ API(account: $0) })
@@ -23,19 +26,17 @@ class HostingController : WKHostingController<MainView> {
         super.init()
         WCSession.default.delegate = self
         WCSession.default.activate()
-        subscriptions.append(
-            eventStore.$events.assign(to: \.events, on: shortcutController)
-        )
-        subscriptions.append(
-            eventStore.$events.sink { _ in
+        eventStore.$events
+            .assign(to: \.events, on: shortcutController)
+            .store(in: &bag)
+            eventStore.$events
+                .sink { _ in
                 let server = CLKComplicationServer.sharedInstance()
                 for complication in server.activeComplications ?? [] {
                     server.reloadTimeline(for: complication)
                 }
-            }
-        )
+                }.store(in: &bag)
         let userEmails = accountStore.accounts.map { $0.email }
-        subscriptions.append(
             batchAPI.eventPublisher
                 .breakpointOnError()
                 .replaceError(with: [])
@@ -43,8 +44,9 @@ class HostingController : WKHostingController<MainView> {
                     !self.settingsStore.showOnlyAcceptedEvents || event.attendees.first(where: { attendee in userEmails.contains(attendee.name) })?.response == .accepted
                     }
                 }
+                .map { $0.sorted() }
                 .assign(to: \.events, on: self.eventStore)
-        )
+                .store(in: &bag)
     }
 
     override var body: MainView {
