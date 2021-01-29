@@ -29,6 +29,8 @@ extension AuthorizationController {
                 let authorization = GTMAppAuthFetcherAuthorization(authState: state)
                 self.authorizationPublisher.send(authorization)
             } else if let error = error {
+                let nsError = error as NSError
+                guard nsError.domain != ASWebAuthenticationSessionError.errorDomain && nsError.code != ASWebAuthenticationSessionError.canceledLogin.rawValue else { return }
                 self.authorizationPublisher.send(completion: .failure(error))
             }
         }
