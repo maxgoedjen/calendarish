@@ -13,12 +13,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let firstEvent = store.events.map({ $0.startTime }).sorted().first
+        let firstEvent = store.events.map({ $0.startTime }).first
         handler(firstEvent)
     }
     
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        let lastEvent = store.events.map({ $0.endTime }).sorted().last
+        let lastEvent = store.events.map({ $0.endTime }).last
         handler(lastEvent)
     }
     
@@ -136,7 +136,7 @@ extension ComplicationController {
         case .graphicRectangular:
             return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: unlockTextProvider, body1TextProvider: calendarTextProvider, body2TextProvider: blankTextProvider)
         case .graphicExtraLarge:
-            return CLKComplicationTemplateGraphicRectangularStandardBody(headerTextProvider: unlockTextProvider, body1TextProvider: calendarTextProvider, body2TextProvider: blankTextProvider)
+            return CLKComplicationTemplateExtraLargeStackText(line1TextProvider: unlockTextProvider, line2TextProvider: calendarTextProvider)
         @unknown default:
             return nil
         }
